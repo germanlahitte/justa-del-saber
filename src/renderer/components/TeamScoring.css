@@ -1,0 +1,837 @@
+.team-scoring {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.scoring-header {
+  margin-bottom: 30px;
+}
+
+.scoring-header h2 {
+  color: #e94560;
+  font-size: 28px;
+  text-align: center;
+}
+
+.edit-mode-notice {
+  background-color: #f39c12;
+  color: #0f3460;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.scoring-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* TieBreak Card Back */
+.tiebreak-card-back {
+  width: 100%;
+  min-height: 400px;
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  padding: 40px;
+}
+
+.tiebreak-card-back::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shimmer 3s infinite;
+}
+
+.tiebreak-card-back .card-back-content {
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.tiebreak-card-back .card-back-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.tiebreak-card-back h2 {
+  color: white;
+  font-size: 32px;
+  margin: 0 0 15px 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tiebreak-card-back p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  margin: 0;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* TieBreak Question Display */
+.question-section {
+  width: 100%;
+}
+
+.question-box-large {
+  background-color: #16213e;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.question-text-large {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 25px 0;
+  line-height: 1.5;
+}
+
+.options-grid-large {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.option-large {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #0f3460;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 2px solid #1a4d7a;
+  transition: all 0.3s;
+}
+
+.option-large.correct {
+  background-color: #27ae60;
+  border-color: #229954;
+}
+
+.option-letter-large {
+  background-color: #e94560;
+  color: white;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 18px;
+  min-width: 35px;
+  text-align: center;
+}
+
+.option-large.correct .option-letter-large {
+  background-color: #1e8449;
+}
+
+.option-text-large {
+  flex: 1;
+  font-size: 16px;
+  color: #ddd;
+  font-weight: 500;
+}
+
+.option-large.correct .option-text-large {
+  color: white;
+  font-weight: 600;
+}
+
+.correct-answer-banner {
+  background-color: #27ae60;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-start-timer,
+.btn-reveal-answer,
+.btn-next-question-tiebreak {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-start-timer {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn-start-timer:hover {
+  background-color: #229954;
+  transform: translateY(-2px);
+}
+
+.btn-reveal-answer {
+  background-color: #f39c12;
+  color: white;
+}
+
+.btn-reveal-answer:hover {
+  background-color: #e67e22;
+  transform: translateY(-2px);
+}
+
+.btn-next-question-tiebreak {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-next-question-tiebreak:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.timer-display {
+  font-size: 32px;
+  font-weight: 700;
+  color: #27ae60;
+  padding: 10px 25px;
+  background-color: #16213e;
+  border-radius: 10px;
+  border: 3px solid #27ae60;
+}
+
+.timer-display.warning {
+  color: #e74c3c;
+  border-color: #e74c3c;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.question-reminder {
+  background-color: #16213e;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.question-reminder h3 {
+  color: #e94560;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.question-reminder p {
+  font-size: 18px;
+  color: #eee;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.correct-answer-reminder {
+  padding: 15px;
+  background-color: #27ae60;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+}
+
+.correct-answer-reminder strong {
+  font-size: 18px;
+}
+
+.teams-scoring-table {
+  background-color: #16213e;
+  padding: 25px;
+  border-radius: 10px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.teams-scoring-table h3 {
+  color: #e94560;
+  font-size: 20px;
+  margin: 0;
+  flex: 1;
+}
+
+.group-subtitle-inline {
+  color: #95a5a6;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.btn-enable-edit,
+.btn-disable-edit {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.btn-enable-edit {
+  background-color: #f39c12;
+  color: white;
+}
+
+.btn-enable-edit:hover {
+  background-color: #e67e22;
+  transform: translateY(-2px);
+}
+
+.btn-disable-edit {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.btn-disable-edit:hover {
+  background-color: #7f8c8d;
+  transform: translateY(-2px);
+}
+
+.teams-scoring-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.teams-scoring-table thead {
+  background-color: #0f3460;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.teams-scoring-table th {
+  padding: 15px;
+  text-align: left;
+  color: #e94560;
+  font-size: 16px;
+  border-bottom: 2px solid #e94560;
+}
+
+.teams-scoring-table tbody tr {
+  border-bottom: 1px solid #0f3460;
+  transition: background-color 0.3s;
+}
+
+.teams-scoring-table tbody tr:hover {
+  background-color: #1a5080;
+}
+
+.teams-scoring-table tbody tr.selected {
+  background-color: #27ae60;
+}
+
+.teams-scoring-table td {
+  padding: 15px;
+  color: #eee;
+  font-size: 16px;
+}
+
+.team-name {
+  font-weight: bold;
+  color: #fff;
+}
+
+.team-score {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.team-checkbox {
+  text-align: center;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  accent-color: #27ae60;
+}
+
+.checkbox-label input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.scoring-summary {
+  background-color: #16213e;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.scoring-summary p {
+  font-size: 18px;
+  color: #eee;
+  margin: 10px 0;
+}
+
+.scoring-summary strong {
+  color: #27ae60;
+  font-size: 20px;
+}
+
+.scoring-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.scoring-actions button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.scoring-actions button:hover {
+  transform: translateY(-2px);
+}
+
+.btn-save {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn-save:hover:not(:disabled) {
+  background-color: #229954;
+}
+
+.btn-save:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.btn-save:disabled:hover {
+  transform: none;
+}
+
+.btn-results {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-results:hover {
+  background-color: #2980b9;
+}
+
+.btn-home {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.btn-home:hover {
+  background-color: #7f8c8d;
+}
+
+.btn-dispute {
+  background-color: #e67e22;
+  color: white;
+}
+
+.btn-dispute:hover {
+  background-color: #d35400;
+}
+
+.disputed-badge {
+  padding: 15px 30px;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+/* Modal de Disputa */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in;
+}
+
+.modal-content {
+  background-color: #16213e;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.dispute-modal h2 {
+  color: #e67e22;
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-warning {
+  font-size: 16px;
+  color: #ecf0f1;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.modal-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 20px 0;
+}
+
+.modal-list li {
+  padding: 10px 0;
+  padding-left: 30px;
+  position: relative;
+  color: #bdc3c7;
+  line-height: 1.5;
+}
+
+.modal-list li:before {
+  content: "•";
+  position: absolute;
+  left: 10px;
+  color: #e67e22;
+  font-size: 20px;
+}
+
+.modal-confirm {
+  font-size: 17px;
+  color: #ecf0f1;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-modal-cancel,
+.btn-modal-confirm {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-modal-cancel {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.btn-modal-cancel:hover {
+  background-color: #7f8c8d;
+  transform: translateY(-2px);
+}
+
+.btn-modal-confirm {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-modal-confirm:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* TieBreak Game Styles */
+.tiebreak-group-scoring {
+  background-color: #16213e;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-left: 5px solid #f39c12;
+}
+
+.group-label {
+  color: #f39c12;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #0f3460;
+}
+
+.active-teams-section {
+  margin-bottom: 15px;
+}
+
+.team-scoring-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px;
+  background-color: #0f3460;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 3px solid transparent;
+  position: relative;
+}
+
+.team-scoring-card:hover {
+  transform: translateX(5px);
+  border-color: #3498db;
+}
+
+.team-scoring-card.selected {
+  background-color: #27ae60;
+  border-color: #27ae60;
+}
+
+.team-scoring-card.resolved {
+  background-color: #7f8c8d;
+  cursor: default;
+  opacity: 0.7;
+}
+
+.team-scoring-card.resolved:hover {
+  transform: none;
+  border-color: transparent;
+}
+
+.team-scoring-card.newly-resolved {
+  animation: resolvedPulse 1s ease-in-out 3;
+  border-color: #f1c40f;
+}
+
+@keyframes resolvedPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(241, 196, 15, 0);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(241, 196, 15, 0.6);
+  }
+}
+
+.team-scoring-info {
+  flex: 1;
+}
+
+.team-scoring-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.team-original-score {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.team-tiebreak-score {
+  font-size: 28px;
+  font-weight: bold;
+  color: #f1c40f;
+  margin-right: 15px;
+}
+
+.resolved-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f1c40f;
+  color: #0f3460;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.resolved-teams-section {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 2px dashed #0f3460;
+}
+
+.resolved-label {
+  color: #bbb;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.btn-next-question-tiebreak {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-next-question-tiebreak:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(52, 152, 219, 0.4);
+}
+
+/* Resolved notification */
+.resolved-notification {
+  background: linear-gradient(135deg, #f1c40f, #f39c12);
+  color: #0f3460;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  animation: slideDown 0.5s ease-out;
+}
+
+/* Team states in tiebreak */
+.resolved-team {
+  background-color: #7f8c8d !important;
+  opacity: 0.6;
+}
+
+.not-participating {
+  opacity: 0.4;
+}
+
+.newly-resolved-highlight {
+  animation: highlightPulse 2s ease-in-out 3;
+}
+
+@keyframes highlightPulse {
+  0%, 100% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(241, 196, 15, 0.3);
+  }
+}
+
+.resolved-tag {
+  margin-left: 10px;
+  padding: 4px 10px;
+  background-color: #27ae60;
+  color: white;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.not-participating-tag {
+  margin-left: 10px;
+  padding: 4px 10px;
+  background-color: #95a5a6;
+  color: white;
+  border-radius: 12px;
+  font-size: 11px;
+}
+
+.score-detail {
+  font-size: 12px;
+  color: #bbb;
+}
+

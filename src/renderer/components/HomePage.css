@@ -1,0 +1,284 @@
+.home-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.rotary-logo {
+  width: 80px;
+  height: 80px;
+  animation: rotateGear 8s linear infinite;
+}
+
+@keyframes rotateGear {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.home-header h1 {
+  color: #F7A81B;
+  font-size: 48px;
+  margin: 0;
+}
+
+.home-subtitle {
+  color: #bbb;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.test-mode-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.test-mode-label {
+  color: #bbb;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.test-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 0.3s;
+}
+
+.test-mode-toggle:hover {
+  transform: scale(1.05);
+}
+
+.toggle-track {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background-color: #555;
+  border-radius: 13px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+}
+
+.test-mode-toggle.active .toggle-track {
+  background-color: #27ae60;
+}
+
+.toggle-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  display: block;
+}
+
+.test-mode-toggle.active .toggle-thumb {
+  transform: translateX(24px);
+}
+
+.toggle-text {
+  color: #bbb;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 30px;
+}
+
+.test-mode-toggle.active .toggle-text {
+  color: #27ae60;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.home-card {
+  background-color: #16213e;
+  border: 3px solid #0f3460;
+  border-radius: 15px;
+  padding: 40px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(233, 69, 96, 0.3);
+  border-color: #e94560;
+}
+
+.card-icon {
+  font-size: 64px;
+  margin-bottom: 10px;
+}
+
+.home-card h2 {
+  color: #e94560;
+  font-size: 24px;
+  margin: 0;
+}
+
+.home-card p {
+  color: #bbb;
+  font-size: 14px;
+  margin: 0;
+}
+
+.teams-card:hover {
+  border-color: #3498db;
+}
+
+.teams-card:hover h2 {
+  color: #3498db;
+}
+
+.questions-card:hover {
+  border-color: #f39c12;
+}
+
+.questions-card:hover h2 {
+  color: #f39c12;
+}
+
+.approximations-card:hover {
+  border-color: #e74c3c;
+}
+
+.approximations-card:hover h2 {
+  color: #e74c3c;
+}
+
+.contests-card:hover {
+  border-color: #9b59b6;
+}
+
+.contests-card:hover h2 {
+  color: #9b59b6;
+}
+
+.standings-card:hover {
+  border-color: #8e44ad;
+}
+
+.standings-card:hover h2 {
+  color: #8e44ad;
+}
+
+.new-contest-card:hover {
+  border-color: #27ae60;
+}
+
+.new-contest-card:hover h2 {
+  color: #27ae60;
+}
+
+.rules-card:hover {
+  border-color: #f39c12;
+}
+
+.rules-card:hover h2 {
+  color: #f39c12;
+}
+
+.docs-card:hover {
+  border-color: #16a085;
+}
+
+.docs-card:hover h2 {
+  color: #16a085;
+}
+
+/* Botones de backup */
+.backup-actions {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.btn-export,
+.btn-import {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-export {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+}
+
+.btn-export:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.btn-import {
+  background: linear-gradient(135deg, #27ae60, #229954);
+  color: white;
+}
+
+.btn-import:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}
+
+@media (max-width: 768px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+  
+  .backup-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+}

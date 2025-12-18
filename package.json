@@ -1,0 +1,61 @@
+{
+  "name": "justa-del-saber",
+  "version": "1.1.0",
+  "description": "Justa del Saber - Aplicación de escritorio para gestionar certámenes de trivia",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "concurrently \"npm run build:watch\" \"npm run electron:dev\"",
+    "build": "tsc && vite build",
+    "build:watch": "tsc && vite build --watch",
+    "electron:dev": "wait-on http://localhost:5173 && electron .",
+    "package": "electron-builder"
+  },
+  "keywords": [
+    "trivia",
+    "electron",
+    "react",
+    "typescript"
+  ],
+  "author": "germen",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8",
+    "wait-on": "^7.2.0"
+  },
+  "dependencies": {
+    "jspdf": "^3.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "build": {
+    "appId": "com.justadelsaber.app",
+    "productName": "Justa del Saber",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "package.json",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": [
+        "portable",
+        "zip"
+      ],
+      "icon": "assets/rotary-logo.png"
+    },
+    "portable": {
+      "artifactName": "Justa-del-Saber-Portable.exe"
+    }
+  }
+}
