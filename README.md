@@ -2,7 +2,15 @@
 
 Aplicación de escritorio desarrollada con Electron, React y TypeScript para gestionar competencias de trivia de forma integral.
 
-Este proyecto nace como una iniciativa autogestiva tras participar en un evento real organizado por el Rotary Club, donde detecté fricciones en la dinámica del juego y oportunidades claras de mejora en la experiencia.
+## 🎯 Contexto
+
+Este proyecto surge tras participar en una trivia organizada por el Rotary Club, donde detecté problemas en la dinámica del evento:
+
+- dificultad para seguir puntajes
+- confusión en desempates
+- experiencia poco clara para el público
+
+Decidí desarrollar una solución que mejore tanto la operación como la experiencia del juego.
 
 ---
 
@@ -36,7 +44,10 @@ Algunas decisiones clave durante el desarrollo:
 - **Timer con alerta sonora:** genera tensión y mejora la dinámica del juego  
 - **Persistencia local:** evita depender de conectividad durante el evento  
 - **Bancos reutilizables:** separación de equipos y preguntas para facilitar reutilización  
-- **Visualización en tiempo real:** foco en que tanto participantes como público puedan seguir el estado del juego  
+- **Visualización en tiempo real:** foco en que tanto participantes como público puedan seguir el estado del juego
+- **Persistencia Histórica:** ahora existe una tabla histórica que permite persistir el rendimiento de los equipos entre distintas ediciones
+- **Puntaje adicional por desempates:** mantiene inalterada la resolución y agrega valor a la tabla general histórica del equipo
+- **Premio Boomerang:** agrega valor a la tabla histórica del equipo al premiar el "arrojo" cuando un equipo gana la última instancia de desempate
 
 ---
 
@@ -58,7 +69,7 @@ Algunas decisiones clave durante el desarrollo:
 
 ### Modo de Prueba
 
-- El timer se ajusta a 0 para poder probar el flujo sin esperar
+- El timer se ajusta a 0s para poder probar el flujo sin esperar
 - Los resultados en este modo no persisten en la tabla general
 
 ### Sistema de puntuación
