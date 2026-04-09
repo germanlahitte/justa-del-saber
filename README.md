@@ -2,6 +2,16 @@
 
 Aplicación de escritorio desarrollada con Electron, React y TypeScript para gestionar competencias de trivia de forma integral.
 
+## 🖼️ Vista general
+
+![demo](assets/demo.gif)
+
+### 📷 Capturas
+
+![menu](assets/menu.png)
+![podio](assets/podio.png)
+![tabla](assets/tablaHistorica.png)
+
 ## 🎯 Contexto
 
 Este proyecto surge tras participar en una trivia organizada por el Rotary Club, donde detecté problemas en la dinámica del evento:
@@ -57,7 +67,7 @@ Algunas decisiones clave durante el desarrollo:
 
 - Banco de equipos con persistencia local  
 - Banco de preguntas (opción múltiple)  
-- Banco de preguntas de aproximación (numéricas)  
+- Banco de preguntas de aproximación (numéricas)
 
 ### Certámenes
 
@@ -88,6 +98,11 @@ Algunas decisiones clave durante el desarrollo:
 - Tabla histórica de certámenes  
 - Medallero (oro, plata, bronce)  
 - Métricas por equipo (puntos, participaciones, promedios)  
+
+### Persistencia
+
+- Memoria Local
+- Exportar e Importar Datos
 
 ---
 
@@ -174,3 +189,7 @@ MIT
 ## 👤 Autor
 
 germen
+
+## 🎥 Demo completa
+
+![demo](assets/demo.mp4)
