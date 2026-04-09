@@ -184,7 +184,8 @@ Pasar de un enfoque más exploratorio a uno más estructurado (SDD)
 
 ## 📄 Licencia
 
-MIT
+Este proyecto está bajo licencia MIT.  
+Podés usarlo libremente respetando los términos de la licencia.
 
 ## 👤 Autor
 
