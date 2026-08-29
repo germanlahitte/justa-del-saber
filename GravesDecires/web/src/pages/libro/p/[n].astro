@@ -575,17 +575,20 @@ const layoutTitle = isPortada ? `Página ${pageNumber}` : `Página ${L}–${R}`;
 
         {/* Reading TRIGGER chrome — below the sheets, never inside them (so
             sheet heights are unaffected). Each panel renders its OWN
-            triggers under its OWN sheet; columns with no readings render
-            nothing (no placeholder). */}
+            triggers under its OWN sheet. BOTH columns are always emitted so
+            the badges align under their own sheet even when one page of a
+            spread has no readings: a lone centered column would otherwise
+            drift over the blank page's "intencionalmente en blanco" legend
+            (e.g. p50 blank + p51 "Si me estás buscando"). Columns with no
+            triggers render nothing inside (the column is just an empty
+            slot). */}
         <div class="readings-row">
-          {leftReadingUnits.length > 0 && (
-            <div class:list={['readings-col', activePanelIsLeft && 'is-active']} data-page={L}>
-              {leftReadingUnits.map((unit) => (
-                <ReadingDrawer client:load readings={leftProps.readingsByUnit.get(unit)!} currentUnit={unit} />
-              ))}
-            </div>
-          )}
-          {!isPortada && rightProps && rightReadingUnits.length > 0 && (
+          <div class:list={['readings-col', activePanelIsLeft && 'is-active']} data-page={L}>
+            {leftReadingUnits.map((unit) => (
+              <ReadingDrawer client:load readings={leftProps.readingsByUnit.get(unit)!} currentUnit={unit} />
+            ))}
+          </div>
+          {!isPortada && rightProps && (
             <div class:list={['readings-col', !activePanelIsLeft && 'is-active']} data-page={R}>
               {rightReadingUnits.map((unit) => (
                 <ReadingDrawer client:load readings={rightProps!.readingsByUnit.get(unit)!} currentUnit={unit} />
