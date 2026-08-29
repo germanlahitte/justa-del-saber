@@ -1,0 +1,234 @@
+OLD unit_count: 47, NEW unit_count: 46
+units missing in NEW: [47]
+units added in NEW: []
+
+--- unit 11 CHANGED ---
+  range: [365, 408] -> [365, 400]
+  assets (by identity): ['image21'] -> ['image21', 'image27']
+
+--- unit 12 CHANGED ---
+  range: [409, 444] -> [401, 456]
+  text differs (old 26 words, new 176 words)
+  song_credits: [('Memoria de siglos', 'Hermética', 'Ácido Argentino', 1991)] -> [('Memoria de siglos', 'Hermética', 'Ácido Argentino', 1991), ('Presa fácil', 'Almafuerte', 'Del entorno', 1996)]
+  assets (by identity): ['image27', 'image40'] -> ['image23', 'image40']
+
+--- unit 13 CHANGED ---
+  range: [445, 472] -> [457, 474]
+  text differs (old 150 words, new 219 words)
+  song_credits: [('Presa fácil', 'Almafuerte', 'Del entorno', 1996)] -> [('Lucero del alba', 'Almafuerte', 'Del Entorno', 1996)]
+  assets (by identity): ['image23'] -> ['image12']
+
+--- unit 14 CHANGED ---
+  range: [473, 490] -> [475, 529]
+  text differs (old 219 words, new 220 words)
+  song_credits: [('Lucero del alba', 'Almafuerte', 'Del Entorno', 1996)] -> [('Los delirios del defacto', 'Almafuerte', 'Del entorno', 1996), ('De un mañana bajo tierra', 'Almafuerte', 'Piedra Libre', 2001)]
+  assets (by identity): ['image12'] -> ['image26', 'image53']
+
+--- unit 15 CHANGED ---
+  range: [491, 545] -> [530, 556]
+  text differs (old 220 words, new 49 words)
+  headings: [] -> ['Domesticación', '“Están adorando un santo de madera”']
+  song_credits: [('Los delirios del defacto', 'Almafuerte', 'Del entorno', 1996), ('De un mañana bajo tierra', 'Almafuerte', 'Piedra Libre', 2001)] -> [('Cautivos del sistema', 'V8', 'Un paso más en la batalla', 1984)]
+  assets (by identity): ['image26', 'image53'] -> ['image52']
+
+--- unit 16 CHANGED ---
+  range: [546, 572] -> [557, 611]
+  text differs (old 49 words, new 0 words)
+  headings: ['Domesticación', '“Están adorando un santo de madera”'] -> []
+  song_credits: [('Cautivos del sistema', 'V8', 'Un paso más en la batalla', 1984)] -> []
+  assets (by identity): ['image52'] -> ['image19']
+
+--- unit 17 CHANGED ---
+  range: [573, 627] -> [612, 635]
+  text differs (old 0 words, new 110 words)
+  assets (by identity): ['image19'] -> []
+
+--- unit 18 CHANGED ---
+  range: [628, 651] -> [636, 651]
+  text differs (old 110 words, new 55 words)
+  song_credits: [] -> [('Ser humano junto a los míos', 'Almafuerte', 'Almafuerte', 1998)]
+  assets (by identity): [] -> ['image49']
+
+--- unit 19 CHANGED ---
+  range: [652, 667] -> [652, 715]
+  text differs (old 55 words, new 319 words)
+  song_credits: [('Ser humano junto a los míos', 'Almafuerte', 'Almafuerte', 1998)] -> [('1999', 'Almafuerte', 'Del Entorno', 1996), ('Sentir indiano', 'Almafuerte', 'Mundo Guanaco', 1995), ('Del más allá', 'Almafuerte', 'Almafuerte', 1998)]
+  assets (by identity): ['image49'] -> ['image2', 'image3', 'image44']
+
+--- unit 20 CHANGED ---
+  range: [668, 731] -> [716, 726]
+  text differs (old 319 words, new 0 words)
+  song_credits: [('1999', 'Almafuerte', 'Del Entorno', 1996), ('Sentir indiano', 'Almafuerte', 'Mundo Guanaco', 1995), ('Del más allá', 'Almafuerte', 'Almafuerte', 1998)] -> []
+  assets (by identity): ['image2', 'image3', 'image44'] -> ['image54']
+
+--- unit 21 CHANGED ---
+  range: [732, 742] -> [727, 802]
+  text differs (old 0 words, new 161 words)
+  headings: [] -> ['Destrucción del entramado social', '“El Vaciamiento”']
+  song_credits: [] -> [('El fin de los inicuos', 'V8', 'El fin de los inicuos', 1986)]
+  assets (by identity): ['image54'] -> ['image16', 'image29', 'image7']
+
+--- unit 22 CHANGED ---
+  range: [743, 818] -> [803, 812]
+  text differs (old 161 words, new 89 words)
+  headings: ['Destrucción del entramado social', '“El Vaciamiento”'] -> []
+  song_credits: [('El fin de los inicuos', 'V8', 'El fin de los inicuos', 1986)] -> [('En las calles de Liniers', 'Hermética', 'Ácido Argentino', 1991)]
+  assets (by identity): ['image16', 'image29', 'image7'] -> ['image28']
+
+--- unit 23 CHANGED ---
+  range: [819, 828] -> [813, 843]
+  text differs (old 89 words, new 141 words)
+  song_credits: [('En las calles de Liniers', 'Hermética', 'Ácido Argentino', 1991)] -> [('Gil Trabajador', 'Hermética', 'Ácido Argentino', 1991)]
+  assets (by identity): ['image28'] -> ['image11']
+
+--- unit 24 CHANGED ---
+  range: [829, 859] -> [844, 859]
+  text differs (old 141 words, new 134 words)
+  song_credits: [('Gil Trabajador', 'Hermética', 'Ácido Argentino', 1991)] -> [('Como estaba ahí Dios', 'Almafuerte', 'Ultimando', 2003)]
+  assets (by identity): ['image11'] -> ['image5']
+
+--- unit 25 CHANGED ---
+  range: [860, 875] -> [860, 872]
+  text differs (old 134 words, new 80 words)
+  song_credits: [('Como estaba ahí Dios', 'Almafuerte', 'Ultimando', 2003)] -> [('Hacia el abismo', 'Almafuerte', 'Del entorno', 1996)]
+  assets (by identity): ['image5'] -> ['image20']
+
+--- unit 26 CHANGED ---
+  range: [876, 888] -> [873, 891]
+  text differs (old 80 words, new 0 words)
+  song_credits: [('Hacia el abismo', 'Almafuerte', 'Del entorno', 1996)] -> []
+  assets (by identity): ['image20'] -> ['image43']
+
+--- unit 27 CHANGED ---
+  range: [889, 907] -> [892, 917]
+  text differs (old 0 words, new 762 words)
+  assets (by identity): ['image43'] -> []
+
+--- unit 28 CHANGED ---
+  range: [908, 933] -> [918, 930]
+  text differs (old 762 words, new 99 words)
+  headings: [] -> ['Los Nadies', '“Sin poder esquivar el dolor ajeno”']
+  song_credits: [] -> [('Si me estás buscando', 'Almafuerte', 'A fondo blanco', 1999)]
+  assets (by identity): [] -> ['image46']
+
+--- unit 29 CHANGED ---
+  range: [934, 946] -> [931, 937]
+  text differs (old 99 words, new 61 words)
+  headings: ['Los Nadies', '“Sin poder esquivar el dolor ajeno”'] -> []
+  song_credits: [('Si me estás buscando', 'Almafuerte', 'A fondo blanco', 1999)] -> [('El visitante', 'Almafuerte', 'A fondo blanco', 1999)]
+  assets (by identity): ['image46'] -> ['image42']
+
+--- unit 30 CHANGED ---
+  range: [947, 953] -> [938, 961]
+  text differs (old 61 words, new 107 words)
+  song_credits: [('El visitante', 'Almafuerte', 'A fondo blanco', 1999)] -> [('Hospitalarias Realidades', 'Hermética', 'Víctimas del vaciamiento', 1994)]
+  assets (by identity): ['image42'] -> ['image47']
+
+--- unit 31 CHANGED ---
+  range: [954, 977] -> [962, 985]
+  text differs (old 107 words, new 211 words)
+  song_credits: [('Hospitalarias Realidades', 'Hermética', 'Víctimas del vaciamiento', 1994)] -> [('Sirva otra vuelta, pulpero', 'Almafuerte', 'Piedra Libre', 2001)]
+  assets (by identity): ['image47'] -> ['image1']
+
+--- unit 32 CHANGED ---
+  range: [978, 986] -> [986, 1009]
+  text differs (old 211 words, new 45 words)
+  song_credits: [('Sirva otra vuelta, pulpero', 'Almafuerte', 'Piedra Libre', 2001)] -> [('Amanecer en Open Door', 'Almafuerte', 'Piedra Libre', 2001)]
+  assets (by identity): ['image1'] -> ['image6']
+
+--- unit 33 CHANGED ---
+  range: [987, 1010] -> [1010, 1034]
+  text differs (old 45 words, new 113 words)
+  song_credits: [('Amanecer en Open Door', 'Almafuerte', 'Piedra Libre', 2001)] -> [('Regresando', 'Almafuerte', 'Piedra libre', 2001)]
+  assets (by identity): ['image6'] -> ['image18']
+
+--- unit 34 CHANGED ---
+  range: [1011, 1035] -> [1035, 1048]
+  text differs (old 113 words, new 48 words)
+  headings: [] -> ['Desarrollo de la subjetividad', 'La libertad individual']
+  song_credits: [('Regresando', 'Almafuerte', 'Piedra libre', 2001)] -> [('Camino al sepulcro', 'V8', 'Un paso más en la batalla', 1984)]
+  assets (by identity): ['image18'] -> ['image8']
+
+--- unit 35 CHANGED ---
+  range: [1036, 1049] -> [1049, 1063]
+  text differs (old 48 words, new 163 words)
+  headings: ['Desarrollo de la subjetividad', 'La libertad individual'] -> []
+  song_credits: [('Camino al sepulcro', 'V8', 'Un paso más en la batalla', 1984)] -> [('Ideando la fuga', 'V8', 'Un paso más en la batalla', 1984)]
+  assets (by identity): ['image8'] -> ['image36']
+
+--- unit 36 CHANGED ---
+  range: [1050, 1064] -> [1064, 1092]
+  text differs (old 163 words, new 146 words)
+  song_credits: [('Ideando la fuga', 'V8', 'Un paso más en la batalla', 1984)] -> [('Tu eres su seguridad', 'Hermética', 'Hermética', 1989)]
+  assets (by identity): ['image36'] -> ['image30']
+
+--- unit 37 CHANGED ---
+  range: [1065, 1093] -> [1093, 1109]
+  text differs (old 146 words, new 75 words)
+  song_credits: [('Tu eres su seguridad', 'Hermética', 'Hermética', 1989)] -> [('Se vos', 'Almafuerte', 'Almafuerte', 1998)]
+  assets (by identity): ['image30'] -> ['image31']
+
+--- unit 38 CHANGED ---
+  range: [1094, 1110] -> [1110, 1131]
+  text differs (old 75 words, new 138 words)
+  headings: [] -> ['La libertad de todos', '“Lo soñamos ayer', 'Y lo cumplimos hoy”']
+  song_credits: [('Se vos', 'Almafuerte', 'Almafuerte', 1998)] -> [('Antes que los Viejos Reyes', 'V8', 'El fin de los inicuos', 1986)]
+  assets (by identity): ['image31'] -> ['image13', 'image39']
+
+--- unit 39 CHANGED ---
+  range: [1111, 1132] -> [1132, 1153]
+  text differs (old 138 words, new 93 words)
+  headings: ['La libertad de todos', '“Lo soñamos ayer', 'Y lo cumplimos hoy”'] -> []
+  song_credits: [('Antes que los Viejos Reyes', 'V8', 'El fin de los inicuos', 1986)] -> [('Ayer deseo, hoy realidad', 'Hermética', 'Víctimas del vaciamiento', 1994), ('Debes saberlo', 'Almafuerte', 'Toro y Pampa', 2006)]
+  assets (by identity): ['image13', 'image39'] -> ['image15', 'image22']
+
+--- unit 40 CHANGED ---
+  range: [1133, 1154] -> [1154, 1169]
+  text differs (old 93 words, new 92 words)
+  song_credits: [('Ayer deseo, hoy realidad', 'Hermética', 'Víctimas del vaciamiento', 1994), ('Debes saberlo', 'Almafuerte', 'Toro y Pampa', 2006)] -> [('Hoy es', 'Almafuerte', 'A fondo blanco', 1999)]
+  assets (by identity): ['image15', 'image22'] -> ['image33']
+
+--- unit 41 CHANGED ---
+  range: [1155, 1170] -> [1170, 1195]
+  text differs (old 92 words, new 114 words)
+  song_credits: [('Hoy es', 'Almafuerte', 'A fondo blanco', 1999)] -> [('Todo es en vano si no hay amor', 'Almafuerte', 'Ultimando', 2003)]
+  assets (by identity): ['image33'] -> ['image45']
+
+--- unit 42 CHANGED ---
+  range: [1171, 1196] -> [1196, 1220]
+  text differs (old 114 words, new 103 words)
+  song_credits: [('Todo es en vano si no hay amor', 'Almafuerte', 'Ultimando', 2003)] -> [('Orgullo argentino', 'Almafuerte', 'Piedra libre', 2001)]
+  assets (by identity): ['image45'] -> ['image48']
+
+--- unit 43 CHANGED ---
+  range: [1197, 1221] -> [1221, 1245]
+  text differs (old 103 words, new 149 words)
+  song_credits: [('Orgullo argentino', 'Almafuerte', 'Piedra libre', 2001)] -> [('Patria al hombro', 'Almafuerte', 'Ultimando', 2003)]
+  assets (by identity): ['image48'] -> ['image37']
+
+--- unit 44 CHANGED ---
+  range: [1222, 1246] -> [1246, 1336]
+  text differs (old 149 words, new 919 words)
+  song_credits: [('Patria al hombro', 'Almafuerte', 'Ultimando', 2003)] -> []
+  assets (by identity): ['image37'] -> []
+
+--- unit 45 CHANGED ---
+  range: [1247, 1337] -> [1337, 1393]
+  text differs (old 919 words, new 0 words)
+  assets (by identity): [] -> ['image50']
+
+--- unit 46 CHANGED ---
+  range: [1338, 1394] -> [1394, 1448]
+  text differs (old 0 words, new 375 words)
+  headings: [] -> ['“Si me ves volver,', 'no me atiendas', 'ni me abras la puerta.', 'Loco, solitario', 'y enredado,', 'no soy yo”']
+  song_credits: [] -> [('Por ser yo', 'Almafuerte', 'Piedra libre', 2001)]
+  assets (by identity): ['image50'] -> ['image34', 'image55']
+
+
+SUMMARY:
+  identical units: 10
+  units with paragraph_range diff: 36
+  units with text diff: 35
+  units with headings diff: 11
+  units with song_credits diff: 32
+  units with asset-identity diff: 36

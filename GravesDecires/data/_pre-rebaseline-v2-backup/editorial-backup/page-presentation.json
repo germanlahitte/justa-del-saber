@@ -1,0 +1,49 @@
+{
+  "_meta": {
+    "source": "EDITORIAL",
+    "purpose": "Decisiones de ADAPTACIÓN VISUAL de cada página para la web. No contiene contenido BOOK: solo declara qué variante de presentación (layout/role) usar al renderizar cada página física, dejando que el componente lea el texto/assets reales desde BOOK vía page-model.json.",
+    "layer_boundary": "BOOK = contenido original. PAGE MODEL (data/page-model.json) = distribución física real derivada del PDF. PAGE PRESENTATION (este archivo) = decisión editorial de qué variante visual usar; nunca duplica texto de BOOK.",
+    "layouts": {
+      "default": "Composición estándar de lectura: título(s) + texto + assets en orden de documento, con SongReference/QR en el pie si corresponde.",
+      "band-role": "Composición especial reservada para las 3 páginas de presentación de bandas (V8/La Estética, Hermética/La Ética, Almafuerte/La Síntesis): frase corta opcional arriba a la derecha, título de rol, letra/declaración, reseña breve de la banda abajo a la derecha, SongReference/QR en el pie.",
+      "blank": "Página intencionalmente en blanco en el original. La superficie de la página permanece vacía; el chrome del lector puede indicar discretamente 'Página intencionalmente en blanco' fuera del área de la página.",
+      "visual-only": "Página cuyo único contenido original es una imagen/QR, sin bloques de texto. Se muestra el asset centrado, sin inventar texto de relleno."
+    },
+    "rule": "Este archivo declara SOLO page -> layout/role. Nunca contenido. Si una página no aparece aquí, se asume 'default' salvo que page-model.json ya la marque is_blank_or_folio_only o is_visual_only (en cuyo caso el layout correspondiente se infiere automáticamente en build-time, sin necesidad de declaración editorial)."
+  },
+  "pages": [
+    {
+      "page": 6,
+      "layout": "band-role",
+      "role": {
+        "band": "V8",
+        "role_label": "La Estética",
+        "short_phrase_book_unit": 3,
+        "short_phrase_note": "\"Loco, V8 ponganlé. Como el motor\" — epígrafe corto que abre la presentación de las tres bandas, impreso en la misma unidad."
+      },
+      "note": "Primera de las tres páginas de presentación de bandas (V8/Hermética/Almafuerte). Ver PROJECT-BRIEF §6 y MASTER MAP band_meta_axis para el significado editorial de esta secuencia — esa lectura vive en FUTURE-ANALYSIS, no aquí."
+    },
+    {
+      "page": 7,
+      "layout": "band-role",
+      "role": {
+        "band": "Hermética",
+        "role_label": "La Ética",
+        "short_phrase_book_unit": null,
+        "short_phrase_note": "Esta página no repite una frase corta propia; continúa directamente con el título de rol."
+      },
+      "note": "Segunda de las tres páginas de presentación de bandas."
+    },
+    {
+      "page": 8,
+      "layout": "band-role",
+      "role": {
+        "band": "Almafuerte",
+        "role_label": "La Síntesis",
+        "short_phrase_book_unit": null,
+        "short_phrase_note": "Esta página no repite una frase corta propia; continúa directamente con el título de rol."
+      },
+      "note": "Tercera de las tres páginas de presentación de bandas. Corregido en la re-baseline: el DOCX nuevo resuelve 'La Síntesis' con estilo Heading2 (antes carecía de estilo) y ubica el QR de la canción en esta misma página (antes aparecía huérfano en la página 9 visual-only)."
+    }
+  ]
+}

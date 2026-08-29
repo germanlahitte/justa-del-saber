@@ -1,0 +1,54 @@
+---
+// Renders an ORIGINAL asset (QR or editorial photo) exactly as extracted
+// from the DOCX, served byte-for-byte via /api/asset/[file] (see that
+// endpoint's comment for why it's not duplicated into public/).
+import type { CollectionEntry } from 'astro:content';
+import SourceTag from './SourceTag.astro';
+
+interface Props {
+  asset: CollectionEntry<'assets'>;
+  editorialNote?: string;
+}
+const { asset, editorialNote } = Astro.props;
+const fileName = asset.data.extracted_file.split('/').pop()!;
+const isQr = asset.data.type === 'qr';
+---
+
+<figure class="flex flex-col items-start gap-2">
+  <div
+    class:list={[
+      'border border-rule bg-paper-dim/40 p-2',
+      isQr ? 'w-28' : 'w-full max-w-sm',
+    ]}
+  >
+    <img
+      src={`/api/asset/${fileName}`}
+      alt={isQr ? 'Código QR original del libro' : 'Fotografía original del libro'}
+      width={isQr ? 148 : undefined}
+      loading="lazy"
+      class="block w-full"
+    />
+  </div>
+  <figcaption class="flex flex-col gap-1 font-mono text-[11px] text-ink-faint">
+    <span class="flex items-center gap-2">
+      <SourceTag source="ASSET" />
+      p.{asset.data.pdf_page}
+    </span>
+    {isQr && asset.data.qr_value && (
+      <a
+        href={asset.data.qr_value}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-accent underline decoration-dotted underline-offset-2"
+      >
+        Escuchar / abrir enlace original →
+      </a>
+    )}
+    {editorialNote && (
+      <span class="flex items-start gap-2">
+        <SourceTag source="EDITORIAL" />
+        <span>{editorialNote}</span>
+      </span>
+    )}
+  </figcaption>
+</figure>

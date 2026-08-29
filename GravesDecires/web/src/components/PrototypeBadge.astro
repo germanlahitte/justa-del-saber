@@ -1,0 +1,16 @@
+---
+// Explicit, visible marker for prototype-only surfaces/controls, per the
+// user's instruction: "Puede haber rutas o controles todavía no
+// funcionales si están claramente identificados como parte del prototipo."
+interface Props {
+  label?: string;
+}
+const { label = 'Prototipo — no funcional' } = Astro.props;
+---
+
+<span
+  class="inline-flex items-center gap-1 rounded-full border border-dashed border-ink-faint px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide text-ink-faint"
+  title="Esta superficie o control es parte del prototipo visual v0.1 y todavía no tiene funcionalidad completa."
+>
+  ● {label}
+</span>

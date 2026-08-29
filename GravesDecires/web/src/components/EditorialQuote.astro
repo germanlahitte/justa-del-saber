@@ -1,0 +1,41 @@
+---
+// EditorialQuote — editorial presentation of a cited prose quote (kind:
+// 'quote') or a lyric/music excerpt (kind: 'excerpt') over existing BOOK
+// blocks (decisions 2/19 of PAGE-REVIEW). Renders right-aligned and italic.
+// The text arrives ALREADY RESOLVED from the `pages` collection (verbatim
+// text_verbatim_slice joined with "\n" preserved); this component only adds
+// presentation — never invents or re-matches copy.
+//
+// separator=true adds a GREATER vertical gap above the quote (used for the
+// SECOND of two excerpts on the same page, e.g. p13/p65, so the two blocks
+// read as clearly distinct).
+interface Props {
+  quoteText: string;
+  attribution?: string | null;
+  kind?: 'excerpt' | 'quote';
+  separator?: boolean;
+}
+
+const {
+  quoteText,
+  attribution = null,
+  kind = 'excerpt',
+  separator = false,
+} = Astro.props;
+---
+
+<blockquote data-kind={kind} class="ml-auto max-w-[85%] text-right">
+  <p
+    class:list={[
+      'whitespace-pre-line text-lg leading-relaxed italic text-ink',
+      separator ? 'mt-10' : 'mt-2',
+    ]}
+  >
+    {quoteText}
+  </p>
+  {attribution && (
+    <footer class="mt-2 whitespace-pre-line text-right font-mono text-xs text-ink-faint not-italic">
+      {attribution}
+    </footer>
+  )}
+</blockquote>

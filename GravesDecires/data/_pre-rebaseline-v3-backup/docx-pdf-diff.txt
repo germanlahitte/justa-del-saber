@@ -1,0 +1,8 @@
+docx words: 7854, pdf words: 7853
+similarity ratio: 0.9999
+diff blocks: 1
+
+--- DELETE  (context: ...Estuvieron activos desde 1995 a 2016 y publicaron)
+  DOCX: '8'
+  PDF : ''
+

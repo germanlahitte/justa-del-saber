@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PrototypeBadge from '../../components/PrototypeBadge.astro';
+import { getCollection } from 'astro:content';
+
+const concepts = (await getCollection('concepts')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name, 'es'),
+);
+---
+
+<Layout title="Conceptos">
+  <main class="mx-auto max-w-3xl px-6 py-14 sm:px-10">
+    <a href="/" class="font-mono text-xs uppercase tracking-wide text-ink-faint hover:text-ink">← Portada</a>
+    <header class="mt-6 mb-8 flex items-start justify-between gap-4">
+      <div>
+        <h1 class="text-3xl font-normal">Conceptos</h1>
+        <p class="prose-book mt-2 text-sm text-ink-soft">{concepts.length} conceptos canónicos (CONCEPTS v0.3).</p>
+      </div>
+      <PrototypeBadge label="Sugerido: concept-integridad" />
+    </header>
+    <div class="grid gap-2 sm:grid-cols-2">
+      {concepts.map((c) => (
+        <a
+          href={`/conceptos/${c.id}`}
+          class="rounded-sm border border-rule px-3 py-2 text-sm text-ink-soft hover:border-accent hover:text-accent"
+        >
+          {c.data.name}
+        </a>
+      ))}
+    </div>
+  </main>
+</Layout>

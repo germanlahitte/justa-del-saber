@@ -1,0 +1,647 @@
+---
+// MODO LEER — corrected primary surface (v0.2, re-baseline V2): navigation
+// is by PHYSICAL PAGE (1..78), matching the real PDF pagination, not by
+// BookUnit. See
+// docs/web/VISUAL-PROTOTYPE-v0.2.md for the full model explanation.
+//
+// VISTA DE DOBLE PÁGINA (v0.3 prototype): on desktop the route renders a
+// REAL spread (two physical pages side by side); on mobile, one page at a
+// time. The spread is computed deterministically from the requested page:
+//   n === 1 -> spread is just [1] (portada shown alone).
+//   otherwise -> [L | R] with L = n even ? n : n - 1 and R = L + 1.
+// Blank pages (2, 51) are NEVER skipped or reordered to fill a spread —
+// they keep their real position (e.g. [2|3] shows blank p.2 on the left).
+// This is a PROTOTYPE: flat, sober, no 3D page-turn, no shadows. Only the
+// reader SHELL (chrome/navigation) changes here; page content is rendered
+// untouched by one <PageView> per physical page, each with its own
+// Readings and SourceReferences.
+import Layout from '../../../layouts/Layout.astro';
+import PageView from '../../../components/PageView.astro';
+import PageShell from '../../../components/PageShell.astro';
+import SourceReferenceFooter from '../../../components/SourceReferenceFooter.astro';
+import PageNav from '../../../components/react/PageNav';
+import SourceTag from '../../../components/SourceTag.astro';
+import { getCollection, getEntry } from 'astro:content';
+import { getToc, sectionForPage } from '../../../lib/pageIndex';
+import { getFirstPageByBookUnit } from '../../../lib/bookUnitPage';
+import ReadingDrawer from '../../../components/react/ReadingDrawer';
+import type { CollectionEntry } from 'astro:content';
+import type { ReadingSummary } from '../../../components/react/ReadingDrawer';
+import type { EditorialQuoteData } from '../../../lib/editorialQuote';
+
+type PageEntry = CollectionEntry<'pages'>;
+type PresentationEntry = CollectionEntry<'pagePresentations'>;
+type ConceptEntry = CollectionEntry<'concepts'>;
+type ReadingEntry = CollectionEntry<'readings'>;
+type AssetEntry = CollectionEntry<'assets'>;
+type SourceReferenceEntry = CollectionEntry<'sourceReferences'>;
+type PageEditorialEntry = CollectionEntry<'pageEditorial'>;
+
+// Short phrases (like "Loco, V8 ponganlé...") that a band-role page may
+// display are the FIRST text block(s) of the presentation BookUnit that
+// come BEFORE its own Heading2 — read structurally, never hardcoded by
+// page number.
+function getShortPhrase(unit: number, allPages: PageEntry[]): string | null {
+  const ownerPages = allPages.filter((p) => p.data.book_units.includes(unit)).sort((a, b) => a.data.page - b.data.page);
+  const firstPage = ownerPages[0];
+  if (!firstPage) return null;
+  const textBlocks = firstPage.data.blocks.filter((b) => b.text_verbatim_slice.trim());
+  const headingIdx = textBlocks.findIndex((b) => b.style === 'Heading2' || b.style === 'Heading1');
+  const before = headingIdx > 0 ? textBlocks.slice(0, headingIdx) : [];
+  return before.length > 0 ? before.map((b) => b.text_verbatim_slice).join(' ') : null;
+}
+
+interface ResolvedPageProps {
+  page: PageEntry;
+  presentation: PresentationEntry | undefined;
+  shortPhraseTextByUnit: Map<number, string>;
+  readingsByUnit: Map<number, ReadingSummary[]>;
+  editorialQuotes: EditorialQuoteData[];
+  editorialFooterRange: [number, number] | null;
+  suppressRanges: [number, number][];
+  photoAlignRight: boolean;
+}
+
+interface PagePropsContext {
+  allPages: PageEntry[];
+  pagePresentations: PresentationEntry[];
+  conceptById: Map<string, ConceptEntry>;
+  readingById: Map<string, ReadingEntry>;
+  pageByBookUnit: Map<number, number>;
+  allReadings: ReadingEntry[];
+  editorialAll: PageEditorialEntry[];
+}
+
+// Builds the FULL set of per-page props for ONE physical page, identical
+// for both spread panels. This is the single place that resolves
+// presentation, short phrase, Readings and the layered editorial data
+// (quotes/excerpts, p5 editorial footer, extra suppression and photo
+// alignment) per page — the anchors declared in page-editorial.json are
+// resolved HERE against page.data.blocks, never hardcoded as text.
+function buildPageProps(pageEntry: PageEntry, c: PagePropsContext): ResolvedPageProps {
+  const presentation = c.pagePresentations.find((p) => p.data.page === pageEntry.data.page);
+
+  const shortPhraseTextByUnit = new Map<number, string>();
+  if (
+    presentation?.data.role?.short_phrase_book_unit !== null &&
+    presentation?.data.role?.short_phrase_book_unit !== undefined
+  ) {
+    const unit = presentation.data.role.short_phrase_book_unit;
+    const phrase = getShortPhrase(unit, c.allPages);
+    if (phrase) shortPhraseTextByUnit.set(unit, phrase);
+  }
+
+  // PAGE -> BookUnit(s) present -> Reading(s) associated (corrected model,
+  // §"READINGS DENTRO DEL MODELO PAGINADO"): resolved per book_unit, not
+  // per whole page, so a page with two fragments from two different units
+  // keeps each unit's own Readings separate.
+  const readingsByUnit = new Map<number, ReadingSummary[]>();
+  for (const unit of pageEntry.data.book_units) {
+    const related = c.allReadings.filter((r) => r.data.book_refs.some((ref) => ref.book_unit === unit));
+    if (related.length === 0) continue;
+    readingsByUnit.set(
+      unit,
+      related.map((r) => ({
+        id: r.id,
+        title: r.data.title,
+        section: r.data.section,
+        kind: r.data.kind,
+        thesis: r.data.thesis,
+        concepts: r.data.concept_ids
+          .map((cid) => c.conceptById.get(cid))
+          .filter((concept): concept is ConceptEntry => Boolean(concept))
+          .map((concept) => ({ id: concept.id, name: concept.data.name })),
+        connections: r.data.connections
+          .map((cid) => c.readingById.get(cid))
+          .filter((conn): conn is ReadingEntry => Boolean(conn))
+          .map((conn) => ({ id: conn.id, title: conn.data.title })),
+        bookUnits: [...new Set(r.data.book_refs.map((ref) => ref.book_unit))].map((u) => ({
+          unit: u,
+          page: c.pageByBookUnit.get(u) ?? pageEntry.data.page,
+        })),
+        fullHref: `/lecturas/${r.id}`,
+      })),
+    );
+  }
+
+  // Layered EDITORIAL data (PAGE-REVIEW decisions 2/19, 5, 9).
+  const editorialForPage = c.editorialAll.filter((e) => e.data.page === pageEntry.data.page);
+
+  // Resolve each declared quote/excerpt range against THIS page's blocks:
+  // match b.docx_paragraph_index inside [lo, hi], join text_verbatim_slice
+  // preserving "\n" (verse breaks), capture the attribution line if
+  // declared. Text always comes VERBATIM from BOOK; never invented.
+  const editorialQuotes: EditorialQuoteData[] = editorialForPage
+    .filter((e) => e.data.rec_type === 'quote')
+    .map((e) => {
+      const range = e.data.docx_paragraph_range ?? [0, 0];
+      const rangeBlocks = pageEntry.data.blocks
+        .filter((b) => b.docx_paragraph_index >= range[0] && b.docx_paragraph_index <= range[1])
+        .sort((a, b) => a.docx_paragraph_index - b.docx_paragraph_index);
+      const quoteText = rangeBlocks.map((b) => b.text_verbatim_slice).join('\n');
+      let attribution: string | null = null;
+      if (e.data.attribution_docx_paragraph !== undefined) {
+        const attributionBlock = pageEntry.data.blocks.find(
+          (b) => b.docx_paragraph_index === e.data.attribution_docx_paragraph,
+        );
+        attribution = attributionBlock?.text_verbatim_slice ?? null;
+      }
+      return {
+        id: e.data.id,
+        quoteText,
+        attribution,
+        kind: e.data.kind ?? ('excerpt' as const),
+        group: e.data.group,
+        docxParagraphRange: range,
+        attributionDocxParagraph: e.data.attribution_docx_paragraph,
+      };
+    })
+    .sort((a, b) => a.docxParagraphRange[0] - b.docxParagraphRange[0]);
+
+  const footerEditorial = editorialForPage.find((e) => e.data.rec_type === 'editorial_footer');
+  const editorialFooterRange: [number, number] | null =
+    footerEditorial?.data.docx_paragraph_range ?? null;
+
+  // Extra ranges to suppress from the body once a footer represents them
+  // (e.g. p24 printed credit [408,410] — decision 9).
+  const suppressRanges: [number, number][] = editorialForPage
+    .filter((e) => e.data.rec_type === 'web_source_reference')
+    .map((e) => e.data.suppress_credit_range)
+    .filter((r): r is [number, number] => Array.isArray(r));
+
+  const photoAlignRight = editorialForPage.some((e) => e.data.photo_align_right === true);
+
+  return {
+    page: pageEntry,
+    presentation,
+    shortPhraseTextByUnit,
+    readingsByUnit,
+    editorialQuotes,
+    editorialFooterRange,
+    suppressRanges,
+    photoAlignRight,
+  };
+}
+
+// Per-page reading TRIGGER units — the set of BookUnits on THIS page that
+// have at least one associated Reading, in document order. Each unit gets
+// its OWN ReadingDrawer trigger, rendered below that page's sheet (never
+// fused across the two pages of a spread). Mirrors the units that PageView
+// used to expose before the trigger moved into reader chrome.
+function readingTriggerUnitsFor(page: PageEntry, readingsByUnit: Map<number, ReadingSummary[]>): number[] {
+  const units: number[] = [];
+  const blocks = [...page.data.blocks].sort((a, b) => a.docx_paragraph_index - b.docx_paragraph_index);
+  for (const b of blocks) {
+    const u = b.book_unit;
+    if (u !== null && u !== undefined && (readingsByUnit.get(u)?.length ?? 0) > 0 && !units.includes(u)) {
+      units.push(u);
+    }
+  }
+  return units;
+}
+
+// Dev-oriented layout label for the overflow diagnostic. Mirrors the
+// factual layout vocabulary used in docs/web/PAGE-REVIEW-v0.1.md.
+function layoutLabelFor(page: PageEntry, presentation: PresentationEntry | undefined): string {
+  if (presentation?.data.layout === 'cover') return 'cover';
+  if (presentation?.data.layout === 'band-role') return 'band-role';
+  if (presentation?.data.layout === 'right-italic') return 'right-italic';
+  if (page.data.is_blank_or_folio_only) return 'blank';
+  const hasText = page.data.blocks.some((b) => b.text_verbatim_slice.trim());
+  return hasText ? 'generic' : 'visual-only';
+}
+
+// Resolves the SourceReferenceFooter(s) for ONE page from its QR assets —
+// the route renders them into the PageShell `footer` slot (bottom-anchored),
+// never inside the page body flow.
+function footersFor(
+  page: PageEntry,
+  assetsById: Map<string, AssetEntry>,
+  sourceRefsByAssetId: Map<string, SourceReferenceEntry>,
+): { sourceRef: SourceReferenceEntry; qrAsset: AssetEntry | undefined }[] {
+  const qrAssetIds = page.data.assets.filter((id) => assetsById.get(id)?.data.type === 'qr');
+  return qrAssetIds
+    .map((aid) => {
+      const sourceRef = sourceRefsByAssetId.get(aid);
+      return sourceRef ? { sourceRef, qrAsset: assetsById.get(aid) } : null;
+    })
+    .filter((x): x is { sourceRef: SourceReferenceEntry; qrAsset: AssetEntry | undefined } => Boolean(x));
+}
+
+// WEB-only source-reference footers (decision 9): an EDITORIAL web
+// association that REUSES a canonical SourceReference by qr_asset_id
+// (sourceRefsByAssetId is keyed on qr_asset_id) WITHOUT creating a
+// duplicate SourceReference entry. Used on p24 for "Memoria de Siglos" —
+// the QR is only printed on paper at its source page (p13), but on WEB the
+// reader on p24 should see the SAME QR for that song, so we resolve the
+// canonical QR asset and render the footer WITH it.
+// Because the canonical reference's pdf_page is the page where it was FIRST
+// printed (p13), the footer label must be overridden to the page the reader
+// is CURRENTLY on (p24), so it never shows p.13 while we are on p.24.
+function webFootersFor(
+  page: PageEntry,
+  allEditorial: PageEditorialEntry[],
+  sourceRefsByAssetId: Map<string, SourceReferenceEntry>,
+  assetsById: Map<string, AssetEntry>,
+): { sourceRef: SourceReferenceEntry; qrAsset: AssetEntry | undefined; pageLabelOverride: number }[] {
+  return allEditorial
+    .filter((e) => e.data.rec_type === 'web_source_reference' && e.data.page === page.data.page)
+    .map((e) => sourceRefsByAssetId.get(e.data.qr_asset_id ?? ''))
+    .filter((s): s is SourceReferenceEntry => Boolean(s))
+    .map((sourceRef) => {
+      const qr = assetsById.get(sourceRef.data.qr_asset_id);
+      return { sourceRef, qrAsset: qr, pageLabelOverride: page.data.page };
+    });
+}
+
+export async function getStaticPaths() {
+  const pages = await getCollection('pages');
+  return pages.map((p) => ({ params: { n: p.id } }));
+}
+
+const { n } = Astro.params;
+const pageNumber = Number(n);
+const page = await getEntry('pages', n!);
+if (!page) return Astro.redirect('/libro');
+
+const allPages = await getCollection('pages');
+const totalPages = allPages.length;
+
+// Shared maps computed ONCE, reused by both spread panels.
+const allAssets = await getCollection('assets');
+const assetsById = new Map(allAssets.map((a) => [a.id, a]));
+
+const assetContext = await getCollection('editorialAssetContext');
+const assetContextById = new Map(
+  assetContext
+    .filter((ac): ac is typeof ac & { data: { asset_id: string } } => Boolean(ac.data.asset_id))
+    .map((ac) => [ac.data.asset_id, ac]),
+);
+
+const allPresentations = await getCollection('pagePresentations');
+
+const allSourceRefs = await getCollection('sourceReferences');
+const sourceRefsByAssetId = new Map(allSourceRefs.map((r) => [r.data.qr_asset_id, r]));
+
+// Layered editorial model: quotes/excerpts, p5 footer, web source refs and
+// photo alignment hints, declared in data/editorial/page-editorial.json.
+const allPageEditorial = await getCollection('pageEditorial');
+
+const allReadings = await getCollection('readings');
+const allConcepts = await getCollection('concepts');
+const conceptById = new Map(allConcepts.map((c) => [c.id, c]));
+const readingById = new Map(allReadings.map((r) => [r.id, r]));
+const pageByBookUnit = await getFirstPageByBookUnit();
+
+// Spread computation — deterministic, pages 1..78, blanks keep their real
+// position (never skipped, never reordered).
+const isPortada = pageNumber === 1;
+const L = isPortada ? 1 : pageNumber % 2 === 0 ? pageNumber : pageNumber - 1;
+const R = isPortada ? 1 : L + 1;
+const activePanelIsLeft = isPortada || pageNumber % 2 === 0;
+
+const leftEntry = await getEntry('pages', String(L));
+// A terminal EVEN page (the last physical page is even in this 78-page
+// book) has no right partner (R = L + 1 exceeds the page count). We fetch
+// it only when it actually exists (guarding `R > totalPages`), so we never
+// call getEntry on a non-existent page, and we do NOT redirect: the page is
+// rendered as a single centered sheet (the spread row's justify-content:
+// center centers a lone child).
+const rightEntry =
+  isPortada || R > totalPages ? null : await getEntry('pages', String(R));
+if (!leftEntry) return Astro.redirect('/libro');
+
+const pagePropsContext: PagePropsContext = {
+  allPages,
+  pagePresentations: allPresentations,
+  conceptById,
+  readingById,
+  pageByBookUnit,
+  allReadings,
+  editorialAll: allPageEditorial,
+};
+const leftProps = buildPageProps(leftEntry, pagePropsContext);
+const rightProps = rightEntry ? buildPageProps(rightEntry, pagePropsContext) : null;
+
+// Layout labels + footer footer entries per panel, for the shell.
+const leftLayout = layoutLabelFor(leftEntry, leftProps.presentation);
+const leftFooters = footersFor(leftEntry, assetsById, sourceRefsByAssetId);
+const leftWebFooters = webFootersFor(leftEntry, allPageEditorial, sourceRefsByAssetId, assetsById);
+const rightLayout = rightEntry && rightProps ? layoutLabelFor(rightEntry, rightProps.presentation) : null;
+const rightFooters = rightEntry ? footersFor(rightEntry, assetsById, sourceRefsByAssetId) : [];
+const rightWebFooters = rightEntry ? webFootersFor(rightEntry, allPageEditorial, sourceRefsByAssetId, assetsById) : [];
+
+// Reading TRIGGERS per page — computed for the below-sheet reader chrome so
+// each spread panel keeps its own triggers under its own sheet (never fused).
+const leftReadingUnits = readingTriggerUnitsFor(leftEntry, leftProps.readingsByUnit);
+const rightReadingUnits = rightEntry && rightProps ? readingTriggerUnitsFor(rightEntry, rightProps.readingsByUnit) : [];
+
+const toc = await getToc();
+// Header section is derived from the ACTIVE requested page (pageNumber).
+const currentSection = sectionForPage(toc, pageNumber);
+
+const layoutTitle = isPortada ? `Página ${pageNumber}` : `Página ${L}–${R}`;
+---
+
+<style>
+  /* READER SHELL — reader chrome, never book content. This is a CSS
+     CONTAINER whose real inline width drives everything: how many sheets
+     fit (spread vs single) and the A5 sheet width. Geometry model is
+     documented in docs/web/A5-GEOMETRY-v0.1.md.
+
+     Spread vs single is decided by CONTAINER WIDTH (real available width),
+     NOT viewport, NOT device type. The @container query reflows
+     automatically when the container resizes — no hand-written media
+     queries, no device sniffing.
+
+     Tunables (single source of truth shared by CSS here and by PageNav's
+     ResizeObserver via getComputedStyle):
+       --reader-gutter        center gutter in spread mode
+       --reader-sheet-max-w   cap on a single sheet's width (keeps even a
+                              single page legible on very wide containers;
+                              in spread mode the shell's own max-width is the
+                              binding bound, so sheets grow wider than before)
+       --reader-sheet-min-w   minimum "legible" sheet width, used only to
+                              pick the spread threshold
+       --reader-spread-min    = 2 × min-w + gutter when two legible sheets
+                              + gutter fit in the container. Chosen 688px =
+                              2×320px sheets + 48px gutter. Below this the
+                              container only fits ONE sheet (single mode);
+                              at/above it, both sheets at ≥320px each fit.
+     NOTE: --reader-sheet-min-w is NOT used by CSS layout; it exists purely
+     so the threshold number has a named rationale.
+
+     SOURCE OF TRUTH: --reader-spread-min drives PageNav's JS detection
+     (read via getComputedStyle). The @container query below must use the
+     LITERAL value (lightningcss cannot minify var() inside an @container
+     condition), so keep `@container (min-width: 688px)` in sync with the
+     `688px` here whenever either is tuned. */
+  .reader-shell {
+    container-type: inline-size;
+    margin-inline: auto;
+    max-width: 1100px;
+    --reader-gutter: 48px;
+    --reader-sheet-max-w: 620px;
+    --reader-sheet-min-w: 320px;
+    --reader-spread-min: 688px; /* 2×320 + 48 — see rationale above */
+  }
+
+  .spread {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--reader-gutter);
+  }
+
+  /* Single mode (default): one A5 sheet, width = min(100cqw, max-w),
+     centered; only the ACTIVE page shows. */
+  .sheet-wrap {
+    display: none;
+  }
+  .sheet-wrap.is-active {
+    display: block;
+    width: min(100cqw, var(--reader-sheet-max-w));
+  }
+
+  /* Spread mode: two A5 sheets side by side + gutter. Identical width
+     formula for both → identical aspect-ratio height → aligned sheets. */
+  /* LITERAL 688px — must match --reader-spread-min (see comment above). */
+  @container (min-width: 688px) {
+    .spread {
+      flex-direction: row;
+      /* Stretch makes both sheets adopt the common height of the TALLER page
+         of the pair, so the shorter page gains free space and the two
+         SourceReferenceFooters land on the same baseline (see PageShell).
+         Widths are untouched — this only equalizes the cross axis (height). */
+      align-items: stretch;
+      justify-content: center;
+      gap: var(--reader-gutter);
+    }
+    .sheet-wrap,
+    .sheet-wrap.is-active {
+      display: block;
+      width: min(calc((100cqw - var(--reader-gutter)) / 2), var(--reader-sheet-max-w));
+    }
+  }
+
+  /* Blank-page chrome note lives OUTSIDE the sheet surface (a sibling
+     below the sheet), never inside. */
+  .blank-note {
+    margin-top: 1rem;
+    border: 1px dashed var(--color-ink-faint);
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-ink-faint);
+  }
+
+  /* Reading TRIGGER chrome — rendered BELOW each sheet, never inside it, so
+     the sheet height is never affected by whether a Reading exists. Each
+     panel keeps its OWN triggers under its own sheet (never fused across
+     the two pages of a spread). Column widths mirror the sheet widths above
+     (same formula / same gap) so triggers align under their sheet. Columns
+     with no readings render nothing (no placeholder). */
+  .readings-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  .readings-col {
+    display: none;
+    width: min(100cqw, var(--reader-sheet-max-w));
+  }
+  .readings-col.is-active {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  @container (min-width: 688px) {
+    .readings-row {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      gap: var(--reader-gutter);
+    }
+    .readings-col,
+    .readings-col.is-active {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      width: min(calc((100cqw - var(--reader-gutter)) / 2), var(--reader-sheet-max-w));
+    }
+  }
+</style>
+
+<Layout title={layoutTitle}>
+  <div class="mx-auto flex min-h-screen max-w-3xl flex-col px-6 sm:px-10 lg:max-w-6xl">
+    <header class="flex items-center justify-between gap-4 py-6">
+      <a href="/libro" class="font-mono text-xs uppercase tracking-wide text-ink-faint hover:text-ink">
+        ← Índice
+      </a>
+      <span class="flex items-center gap-2 font-mono text-xs text-ink-faint">
+        <SourceTag source={currentSection?.source === 'EDITORIAL' ? 'EDITORIAL' : 'BOOK'} />
+        {currentSection && (
+          <span class:list={['hidden sm:inline', currentSection.source === 'EDITORIAL' && 'italic']}>
+            {currentSection.text}
+          </span>
+        )}
+      </span>
+    </header>
+
+    <main class="flex-1 pb-10">
+      {/* The reader SHELL is a CSS container (chrome only — never book
+          content). It owns the A5 geometry (single vs spread) and exposes
+          --reader-spread-min for both the @container query and PageNav.
+          Each physical page is a full <PageView> inside its own PageShell
+          (fixed A5 sheet); its SourceReferenceFooter(s) are rendered into
+          the shell's `footer` slot (bottom-anchored). Blank pages keep
+          their real position (2, 51) and their chrome note sits as a
+          sibling BELOW the sheet, never inside it. */}
+      <div class="reader-shell" data-reader-shell>
+        <div class="spread">
+          <div class:list={['sheet-wrap', activePanelIsLeft && 'is-active']} data-page={L} data-layout={leftLayout}>
+            <PageShell>
+              <div slot="content">
+                <PageView
+                  page={leftProps.page}
+                  presentation={leftProps.presentation}
+                  assetsById={assetsById}
+                  assetContextById={assetContextById}
+                  sourceRefsByAssetId={sourceRefsByAssetId}
+                  shortPhraseTextByUnit={leftProps.shortPhraseTextByUnit}
+                  editorialQuotes={leftProps.editorialQuotes}
+                  editorialFooterRange={leftProps.editorialFooterRange}
+                  suppressRanges={leftProps.suppressRanges}
+                  photoAlignRight={leftProps.photoAlignRight}
+                />
+              </div>
+              <footer slot="footer">
+                {leftFooters.map((f) => (
+                  <SourceReferenceFooter sourceRef={f.sourceRef} qrAsset={f.qrAsset} />
+                ))}
+                {leftWebFooters.map((f) => (
+                  <SourceReferenceFooter sourceRef={f.sourceRef} qrAsset={f.qrAsset} pageLabelOverride={f.pageLabelOverride} />
+                ))}
+              </footer>
+            </PageShell>
+            {leftEntry.data.is_blank_or_folio_only && (
+              <p class="blank-note" role="note">
+                Página intencionalmente en blanco en el original
+              </p>
+            )}
+          </div>
+
+          {!isPortada && rightProps && (
+            <div
+              class:list={['sheet-wrap', !activePanelIsLeft && 'is-active']}
+              data-page={R}
+              data-layout={rightLayout ?? ''}
+            >
+              <PageShell>
+                <div slot="content">
+                  <PageView
+                    page={rightProps.page}
+                    presentation={rightProps.presentation}
+                    assetsById={assetsById}
+                    assetContextById={assetContextById}
+                    sourceRefsByAssetId={sourceRefsByAssetId}
+                    shortPhraseTextByUnit={rightProps.shortPhraseTextByUnit}
+                    editorialQuotes={rightProps.editorialQuotes}
+                    editorialFooterRange={rightProps.editorialFooterRange}
+                    suppressRanges={rightProps.suppressRanges}
+                    photoAlignRight={rightProps.photoAlignRight}
+                  />
+                </div>
+                <footer slot="footer">
+                  {rightFooters.map((f) => (
+                    <SourceReferenceFooter sourceRef={f.sourceRef} qrAsset={f.qrAsset} />
+                  ))}
+                  {rightWebFooters.map((f) => (
+                    <SourceReferenceFooter sourceRef={f.sourceRef} qrAsset={f.qrAsset} pageLabelOverride={f.pageLabelOverride} />
+                  ))}
+                </footer>
+              </PageShell>
+              {rightEntry!.data.is_blank_or_folio_only && (
+                <p class="blank-note" role="note">
+                  Página intencionalmente en blanco en el original
+                </p>
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* Reading TRIGGER chrome — below the sheets, never inside them (so
+            sheet heights are unaffected). Each panel renders its OWN
+            triggers under its OWN sheet; columns with no readings render
+            nothing (no placeholder). */}
+        <div class="readings-row">
+          {leftReadingUnits.length > 0 && (
+            <div class:list={['readings-col', activePanelIsLeft && 'is-active']} data-page={L}>
+              {leftReadingUnits.map((unit) => (
+                <ReadingDrawer client:load readings={leftProps.readingsByUnit.get(unit)!} currentUnit={unit} />
+              ))}
+            </div>
+          )}
+          {!isPortada && rightProps && rightReadingUnits.length > 0 && (
+            <div class:list={['readings-col', !activePanelIsLeft && 'is-active']} data-page={R}>
+              {rightReadingUnits.map((unit) => (
+                <ReadingDrawer client:load readings={rightProps!.readingsByUnit.get(unit)!} currentUnit={unit} />
+              ))}
+            </div>
+          )}
+        </div>
+
+        <script>
+          // Overflow diagnostic (dev-oriented OBSERVER only — never hides or
+          // fixes). After load and on container resize, measures each A5
+          // sheet's content box against its allocated box at the REAL
+          // rendered width (single or spread) and reports per page:
+          //   overflow_horizontal / overflow_vertical
+          // Surfaces as data-overflow-h / data-overflow-v on each [data-sheet]
+          // plus a console report. Expected outcome: all 0.
+          function measureOverflow() {
+            const shell = document.querySelector('[data-reader-shell]');
+            if (!shell) return;
+            const report: {
+              page: string;
+              layout: string;
+              overflow_horizontal: boolean;
+              overflow_vertical: boolean;
+            }[] = [];
+            shell.querySelectorAll('[data-sheet]').forEach((sheet) => {
+              const content = sheet.querySelector('[data-sheet-content]');
+              if (!content) return;
+              const wrap = sheet.closest('[data-page]');
+              const page = wrap?.getAttribute('data-page') ?? '?';
+              const layout = wrap?.getAttribute('data-layout') ?? '?';
+              const overflowH = content.scrollWidth > content.clientWidth + 1;
+              const overflowV = content.scrollHeight > content.clientHeight + 1;
+              sheet.setAttribute('data-overflow-h', overflowH ? '1' : '0');
+              sheet.setAttribute('data-overflow-v', overflowV ? '1' : '0');
+              report.push({ page, layout, overflow_horizontal: overflowH, overflow_vertical: overflowV });
+            });
+            console.info('[reader-overflow]', report);
+          }
+
+          window.addEventListener('load', measureOverflow);
+          const shell = document.querySelector('[data-reader-shell]');
+          if (shell && 'ResizeObserver' in window) {
+            let t = 0;
+            const ro = new ResizeObserver(() => {
+              window.clearTimeout(t);
+              t = window.setTimeout(measureOverflow, 150);
+            });
+            ro.observe(shell);
+          } else {
+            window.addEventListener('resize', measureOverflow);
+          }
+        </script>
+      </div>
+    </main>
+
+    <PageNav client:load page={pageNumber} total={totalPages} spreadLeft={L} spreadRight={R} />
+  </div>
+</Layout>

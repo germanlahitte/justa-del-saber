@@ -1,0 +1,211 @@
+{
+  "_meta": {
+    "source": "EDITORIAL",
+    "purpose": "Resolución manual de asociaciones NEEDS-REVIEW/UNKNOWN detectadas en data/assets-manifest.json. Referencia asset_id existentes; no modifica ningún Asset, ni el manifest técnico, ni el DOCX/PDF originales.",
+    "generated_by": "manual editorial input, stage 1.5",
+    "note": "El campo association_status del manifest técnico (data/assets-manifest.json) permanece intacto como registro de la etapa 1. Esta capa es la resolución editorial adicional que se combina en tiempo de build."
+  },
+  "asset_context": [
+    {
+      "id": "assetcontext-01",
+      "decision_id": "DEC-01",
+      "source": "EDITORIAL",
+      "asset_id": "asset-image7",
+      "pdf_page": 13,
+      "resolved_accompanies": {
+        "type": "song",
+        "song_ref": {
+          "title": "Olvídalo y volverá por más",
+          "band": "Hermética",
+          "album": "Víctimas del Vaciamiento",
+          "year": 1994
+        }
+      },
+      "note": "Página 13 cita dos canciones (Olvídalo y volverá por más / Memoria de Siglos) con un QR cada una. El editor confirma que este QR corresponde a Olvídalo y volverá por más."
+    },
+    {
+      "id": "assetcontext-02",
+      "decision_id": "DEC-02",
+      "source": "EDITORIAL",
+      "asset_id": "asset-image17",
+      "pdf_page": 13,
+      "resolved_accompanies": {
+        "type": "song",
+        "song_ref": {
+          "title": "Memoria de Siglos",
+          "band": "Hermética",
+          "album": "Ácido Argentino",
+          "year": 1991
+        }
+      },
+      "note": "Página 13, el otro QR de la misma página: confirmado como Memoria de Siglos."
+    },
+    {
+      "id": "assetcontext-03",
+      "decision_id": "DEC-03",
+      "source": "EDITORIAL",
+      "asset_id": "asset-image29",
+      "pdf_page": 65,
+      "resolved_accompanies": {
+        "type": "song",
+        "song_ref": {
+          "title": "Ayer deseo, hoy realidad",
+          "band": "Hermética",
+          "album": "Víctimas del vaciamiento",
+          "year": 1994
+        }
+      },
+      "note": "Página 65 cita dos canciones (Ayer deseo, hoy realidad / Debes saberlo) con un QR cada una. Confirmado como Ayer deseo, hoy realidad."
+    },
+    {
+      "id": "assetcontext-04",
+      "decision_id": "DEC-04",
+      "source": "EDITORIAL",
+      "asset_id": "asset-image13",
+      "pdf_page": 65,
+      "resolved_accompanies": {
+        "type": "song",
+        "song_ref": {
+          "title": "Debes saberlo",
+          "band": "Almafuerte",
+          "album": "Toro y Pampa",
+          "year": 2006
+        }
+      },
+      "note": "Página 65, el otro QR de la misma página: confirmado como Debes saberlo."
+    },
+    {
+      "id": "assetcontext-05",
+      "decision_id": "DEC-05",
+      "source": "EDITORIAL",
+      "asset_id": "asset-image6",
+      "pdf_page": 9,
+      "status": "superseded-by-book-rebaseline",
+      "resolved_accompanies": {
+        "type": "song",
+        "song_ref": {
+          "id": "song-el-amasijo-de-un-gran-sueno",
+          "title": "El amasijo de un gran sueño",
+          "band": "Almafuerte",
+          "album": "Mundo Guanaco",
+          "year": 1995
+        }
+      },
+      "note": "DECISIÓN HISTÓRICA (Etapa 1.5), ya no representa la composición actual del libro. En ese momento el QR aparecía huérfano en la página 9 (visual, sin texto) y el editor lo asoció manualmente a la canción descripta en la página 8 anterior. Tras la re-baseline editorial (ver docs/web/BOOK-REBASELINE-v0.1.md), el DOCX corregido ubica ese mismo QR (por contenido/sha256, ahora identificado como asset-image17) directamente en la página 8, junto al fragmento de 'La Síntesis'. El pipeline técnico ya resuelve esa asociación automáticamente ('Sección: La Síntesis') sin necesitar este override editorial. Se conserva este registro como trazabilidad histórica, marcado 'superseded-by-book-rebaseline', y NO se aplica en el merge de build para el asset_id vigente. Ver también songcredit-editorial-01 (DEC-12), que permanece vigente para el crédito del fragmento en sí."
+    },
+    {
+      "id": "assetcontext-06",
+      "decision_id": "DEC-06",
+      "source": "EDITORIAL",
+      "asset_id": "asset-image39",
+      "pdf_page": 9,
+      "resolved_accompanies": {
+        "type": "descriptive-context",
+        "song_ref": null
+      },
+      "editorial_description": "Foto de Ricardo Iorio cantando y tocando el bajo con una remera sin mangas de Hermética.",
+      "note": "Contexto descriptivo provisto por el editor. No se identifican terceras personas ni bandas no explícitas en la fuente."
+    },
+    {
+      "id": "assetcontext-07",
+      "decision_id": "DEC-07",
+      "source": "EDITORIAL",
+      "asset_id": "asset-image32",
+      "pdf_page": 19,
+      "resolved_accompanies": {
+        "type": "descriptive-context",
+        "song_ref": null
+      },
+      "editorial_description": "Foto emblemática de Ricardo Iorio con corte mohicano, mirando a cámara de una manera extraña.",
+      "note": "Contexto descriptivo provisto por el editor."
+    },
+    {
+      "id": "assetcontext-08",
+      "decision_id": "DEC-08",
+      "source": "EDITORIAL",
+      "asset_id": "asset-image16",
+      "pdf_page": 32,
+      "resolved_accompanies": {
+        "type": "descriptive-context",
+        "song_ref": null
+      },
+      "editorial_description": "Foto de Ricardo Iorio ya de grande, riendo en el escenario.",
+      "note": "Contexto descriptivo provisto por el editor."
+    },
+    {
+      "id": "assetcontext-09",
+      "decision_id": "DEC-09",
+      "source": "EDITORIAL",
+      "asset_id": "asset-image52",
+      "pdf_page": 38,
+      "resolved_accompanies": {
+        "type": "descriptive-context",
+        "song_ref": null
+      },
+      "editorial_description": "Foto de Ricardo Iorio muy joven, tocando el bajo y cantando.",
+      "note": "Contexto descriptivo provisto por el editor."
+    },
+    {
+      "id": "assetcontext-10",
+      "decision_id": "DEC-10",
+      "source": "EDITORIAL",
+      "asset_id": "asset-image25",
+      "pdf_page": 46,
+      "resolved_accompanies": {
+        "type": "descriptive-context",
+        "song_ref": null
+      },
+      "editorial_description": "Foto de Ricardo Iorio tocando el bajo junto al guitarrista Claudio Marciello.",
+      "note": "Contexto descriptivo provisto por el editor."
+    },
+    {
+      "id": "assetcontext-11",
+      "decision_id": "DEC-11",
+      "source": "EDITORIAL",
+      "asset_id": "asset-image28",
+      "pdf_page": 76,
+      "resolved_accompanies": {
+        "type": "descriptive-context",
+        "song_ref": null
+      },
+      "editorial_description": "Foto emblemática de Hermética, con los integrantes sentados en el suelo contra una pared que contiene el grafiti: \"No se rindan\".",
+      "note": "Contexto descriptivo provisto por el editor."
+    },
+    {
+      "id": "assetcontext-13",
+      "decision_id": "DEC-13",
+      "source": "EDITORIAL",
+      "asset_sha256": "f6b80f77846355d2d993dde4a3d43f1b05a929a753a01333a8e43e97da2fb949",
+      "asset_id_at_decision_time": "asset-image11",
+      "pdf_page": 6,
+      "resolved_accompanies": {
+        "type": "song",
+        "song_ref": {
+          "title": "Brigadas Metálicas",
+          "band": "V8",
+          "album": "Luchando por el metal",
+          "year": 1983
+        }
+      },
+      "note": "El QR de la página 6 (presentación de V8 / 'La Estética') se asocia a la canción de la que proviene el fragmento citado ('Basta ya de signos de la paz...'). Referenciado por sha256 (no por asset_id) porque Word renumera los archivos internos del DOCX en cada guardado; ver docs/web/BOOK-REBASELINE-v0.1.md §5."
+    },
+    {
+      "id": "assetcontext-14",
+      "decision_id": "DEC-14",
+      "source": "EDITORIAL",
+      "asset_sha256": "6333311cef606928aa92df341c8633ce4b183439ac65c927e0e42310f3da1aa7",
+      "asset_id_at_decision_time": "asset-image46",
+      "pdf_page": 7,
+      "resolved_accompanies": {
+        "type": "press-conference",
+        "source_ref": {
+          "description": "Conferencia de prensa de Hermética — Oberá Rock, 1993",
+          "band": "Hermética",
+          "event": "Oberá Rock",
+          "year": 1993
+        }
+      },
+      "note": "El QR de la página 7 (presentación de Hermética / 'La Ética') no remite a una canción sino a una declaración de la banda: la frase citada ('Reflejar el presente inmediato para que un chico de 17 años...') corresponde a una conferencia de prensa en el marco del evento Oberá Rock, 1993. No se le asigna título de obra porque no es una canción."
+    }
+  ]
+}

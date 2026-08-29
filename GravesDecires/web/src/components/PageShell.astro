@@ -1,0 +1,72 @@
+---
+// PageShell — the ONE visual container that defines a physical A5 sheet for
+// EVERY page (generic, band-role, blank, visual-only). It only enforces the
+// fixed A5 ratio and the internal vertical layout; the SHEET WIDTH is set by
+// the parent route (single vs spread mode) and the height always comes from
+// the aspect ratio + available width — never from content, never from a
+// min-height.
+//
+// Slots:
+//   content -> the page body (what PageView renders; the ReadingDrawer
+//              triggers are NOT here — they live in reader chrome BELOW this
+//              sheet, never inside it, so the sheet is only book content).
+//   footer  -> SourceReferenceFooter(s) for that page, rendered by the route
+//              into this slot, anchored to the BOTTOM edge. If a page has no
+//              SourceReference the route still provides an EMPTY footer slot
+//              so every sheet keeps identical vertical structure.
+//
+// Overflow is deliberately NEVER hidden: if the content is taller than the
+// sheet, the footer naturally flows below the sheet and the diagnostics in
+// the route (see READER-OVERFLOW.js) detect and report it.
+---
+
+<!-- A5: width : height = 1 : √2 ≈ 1.4142. The sheet's HEIGHT must come from
+     this ratio and the width set by the parent — never from content. -->
+<div class="sheet" data-sheet>
+  <div class="sheet-content" data-sheet-content>
+    <slot name="content" />
+  </div>
+  <footer class="sheet-footer" data-sheet-footer>
+    <slot name="footer" />
+  </footer>
+</div>
+
+<style>
+  .sheet {
+    /* Width is set by the parent (.sheet-wrap). By default the height comes
+       from the aspect ratio (width × √2). `height: 100%` makes the sheet fill
+       its wrapper: in SINGLE mode the wrapper has no fixed height, so this
+       resolves to auto and the aspect ratio still governs — identical to
+       before. In SPREAD mode the wrapper is stretched to the common pair
+       height by the layout, so the sheet fills it and the shorter page gains
+       free space; the aspect ratio stays as a reference and is overridden by
+       the stretched height. No min-height, no per-page height. */
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1.4142; /* √2 ≈ 1.4142 → A5 (148 × 210 mm) */
+
+    display: flex;
+    flex-direction: column;
+
+    /* Comfortable A5 editorial margin. Theme tokens for paper/rule. cqw is
+       relative to the reader container, giving a stable margin across both
+       single and spread modes. */
+    padding: clamp(20px, 5cqw, 40px);
+
+    background-color: var(--color-paper);
+    border: 1px solid var(--color-rule);
+  }
+
+  .sheet-content {
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .sheet-footer {
+    flex-shrink: 0;
+    /* Spare space goes above the footer, pinning it to the bottom edge. Both
+       sheets of a spread share identical height + padding, so both footers
+       land on the SAME baseline. */
+    margin-top: auto;
+  }
+</style>

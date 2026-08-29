@@ -1,0 +1,71 @@
+---
+// BOOK INDEX — corrected model (v0.2): navigates to PAGES, not to isolated
+// BookUnits. "Capítulo/sección -> página donde comienza -> lectura
+// continua desde allí": each TOC entry links straight into the paginated
+// reader; from there the reader never needs to come back here.
+import Layout from '../../layouts/Layout.astro';
+import PrototypeBadge from '../../components/PrototypeBadge.astro';
+import SourceTag from '../../components/SourceTag.astro';
+import { getCollection } from 'astro:content';
+import { getToc } from '../../lib/pageIndex';
+
+const pages = await getCollection('pages');
+const totalPages = pages.length;
+const toc = await getToc();
+---
+
+<Layout title="Libro">
+  <main class="mx-auto max-w-3xl px-6 py-14 sm:px-10">
+    <a href="/" class="font-mono text-xs uppercase tracking-wide text-ink-faint hover:text-ink">← Portada</a>
+
+    <header class="mt-6 mb-10 flex items-start justify-between gap-4">
+      <div>
+        <p class="font-mono text-xs uppercase tracking-wider text-ink-faint">Modo lectura</p>
+        <h1 class="mt-2 text-3xl font-normal">Graves decires de aguda intuición</h1>
+        <p class="prose-book mt-3 text-sm text-ink-soft">
+          {totalPages} páginas, en el orden real del libro editado. Elegí un
+          punto de entrada — desde ahí podés seguir leyendo de corrido sin
+          volver acá.
+        </p>
+      </div>
+      <PrototypeBadge label="Índice → páginas reales" />
+    </header>
+
+    <div class="mb-10 flex gap-4">
+      <a
+        href="/libro/p/1"
+        class="inline-flex items-center gap-2 rounded-sm border border-accent/60 bg-accent-bg px-4 py-2 font-mono text-xs uppercase tracking-wide text-accent hover:border-accent"
+      >
+        Empezar desde la portada →
+      </a>
+    </div>
+
+    <ol class="divide-y divide-rule border-y border-rule">
+      {toc.map((entry) => (
+        <li>
+          <a
+            href={`/libro/p/${entry.page}`}
+            class="flex items-center justify-between gap-4 py-3 hover:bg-paper-dim/40"
+          >
+            <span class="flex items-center gap-2">
+              {entry.source === 'EDITORIAL' && (
+                <SourceTag source="EDITORIAL" />
+              )}
+              <span class:list={['text-sm', entry.source === 'EDITORIAL' ? 'text-ink-soft italic' : 'text-ink']}>
+                {entry.text}
+              </span>
+            </span>
+            <span class="font-mono text-xs text-ink-faint">p. {entry.page} →</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+
+    <p class="prose-book mt-6 font-mono text-[10px] text-ink-faint">
+      <SourceTag source="EDITORIAL" /> marca etiquetas de navegación agregadas
+      para orientarte en tramos del libro que no llevan un título visible en
+      la obra (dedicatoria, prólogo, ensayos, epílogo). No son títulos
+      impresos en el libro — son solo una ayuda para encontrar el camino.
+    </p>
+  </main>
+</Layout>

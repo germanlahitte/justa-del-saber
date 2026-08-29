@@ -1,0 +1,11 @@
+Total QR assets: 43
+Resolved SongReferences: 41
+Unresolved: 2
+Unresolved asset_id remaps (EDITORIAL entries whose old asset_id has no matching content in new manifest): 0
+
+Songs with a credit in BOOK/EDITORIAL but NO QR found: 1
+  - Memoria de siglos (Hermética)
+
+Unresolved QR references (no song could be determined):
+  - asset-image11 (page 6, units [3])
+  - asset-image46 (page 7, units [3])

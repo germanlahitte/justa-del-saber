@@ -1,0 +1,113 @@
+{
+  "_meta": {
+    "source": "EDITORIAL",
+    "purpose": "Modelo editorial en capas para citas y fragmentos musicales (decisions 2/19 de PAGE-REVIEW), firma final del prólogo como footer (decision 5), y referencias de fuente web-only que reutilizan SourceReference canónicas (decision 9). Cada entrada asocia una PRESENTACIÓN editorial a bloques BOOK existentes vía rangos docx_paragraph_index; el texto se RESUELVE en render-time contra la colección `pages`, nunca se inventa.",
+    "layer_boundary": "BOOK = contenido original (text_verbatim intocable). PAGE MODEL (data/page-model.json) = distribución física real por página. PAGE EDITORIAL (este archivo) = asociaciones de presentación sobre bloques BOOK existentes: layout 'cover' (p1), citas/fragmentos itálicos a la derecha (p13/23/24/30/49/58/65/75), footer editorial (p5), foto derecha + footer de fuente web-only (p24). Es un archivo de reglas ancladas por rango de párrafo DOCX, resuelto contra la colección `pages`; nunca inserta en text_verbatim, nunca usa CSS por página, nunca busca cadenas en runtime. Las notas son metadata editorial, no contenido.",
+    "resolution_note": "quote(kind excerpt|quote): rango [lo,hi] cerrado de docx_paragraph_index; opcional attribution_docx_paragraph (línea de autor/fuente); group separa fragmentos múltiples en una misma página (el segundo recibe mayor separación vertical). web_source_reference: DONDE el libro impreso NO repite el QR (misma canción ya referenciada antes), en WEB no se crea una entrada nueva en source-references.json ni un QR nuevo: se REUTILIZA la SourceReference canónica indicada por qr_asset_id y se render un SourceReferenceFooter sin imagen QR. editorial_footer: rango movido del cuerpo genérico a un footer derecho al pie de la hoja (texto BOOK verbatim)."
+  },
+  "entries": [
+    {
+      "rec_type": "quote",
+      "id": "p13-olidvidalo",
+      "page": 13,
+      "kind": "excerpt",
+      "docx_paragraph_range": [256, 258],
+      "group": 1,
+      "note": "Olvídalo y volverá por más — Hermética"
+    },
+    {
+      "rec_type": "quote",
+      "id": "p13-memoria",
+      "page": 13,
+      "kind": "excerpt",
+      "docx_paragraph_range": [266, 269],
+      "group": 2,
+      "note": "Memoria de Siglos — Hermética"
+    },
+    {
+      "rec_type": "quote",
+      "id": "p23-alberdi",
+      "page": 23,
+      "kind": "quote",
+      "docx_paragraph_range": [398, 398],
+      "attribution_docx_paragraph": 399,
+      "note": "Cita de Juan Bautista Alberdi"
+    },
+    {
+      "rec_type": "quote",
+      "id": "p24-excerpt",
+      "page": 24,
+      "kind": "excerpt",
+      "docx_paragraph_range": [403, 406],
+      "note": "Memoria de siglos — Hermética"
+    },
+    {
+      "rec_type": "quote",
+      "id": "p30-excerpt",
+      "page": 30,
+      "kind": "excerpt",
+      "docx_paragraph_range": [537, 540],
+      "note": "Cautivos del sistema — V8"
+    },
+    {
+      "rec_type": "quote",
+      "id": "p49-peron",
+      "page": 49,
+      "kind": "quote",
+      "docx_paragraph_range": [915, 915],
+      "attribution_docx_paragraph": 916,
+      "note": "Cita de Juan Domingo Perón"
+    },
+    {
+      "rec_type": "quote",
+      "id": "p58-excerpt",
+      "page": 58,
+      "kind": "excerpt",
+      "docx_paragraph_range": [1042, 1044],
+      "note": "Camino al sepulcro — V8"
+    },
+    {
+      "rec_type": "quote",
+      "id": "p65-ayer",
+      "page": 65,
+      "kind": "excerpt",
+      "docx_paragraph_range": [1136, 1141],
+      "group": 1,
+      "note": "Ayer deseo, hoy realidad — Hermética"
+    },
+    {
+      "rec_type": "quote",
+      "id": "p65-debes",
+      "page": 65,
+      "kind": "excerpt",
+      "docx_paragraph_range": [1149, 1153],
+      "group": 2,
+      "note": "Debes saberlo — Almafuerte"
+    },
+    {
+      "rec_type": "quote",
+      "id": "p75-prilutzky",
+      "page": 75,
+      "kind": "quote",
+      "docx_paragraph_range": [1339, 1339],
+      "attribution_docx_paragraph": 1340,
+      "note": "Cita de Julia Prilutzky Farny"
+    },
+    {
+      "rec_type": "web_source_reference",
+      "id": "p24-memoria",
+      "page": 24,
+      "qr_asset_id": "asset-image24",
+      "photo_align_right": true,
+      "suppress_credit_range": [408, 410],
+      "note": "En el libro físico este QR no se repite (misma canción ya referenciada en p13). En WEB se muestra SourceReferenceFooter reutilizando la SourceReference canónica 'Memoria de Siglos' (Hermética/Ácido Argentino/1991) sin QR."
+    },
+    {
+      "rec_type": "editorial_footer",
+      "id": "p5-firma",
+      "page": 5,
+      "docx_paragraph_range": [50, 51],
+      "note": "Firma final del prólogo movida a footer editorial derecho (texto BOOK verbatim)."
+    }
+  ]
+}

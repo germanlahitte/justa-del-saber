@@ -1,0 +1,72 @@
+---
+// MASTER MAP — Etapa 3 approved direction: recorrido longitudinal +
+// recurrencia conceptual + meta-eje de bandas + terminal_structure como
+// coda (nunca un décimo arco). All data below comes straight from the
+// canonical master-map-v0.2.json (mapArcs, mapBandAxis) plus the top-level
+// terminal_structure read via src/lib/masterMap.ts.
+import Layout from '../../layouts/Layout.astro';
+import PrototypeBadge from '../../components/PrototypeBadge.astro';
+import MasterMapJourney, {
+  type ArcStation,
+  type BandAxisSegment,
+} from '../../components/react/MasterMapJourney';
+import { getCollection } from 'astro:content';
+import { getMasterMapMeta } from '../../lib/masterMap';
+
+const arcsRaw = (await getCollection('mapArcs')).sort((a, b) => a.data.order - b.data.order);
+const concepts = await getCollection('concepts');
+const conceptNameById = Object.fromEntries(concepts.map((c) => [c.id, c.data.name]));
+const meta = getMasterMapMeta();
+const bandAxisRaw = await getCollection('mapBandAxis');
+const readings = await getCollection('readings');
+
+const arcs: ArcStation[] = arcsRaw.map((a) => ({
+  id: a.id,
+  order: a.data.order,
+  title: a.data.title,
+  question: a.data.question,
+  claim: a.data.claim,
+  conceptIds: a.data.concept_ids,
+  conceptNames: conceptNameById,
+  readingCount: a.data.reading_ids.length,
+}));
+
+// Editorial approximation for the overlay stripe placement: V8/Estética
+// over the earliest arcs, Hermética/Ética over the middle, Almafuerte/
+// Síntesis over the later arcs and the terminal coda. Declared explicitly
+// as approximation in the UI copy (MasterMapJourney already labels it so).
+const bandAxis: BandAxisSegment[] = bandAxisRaw.map((b) => ({
+  band: b.data.band,
+  role: b.data.role,
+  function: b.data.function,
+  arcOrders: [],
+}));
+
+const terminalSequence = meta.terminal_structure.sequence.map((id) => {
+  const r = readings.find((rd) => rd.id === id);
+  return { id, title: r?.data.title ?? id };
+});
+---
+
+<Layout title="Mapa">
+  <main class="mx-auto max-w-3xl px-6 py-14 sm:px-10">
+    <a href="/" class="font-mono text-xs uppercase tracking-wide text-ink-faint hover:text-ink">← Portada</a>
+
+    <header class="mt-6 mb-10 flex items-start justify-between gap-4">
+      <div>
+        <p class="font-mono text-xs uppercase tracking-wider text-accent">Modo exploración</p>
+        <h1 class="mt-2 text-3xl font-normal">Mapa</h1>
+        <p class="prose-book mt-3 text-sm leading-relaxed text-ink-soft">{meta.core_thesis}</p>
+      </div>
+      <PrototypeBadge label="Recorrido longitudinal" />
+    </header>
+
+    <MasterMapJourney
+      client:load
+      arcs={arcs}
+      bandAxis={bandAxis}
+      terminalSequence={terminalSequence}
+      terminalMeaning={meta.terminal_structure.meaning}
+    />
+  </main>
+</Layout>

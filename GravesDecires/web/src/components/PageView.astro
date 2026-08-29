@@ -1,0 +1,302 @@
+---
+// PAGE VIEW — corrected MODO LEER (v0.2 + re-baseline v0.1). Renders ONE
+// physical page, respecting document order for TEXT and EDITORIAL IMAGES.
+//
+// QR editorial rule (re-baseline §5, generalized §3): SourceReference/QR
+// are NEVER shown inline where they happen to sit in the DOCX flow. They
+// are always collected and rendered together in the page footer,
+// right-aligned, adapted to their source_ref.type (song, press-conference,
+// etc.) — a deliberate adaptation to the web medium (the QR was born as a
+// print-only affordance; on the web, the deep link IS the QR's function,
+// so it belongs in one predictable place instead of interrupting the
+// reading flow wherever Word happened to anchor the image).
+//
+// Editorial photos (type: imagen-editorial) are NOT QR and keep their
+// original document-order placement, since they ARE part of the visual
+// composition of the page, not a technical/functional element like a QR.
+//
+// Page presentation: if data/editorial/page-presentation.json declares a
+// non-default layout for this page ("band-role" or "cover"), delegate the
+// whole content area to that layout instead of the generic block-by-block
+// renderer. band-role keeps its dedicated component; cover renders the
+// existing Title blocks of page 1 as a sober, deliberate cover composition
+// (decision 3, PAGE-REVIEW) — verbatim BOOK text, presentation only.
+//
+// Layered EDITORIAL content (PAGE-REVIEW decisions 2/19, 5, 9): quotes and
+// music excerpts declared in data/editorial/page-editorial.json (anchored on
+// docx_paragraph_index ranges) are resolved by the ROUTE into `editorialQuotes`
+// and inserted here as <EditorialQuote> in document order — right-aligned and
+// italic, never rendered as generic body, never via per-page CSS. The p5
+// final-signature range arrives as `editorialFooterRange` and renders as a
+// right-aligned, faint editorial footer at the bottom of the sheet content
+// (the PageShell footer slot stays reserved for SourceReferenceFooter). Extra
+// `suppressRanges` (e.g. p24 printed credit [408,410]) hide BOOK blocks whose
+// information is now represented by a footer. `photoAlignRight` right-aligns
+// the page's editorial photo (p24, decision 9).
+//
+// SourceReferenceFooter rendering DOES NOT live here anymore: the route
+// renders each page's SourceReferenceFooter(s) into the PageShell `footer`
+// slot (bottom-anchored). PageView keeps computing qrAssetIds only to
+// suppress the duplicated printed credit block in the body (isSuppressed).
+//
+// Reading TRIGGERS no longer live here either (MODO LEER): the route renders
+// each page's ReadingDrawer triggers BELOW the sheet in reader chrome, so
+// the sheet body is only ever book content and the trigger never affects
+// sheet height.
+import type { CollectionEntry } from 'astro:content';
+import AssetImage from './AssetImage.astro';
+import BandRoleLayout from './BandRoleLayout.astro';
+import EditorialQuote from './EditorialQuote.astro';
+import type { EditorialQuoteData } from '../lib/editorialQuote';
+
+interface Props {
+  page: CollectionEntry<'pages'>;
+  presentation: CollectionEntry<'pagePresentations'> | undefined;
+  assetsById: Map<string, CollectionEntry<'assets'>>;
+  assetContextById: Map<string, CollectionEntry<'editorialAssetContext'>>;
+  sourceRefsByAssetId: Map<string, CollectionEntry<'sourceReferences'>>;
+  shortPhraseTextByUnit: Map<number, string>;
+  editorialQuotes?: EditorialQuoteData[];
+  editorialFooterRange?: [number, number] | null;
+  suppressRanges?: [number, number][];
+  photoAlignRight?: boolean;
+}
+
+const {
+  page,
+  presentation,
+  assetsById,
+  assetContextById,
+  sourceRefsByAssetId,
+  shortPhraseTextByUnit,
+  editorialQuotes = [],
+  editorialFooterRange = null,
+  suppressRanges = [],
+  photoAlignRight = false,
+} = Astro.props;
+
+const qrAssetIds = page.data.assets.filter((id) => assetsById.get(id)?.data.type === 'qr');
+const editorialImageIds = new Set(
+  page.data.assets.filter((id) => assetsById.get(id)?.data.type === 'imagen-editorial'),
+);
+
+// Problem #2 fix: the printed credit block (title / album-year / band) for
+// a song is now represented by SourceReferenceFooter — it must not ALSO
+// render as normal page body, or the reader sees it twice. The suppression
+// is deterministic: only paragraphs whose index falls inside the EXACT
+// credit_paragraph_range of a SourceReference actually present on THIS
+// page are hidden. The paragraphs still exist in BOOK/page-model.json for
+// traceability; they are simply not duplicated in the rendered body.
+const suppressedParaRanges: [number, number][] = qrAssetIds
+  .map((aid) => sourceRefsByAssetId.get(aid)?.data.source_ref?.credit_paragraph_range)
+  .filter((r): r is [number, number] => Array.isArray(r));
+
+// Layered EDITORIAL suppression on top of the credit ranges above:
+//  - `suppressRanges`  -> per-page extra ranges (p24 printed credit
+//    [408,410], now represented by the WEB source-reference footer).
+//  - quote ranges      -> the same paragraphs render as <EditorialQuote>
+//    (right-aligned, italic), never again as generic body.
+//  - attribution paras -> the attribution_docx_paragraph consumed by an
+//    <EditorialQuote> (e.g. p23 [399], p49 [916], p75 [1340]) is CONSUMED
+//    by that quote and must not be re-rendered as a normal BOOK paragraph.
+//    This is a systemic rule: any paragraph a quote consumes as its
+//    attribution appears exactly ONCE (inside the quote).
+//  - editorial footer  -> p5 final-signature [50,51] moves out of the body
+//    into the bottom-right editorial footer.
+// All of these stay BOOK paragraphs for traceability; they are simply moved
+// or re-presented, never duplicated.
+const additionalSuppressRanges: [number, number][] = [
+  ...suppressRanges,
+  ...editorialQuotes.map((q) => q.docxParagraphRange),
+  ...editorialQuotes.flatMap((q) =>
+    q.attributionDocxParagraph !== undefined ? [[q.attributionDocxParagraph, q.attributionDocxParagraph] as [number, number]] : [],
+  ),
+  ...(editorialFooterRange ? [editorialFooterRange] : []),
+];
+const allSuppressedRanges: [number, number][] = [
+  ...suppressedParaRanges,
+  ...additionalSuppressRanges,
+];
+
+function isSuppressed(docxIndex: number): boolean {
+  return allSuppressedRanges.some(([lo, hi]) => docxIndex >= lo && docxIndex <= hi);
+}
+
+type Item =
+  | { kind: 'text'; order: number; docxIndex: number; bookUnit: number | null; style: string | null; text: string }
+  | { kind: 'asset'; order: number; docxIndex: number; assetId: string }
+  | { kind: 'quote'; order: number; docxIndex: number; quote: EditorialQuoteData; separator: boolean };
+
+// Quotes are anchored at their range START, so they slot into the body at
+// their document position. When a page has TWO quotes (group 1 and group 2,
+// e.g. p13/p65), the SECOND receives `separator` for the greater vertical
+// separation between the two blocks.
+const sortedEditorialQuotes = [...editorialQuotes].sort(
+  (a, b) => a.docxParagraphRange[0] - b.docxParagraphRange[0],
+);
+
+const items: Item[] = [
+  ...page.data.blocks
+    .filter((b) => b.text_verbatim_slice.trim() && !isSuppressed(b.docx_paragraph_index))
+    .map((b) => ({
+      kind: 'text' as const,
+      order: b.docx_paragraph_index,
+      docxIndex: b.docx_paragraph_index,
+      bookUnit: b.book_unit,
+      style: b.style,
+      text: b.text_verbatim_slice,
+    })),
+  ...sortedEditorialQuotes.map((q, i) => ({
+    kind: 'quote' as const,
+    order: q.docxParagraphRange[0],
+    docxIndex: q.docxParagraphRange[0],
+    quote: q,
+    separator: i > 0,
+  })),
+  // Only editorial (non-QR) images stay inline; QR are moved to the footer.
+  ...page.data.asset_placements
+    .filter((a) => editorialImageIds.has(a.asset_id))
+    .map((a) => ({
+      kind: 'asset' as const,
+      order: a.docx_paragraph_index,
+      docxIndex: a.docx_paragraph_index,
+      assetId: a.asset_id,
+    })),
+].sort((a, b) => a.order - b.order);
+
+const isBandRole = presentation?.data.layout === 'band-role';
+const isCover = presentation?.data.layout === 'cover';
+const isRightItalic = presentation?.data.layout === 'right-italic';
+
+// Cover (decision 3, page 1): the existing BOOK Title blocks ("Graves
+// decires" / "de" / "aguda intuición") composed as a stacked title block —
+// generous vertical rhythm, centered, distinct from generic body. No new
+// copy; the blocks are verbatim Title-typed paragraphs.
+const coverTitleLines = isCover
+  ? page.data.blocks
+      .filter((b) => b.style === 'Title')
+      .sort((a, b) => a.docx_paragraph_index - b.docx_paragraph_index)
+      .map((b) => b.text_verbatim_slice)
+  : [];
+
+// p5 editorial footer (decision 5): the final-signature lines, verbatim,
+// pushed to the bottom-right of the sheet content area.
+const editorialFooterLines = editorialFooterRange
+  ? page.data.blocks
+      .filter((b) => b.docx_paragraph_index >= editorialFooterRange[0] && b.docx_paragraph_index <= editorialFooterRange[1])
+      .sort((a, b) => a.docx_paragraph_index - b.docx_paragraph_index)
+      .map((b) => b.text_verbatim_slice)
+  : [];
+
+const rootClass = isCover
+  ? 'flex min-h-full flex-col items-center justify-center gap-10 text-center'
+  : 'flex min-h-full flex-col gap-2';
+
+// p24 photo (decision 9): right-align the editorial photo via justify-end.
+const assetWrapperClass = photoAlignRight ? 'flex justify-end' : '';
+---
+
+<div class={rootClass}>
+  {isCover ? (
+    coverTitleLines.map((line, i) =>
+      i === 1 ? (
+        // Middle fragment ("de"): smaller, faint connector line between the
+        // two main title lines — sober, still verbatim.
+        <p class="whitespace-pre-line font-mono text-xs text-ink-faint">{line}</p>
+      ) : (
+        <p class="whitespace-pre-line text-5xl leading-tight text-ink">{line}</p>
+      ),
+    )
+  ) : isRightItalic ? (
+    // RIGHT-ITALIC (p.3 dedicatoria, decision PAGE-REVIEW): the WHOLE page
+    // body renders right-aligned and in italic — a semantic editorial page
+    // rule, not per-page CSS. BOOK text stays verbatim (text_verbatim_slice);
+    // only alignment and emphasis change. Editorial photos (none on p.3 but
+    // kept generically) also right-align.
+    <>
+      {items.map((item) =>
+        item.kind === 'quote' ? (
+          <EditorialQuote
+            quoteText={item.quote.quoteText}
+            attribution={item.quote.attribution}
+            kind={item.quote.kind}
+            separator={item.separator}
+          />
+        ) : item.kind === 'text' ? (
+          <p class="whitespace-pre-line text-right italic leading-relaxed text-ink">{item.text}</p>
+        ) : (
+          assetsById.has(item.assetId) && (
+            <div class="my-6 flex justify-end">
+              <AssetImage
+                asset={assetsById.get(item.assetId)!}
+                editorialNote={assetContextById.get(item.assetId)?.data.editorial_description}
+              />
+            </div>
+          )
+        ),
+      )}
+
+      {editorialFooterLines.length > 0 && (
+        <div class="mt-auto flex flex-col items-end gap-1 pt-8">
+          {editorialFooterLines.map((line) => (
+            <span class="whitespace-pre-line font-mono text-xs leading-relaxed text-ink-faint">{line}</span>
+          ))}
+        </div>
+      )}
+    </>
+  ) : isBandRole && presentation ? (
+    <BandRoleLayout
+      page={page}
+      presentation={presentation}
+      shortPhraseText={
+        presentation.data.role?.short_phrase_book_unit !== null && presentation.data.role?.short_phrase_book_unit !== undefined
+          ? (shortPhraseTextByUnit.get(presentation.data.role.short_phrase_book_unit) ?? null)
+          : null
+      }
+    />
+  ) : (
+    <>
+      {items.map((item) =>
+        item.kind === 'quote' ? (
+          <EditorialQuote
+            quoteText={item.quote.quoteText}
+            attribution={item.quote.attribution}
+            kind={item.quote.kind}
+            separator={item.separator}
+          />
+        ) : item.kind === 'text' ? (
+          item.style === 'Title' || item.style === 'Heading1' || item.style === 'Heading2' ? (
+            <p class="mt-4 mb-2 whitespace-pre-line text-2xl font-normal text-ink first:mt-0">{item.text}</p>
+          ) : (
+            // whitespace-pre-line: Problem #3 fix — text_verbatim_slice now
+            // preserves real internal \n (verse breaks) from the DOCX; CSS
+            // must render them as line breaks, not collapse them into
+            // prose (the default whitespace behavior for <p>).
+            <p class="text-lg leading-relaxed whitespace-pre-line text-ink">{item.text}</p>
+          )
+        ) : (
+          assetsById.has(item.assetId) && (
+            // p24 photo (decision 9): right-aligned via justify-end when the
+            // page declares photo_align_right.
+            <div class="my-6">
+              <div class={assetWrapperClass}>
+                <AssetImage
+                  asset={assetsById.get(item.assetId)!}
+                  editorialNote={assetContextById.get(item.assetId)?.data.editorial_description}
+                />
+              </div>
+            </div>
+          )
+        ),
+      )}
+
+      {editorialFooterLines.length > 0 && (
+        <div class="mt-auto flex flex-col items-end gap-1 pt-8">
+          {editorialFooterLines.map((line) => (
+            <span class="whitespace-pre-line font-mono text-xs leading-relaxed text-ink-faint">{line}</span>
+          ))}
+        </div>
+      )}
+    </>
+  )}
+</div>

@@ -1,0 +1,82 @@
+{
+  "broken_count": 11,
+  "broken": [
+    {
+      "entry_id": "assetcontext-01",
+      "decision_id": "DEC-01",
+      "referenced_asset_id": "asset-image7",
+      "old_content_now_lives_at": "asset-image14",
+      "asset_id_now_points_to_different_content": "asset-image7"
+    },
+    {
+      "entry_id": "assetcontext-02",
+      "decision_id": "DEC-02",
+      "referenced_asset_id": "asset-image17",
+      "old_content_now_lives_at": "asset-image24",
+      "asset_id_now_points_to_different_content": "asset-image17"
+    },
+    {
+      "entry_id": "assetcontext-03",
+      "decision_id": "DEC-03",
+      "referenced_asset_id": "asset-image29",
+      "old_content_now_lives_at": "asset-image22",
+      "asset_id_now_points_to_different_content": "asset-image29"
+    },
+    {
+      "entry_id": "assetcontext-04",
+      "decision_id": "DEC-04",
+      "referenced_asset_id": "asset-image13",
+      "old_content_now_lives_at": "asset-image15",
+      "asset_id_now_points_to_different_content": "asset-image13"
+    },
+    {
+      "entry_id": "assetcontext-05",
+      "decision_id": "DEC-05",
+      "referenced_asset_id": "asset-image6",
+      "old_content_now_lives_at": "asset-image10",
+      "asset_id_now_points_to_different_content": "asset-image6"
+    },
+    {
+      "entry_id": "assetcontext-06",
+      "decision_id": "DEC-06",
+      "referenced_asset_id": "asset-image39",
+      "old_content_now_lives_at": "asset-image41",
+      "asset_id_now_points_to_different_content": "asset-image39"
+    },
+    {
+      "entry_id": "assetcontext-07",
+      "decision_id": "DEC-07",
+      "referenced_asset_id": "asset-image32",
+      "old_content_now_lives_at": "asset-image21",
+      "asset_id_now_points_to_different_content": "asset-image32"
+    },
+    {
+      "entry_id": "assetcontext-08",
+      "decision_id": "DEC-08",
+      "referenced_asset_id": "asset-image16",
+      "old_content_now_lives_at": "asset-image19",
+      "asset_id_now_points_to_different_content": "asset-image16"
+    },
+    {
+      "entry_id": "assetcontext-09",
+      "decision_id": "DEC-09",
+      "referenced_asset_id": "asset-image52",
+      "old_content_now_lives_at": "asset-image54",
+      "asset_id_now_points_to_different_content": "asset-image52"
+    },
+    {
+      "entry_id": "assetcontext-10",
+      "decision_id": "DEC-10",
+      "referenced_asset_id": "asset-image25",
+      "old_content_now_lives_at": "asset-image43",
+      "asset_id_now_points_to_different_content": "asset-image25"
+    },
+    {
+      "entry_id": "assetcontext-11",
+      "decision_id": "DEC-11",
+      "referenced_asset_id": "asset-image28",
+      "old_content_now_lives_at": "asset-image50",
+      "asset_id_now_points_to_different_content": "asset-image28"
+    }
+  ]
+}

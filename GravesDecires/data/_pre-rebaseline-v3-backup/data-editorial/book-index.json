@@ -1,0 +1,114 @@
+{
+  "_meta": {
+    "source": "EDITORIAL",
+    "purpose": "Política editorial explícita del ÍNDICE WEB. El índice no es una transcripción automática de todos los headings detectados en BOOK: es una capa de navegación editorial sobre la estructura de BOOK. BOOK conserva su estructura original; BOOK INDEX decide cómo se representa.",
+    "layer_boundary": "BOOK INDEX (este archivo) es navegación editorial derivada, NO se inserta dentro de text_verbatim, nunca se presenta como si fuera un heading impreso en la página. No modifica BOOK ni page-model.json. Un subtítulo puede ser un heading significativo dentro de BOOK sin que eso implique una entrada de índice: BOOK heading ≠ INDEX entry.",
+    "model": "Cada entrada representa una fila de índice con una operación auditable. operation ADD = entrada sin heading BOOK (source EDITORIAL); RENAME = re-etiqueta el merged heading de la página (source BOOK); RENAME con suppress_subtitle = muestra solo el título principal y excluye el subtítulo del índice, aunque permanece en la página; MERGE = fusiona fragmentos en un único label (source BOOK). La normalización estructural de fragmentos Word del mismo heading en la misma página (run-merge) vive en src/lib/pageIndex.ts; este archivo declara solo la curaduría, y pageIndex la consume sin lógica de strings dispersa.",
+    "operations_supported": ["add", "rename", "merge"],
+    "rule": "Una página con operation rename/merge reemplaza la etiqueta del heading BOOK correspondiente; add se agrega solo si no existe heading BOOK en la página. Las entradas no señaladas de BOOK se siguen derivando automáticamente por pageIndex."
+  },
+  "entries": [
+    {
+      "id": "dedicatorias",
+      "page": 3,
+      "label": "Dedicatorias",
+      "operation": "add",
+      "note": "El libro abre con dedicatorias personales del autor, sin título visible. Sin heading BOOK; entrada editorial de navegación."
+    },
+    {
+      "id": "prologo",
+      "page": 4,
+      "label": "Prólogo",
+      "operation": "add",
+      "note": "Texto introductorio del autor (unidad 2 del book-model), sin heading propio. Sin heading BOOK; entrada editorial de navegación."
+    },
+    {
+      "id": "ensayo1",
+      "page": 20,
+      "label": "Sobre la libertad y la democracia",
+      "operation": "add",
+      "note": "Primer ensayo en prosa del autor (unidad 11), intercalado entre las letras, sin heading propio. Sin heading BOOK; entrada editorial de navegación."
+    },
+    {
+      "id": "ensayo2",
+      "page": 46,
+      "label": "Sobre la representación política",
+      "operation": "add",
+      "note": "Segundo ensayo en prosa del autor (unidad 27), sin heading propio. Sin heading BOOK; entrada editorial de navegación."
+    },
+    {
+      "id": "ensayo3",
+      "page": 69,
+      "label": "Sobre las redes sociales y la subjetividad",
+      "operation": "add",
+      "note": "Tercer ensayo en prosa del autor (unidad 44), sin heading propio. Sin heading BOOK; entrada editorial de navegación."
+    },
+    {
+      "id": "epilogo",
+      "page": 78,
+      "label": "Epílogo",
+      "operation": "add",
+      "note": "Colofón de cierre del autor explicando el origen del libro ('Ricardo y la libertad'), sin heading propio. Sin heading BOOK; entrada editorial de navegación."
+    },
+    {
+      "id": "portada",
+      "page": 1,
+      "label": "Portada",
+      "operation": "rename",
+      "note": "Re-etiqueta del Title de portada ('Graves decires de aguda intuición'). El contenido de la portada no cambia; solo la etiqueta del índice."
+    },
+    {
+      "id": "apertura",
+      "page": 10,
+      "label": "Apertura",
+      "operation": "rename",
+      "note": "Re-etiqueta del Heading1 'Mis años y la madrugada anudan sueños por cumplir'. La frase original sigue en la página."
+    },
+    {
+      "id": "cierre",
+      "page": 77,
+      "label": "Cierre",
+      "operation": "rename",
+      "note": "Re-etiqueta del Title 'Si me ves volver, no me atiendas...'. La frase completa sigue intacta dentro del libro."
+    },
+    {
+      "id": "enajenacion-individualismo",
+      "page": 12,
+      "label": "Enajenación | Individualismo",
+      "operation": "merge",
+      "note": "Fusiona en una única entrada los dos headings contiguos del mismo tramo (Enajenación, Individualismo). No cambia el texto dentro de la página."
+    },
+    {
+      "id": "domesticacion",
+      "page": 30,
+      "label": "Domesticación",
+      "operation": "rename",
+      "suppress_subtitle": true,
+      "note": "SUBTÍTULO 'Están adorando un santo de madera' excluido del índice; permanece visible en la página. El índice muestra solo 'Domesticación'."
+    },
+    {
+      "id": "destruccion-entramado-social",
+      "page": 38,
+      "label": "Destrucción del entramado social",
+      "operation": "rename",
+      "suppress_subtitle": true,
+      "note": "SUBTÍTULO 'El Vaciamiento' excluido del índice; permanece en la página. El índice muestra solo 'Destrucción del entramado social'."
+    },
+    {
+      "id": "los-nadies",
+      "page": 51,
+      "label": "Los Nadies",
+      "operation": "rename",
+      "suppress_subtitle": true,
+      "note": "SUBTÍTULO 'Sin poder esquivar el dolor ajeno' excluido del índice; permanece dentro de la obra. El índice muestra solo 'Los Nadies'."
+    },
+    {
+      "id": "libertad-de-todos",
+      "page": 63,
+      "label": "La libertad de todos",
+      "operation": "rename",
+      "suppress_subtitle": true,
+      "note": "SUBTÍTULO 'Lo soñamos ayer / y lo cumplimos hoy' excluido del índice, conservando su composición en la página. El índice muestra solo 'La libertad de todos'."
+    }
+  ]
+}

@@ -1,0 +1,336 @@
+{
+  "source_docx": "book\\Graves decires de aguda intuición.docx",
+  "count": 55,
+  "files": [
+    {
+      "original_path_in_docx": "word/media/image1.png",
+      "extracted_file": "assets/docx-media/image1.png",
+      "size_bytes": 597,
+      "sha256": "ad23998b3dfda84aa45048520f8c0cc7ea57ae15aeb77805f4de42964c9e2964"
+    },
+    {
+      "original_path_in_docx": "word/media/image10.jpg",
+      "extracted_file": "assets/docx-media/image10.jpg",
+      "size_bytes": 4760,
+      "sha256": "a1ee37ab03a5d21799b905129b60a20b948953a2415a366b171803c62cc01efc"
+    },
+    {
+      "original_path_in_docx": "word/media/image11.png",
+      "extracted_file": "assets/docx-media/image11.png",
+      "size_bytes": 585,
+      "sha256": "f6b80f77846355d2d993dde4a3d43f1b05a929a753a01333a8e43e97da2fb949"
+    },
+    {
+      "original_path_in_docx": "word/media/image12.png",
+      "extracted_file": "assets/docx-media/image12.png",
+      "size_bytes": 587,
+      "sha256": "e6de6aefd0fd45899ebe253ae87a706908d5f279e1691300bc74d2ea75537d0e"
+    },
+    {
+      "original_path_in_docx": "word/media/image13.png",
+      "extracted_file": "assets/docx-media/image13.png",
+      "size_bytes": 590,
+      "sha256": "da22fe1cf9d95bfb8da41ac83f2e50d80a5a47848040d08610de4e4e91838022"
+    },
+    {
+      "original_path_in_docx": "word/media/image14.png",
+      "extracted_file": "assets/docx-media/image14.png",
+      "size_bytes": 596,
+      "sha256": "e2cb570aded9c333dc60450ba90b238b37708d27ee221d78573f436a877acb29"
+    },
+    {
+      "original_path_in_docx": "word/media/image15.png",
+      "extracted_file": "assets/docx-media/image15.png",
+      "size_bytes": 595,
+      "sha256": "64e2505d8aff35b01404e33a24be1b886cccb1570de0a426b96805d81fc3209d"
+    },
+    {
+      "original_path_in_docx": "word/media/image16.png",
+      "extracted_file": "assets/docx-media/image16.png",
+      "size_bytes": 589,
+      "sha256": "f1909d6459a7fd174188b63d4b0e63c909004f37f7f127bdbbaeb24cac14a0c0"
+    },
+    {
+      "original_path_in_docx": "word/media/image17.png",
+      "extracted_file": "assets/docx-media/image17.png",
+      "size_bytes": 598,
+      "sha256": "be60a32f43bb784349f5606756228ea9e9d38bc63eb52fb5a12ebf9de4173143"
+    },
+    {
+      "original_path_in_docx": "word/media/image18.jpg",
+      "extracted_file": "assets/docx-media/image18.jpg",
+      "size_bytes": 5377,
+      "sha256": "bb33e98e42b87b1a013196b18aae0c226614500230122d596d9ce62b5b2bcfdf"
+    },
+    {
+      "original_path_in_docx": "word/media/image19.jpg",
+      "extracted_file": "assets/docx-media/image19.jpg",
+      "size_bytes": 58274,
+      "sha256": "cc3516a327cbff64b4658ed3dac260da7f537901e7bc59044242e56e37820227"
+    },
+    {
+      "original_path_in_docx": "word/media/image2.png",
+      "extracted_file": "assets/docx-media/image2.png",
+      "size_bytes": 590,
+      "sha256": "93b4368d8a1c803710a026b4ac43862499ef8eb45e854fcba73e7a8d4db5a390"
+    },
+    {
+      "original_path_in_docx": "word/media/image20.png",
+      "extracted_file": "assets/docx-media/image20.png",
+      "size_bytes": 602,
+      "sha256": "90c22541a8d34b0884e64fbc6e21921d2d6456751a938ab963d0d18e6260a5ca"
+    },
+    {
+      "original_path_in_docx": "word/media/image21.jpg",
+      "extracted_file": "assets/docx-media/image21.jpg",
+      "size_bytes": 30206,
+      "sha256": "150654055bf283a781891fcecca0b15e9140a87b4636de665398cc6bf76617b0"
+    },
+    {
+      "original_path_in_docx": "word/media/image22.png",
+      "extracted_file": "assets/docx-media/image22.png",
+      "size_bytes": 581,
+      "sha256": "b6e3dcd88223c2b426e5d577a4f9e40f4ecc9ea7f5b3f7e2c3bc3b929d5e4026"
+    },
+    {
+      "original_path_in_docx": "word/media/image23.png",
+      "extracted_file": "assets/docx-media/image23.png",
+      "size_bytes": 595,
+      "sha256": "622b5c920b3b2dbfb4d922e7eaadff607fabc4e617f43b7b01d50ee8c0c3e6f5"
+    },
+    {
+      "original_path_in_docx": "word/media/image24.png",
+      "extracted_file": "assets/docx-media/image24.png",
+      "size_bytes": 581,
+      "sha256": "7ccf5d8f5ef4b931fe03cdfddb544a9bcb56eec1b7d9b96077a2d37662e15a03"
+    },
+    {
+      "original_path_in_docx": "word/media/image25.png",
+      "extracted_file": "assets/docx-media/image25.png",
+      "size_bytes": 603,
+      "sha256": "0dc02f292843637ec4a5e1a40034ab82bfe5455b2cec7866f7cda5600481787b"
+    },
+    {
+      "original_path_in_docx": "word/media/image26.png",
+      "extracted_file": "assets/docx-media/image26.png",
+      "size_bytes": 592,
+      "sha256": "de0d32a062f6821a07364af099fc7bd000a3ce57efde19f5b7a6f39fad59c02b"
+    },
+    {
+      "original_path_in_docx": "word/media/image27.png",
+      "extracted_file": "assets/docx-media/image27.png",
+      "size_bytes": 588,
+      "sha256": "0c0b6dcd6deba55e3a9e8b105f4c4faa0735ab41aadc4fbd5b7a015d51d401e3"
+    },
+    {
+      "original_path_in_docx": "word/media/image28.jpg",
+      "extracted_file": "assets/docx-media/image28.jpg",
+      "size_bytes": 7714,
+      "sha256": "80888c227438b19097a9eca69d57163959eaacf302f2ab87e2fc2a6a5388d53e"
+    },
+    {
+      "original_path_in_docx": "word/media/image29.png",
+      "extracted_file": "assets/docx-media/image29.png",
+      "size_bytes": 592,
+      "sha256": "6b7b450e8bcba81ce2abd93d1e228fb46736bf745143c15ee9d73a9ed710a301"
+    },
+    {
+      "original_path_in_docx": "word/media/image3.png",
+      "extracted_file": "assets/docx-media/image3.png",
+      "size_bytes": 582,
+      "sha256": "9b3ba1e50854d5516e8e6dffb506baf1927c84c71e1e32c72c847a5d69f90191"
+    },
+    {
+      "original_path_in_docx": "word/media/image30.png",
+      "extracted_file": "assets/docx-media/image30.png",
+      "size_bytes": 583,
+      "sha256": "819ba8567c31e2a0435758f51c4f0765636768f1cf422c0a1bec58eb140fb4b8"
+    },
+    {
+      "original_path_in_docx": "word/media/image31.png",
+      "extracted_file": "assets/docx-media/image31.png",
+      "size_bytes": 606,
+      "sha256": "e24086040fbd0f6389c7f7b3f307437a021b1dfb66c08d378dd2493a9c1eb18f"
+    },
+    {
+      "original_path_in_docx": "word/media/image32.png",
+      "extracted_file": "assets/docx-media/image32.png",
+      "size_bytes": 589,
+      "sha256": "2b37bd608a8377f07948d90079c34de8a2b551d8ba45081de6ece942f005b6fd"
+    },
+    {
+      "original_path_in_docx": "word/media/image33.png",
+      "extracted_file": "assets/docx-media/image33.png",
+      "size_bytes": 583,
+      "sha256": "3fc612126d40902065e1d6f2fa8f77e167fcc212adffc7d880095684ec534064"
+    },
+    {
+      "original_path_in_docx": "word/media/image34.png",
+      "extracted_file": "assets/docx-media/image34.png",
+      "size_bytes": 589,
+      "sha256": "bcca74ab2385d94b62902477b98761f7395a984ea5b5120caf0874f2bb3acd69"
+    },
+    {
+      "original_path_in_docx": "word/media/image35.png",
+      "extracted_file": "assets/docx-media/image35.png",
+      "size_bytes": 594,
+      "sha256": "b49daf0d9c5f8150e8c253756900897c73bcc3d3eb9fa32eb3d78a2a76d15fc8"
+    },
+    {
+      "original_path_in_docx": "word/media/image36.png",
+      "extracted_file": "assets/docx-media/image36.png",
+      "size_bytes": 594,
+      "sha256": "e2d42177faca9fb62d8283e1512562e42755db23ca0a4b207ba90bae3074ac91"
+    },
+    {
+      "original_path_in_docx": "word/media/image37.png",
+      "extracted_file": "assets/docx-media/image37.png",
+      "size_bytes": 590,
+      "sha256": "3f4f2c6f8c29d175fb5024c2ac2261335e03d0a74f667c681371473de8043a86"
+    },
+    {
+      "original_path_in_docx": "word/media/image38.png",
+      "extracted_file": "assets/docx-media/image38.png",
+      "size_bytes": 586,
+      "sha256": "446979f411f20e506a47c28cfd7b0573f6de5859b8cae3d2750e433952ae74e6"
+    },
+    {
+      "original_path_in_docx": "word/media/image39.jpg",
+      "extracted_file": "assets/docx-media/image39.jpg",
+      "size_bytes": 27557,
+      "sha256": "00a7921085fd899a8690f4f1adb0d17e98c234fa83716d70aaa64435792bb310"
+    },
+    {
+      "original_path_in_docx": "word/media/image4.png",
+      "extracted_file": "assets/docx-media/image4.png",
+      "size_bytes": 598,
+      "sha256": "fbb2c37c1eae4927e17df2fcc5f9f62aa175478f58bf10c685baf3b26c5ea15a"
+    },
+    {
+      "original_path_in_docx": "word/media/image40.png",
+      "extracted_file": "assets/docx-media/image40.png",
+      "size_bytes": 583,
+      "sha256": "f5d4f9515805338131e97e78678a9360618a099f5ced671218b2596af38569d8"
+    },
+    {
+      "original_path_in_docx": "word/media/image41.png",
+      "extracted_file": "assets/docx-media/image41.png",
+      "size_bytes": 575,
+      "sha256": "5270822d0b89cc6135228a32b9ddfc17146f6e735206113d33895f05f2fed2ec"
+    },
+    {
+      "original_path_in_docx": "word/media/image42.png",
+      "extracted_file": "assets/docx-media/image42.png",
+      "size_bytes": 593,
+      "sha256": "fb5f8215802c0a5aa4fd915bb9224124b5ede219d439fe067ef937dbc67325f6"
+    },
+    {
+      "original_path_in_docx": "word/media/image43.png",
+      "extracted_file": "assets/docx-media/image43.png",
+      "size_bytes": 580,
+      "sha256": "2a9f322535573b857b6ce7e1cd7e1e6e631001c1f935bb3479f7d7ff47a64cdd"
+    },
+    {
+      "original_path_in_docx": "word/media/image44.png",
+      "extracted_file": "assets/docx-media/image44.png",
+      "size_bytes": 600,
+      "sha256": "e911c0453baf62bf3c716caa1e414d45f47c13477b0f5486df40f10ce10ec926"
+    },
+    {
+      "original_path_in_docx": "word/media/image45.png",
+      "extracted_file": "assets/docx-media/image45.png",
+      "size_bytes": 595,
+      "sha256": "df10cf2a13e4acd9da1839f39c213e5249465ef382c4f6ca15170e3774631644"
+    },
+    {
+      "original_path_in_docx": "word/media/image46.png",
+      "extracted_file": "assets/docx-media/image46.png",
+      "size_bytes": 562,
+      "sha256": "6333311cef606928aa92df341c8633ce4b183439ac65c927e0e42310f3da1aa7"
+    },
+    {
+      "original_path_in_docx": "word/media/image47.png",
+      "extracted_file": "assets/docx-media/image47.png",
+      "size_bytes": 597,
+      "sha256": "1b116b72990e97cb6b5d16f1283e2a35be44bdf33162f3f2dccae2602e45045c"
+    },
+    {
+      "original_path_in_docx": "word/media/image48.png",
+      "extracted_file": "assets/docx-media/image48.png",
+      "size_bytes": 602,
+      "sha256": "a0a54b7f4b069880225aac20f38a3044f5131ca4ba898df502718633f834e3a0"
+    },
+    {
+      "original_path_in_docx": "word/media/image49.png",
+      "extracted_file": "assets/docx-media/image49.png",
+      "size_bytes": 598,
+      "sha256": "1fc47ff8b15284cc5c1098bbde71ac97fdf8a07a47a02cdbfbde60d13426b1d5"
+    },
+    {
+      "original_path_in_docx": "word/media/image5.jpg",
+      "extracted_file": "assets/docx-media/image5.jpg",
+      "size_bytes": 117217,
+      "sha256": "af6a08792da4fdb2432fccf29b4859acd218e9b0d40df969aa84e2049105d697"
+    },
+    {
+      "original_path_in_docx": "word/media/image50.png",
+      "extracted_file": "assets/docx-media/image50.png",
+      "size_bytes": 46194,
+      "sha256": "cda1dab3452a49dca32448bbdcba327e92586c8425e1d6c502fdb43a52b107ee"
+    },
+    {
+      "original_path_in_docx": "word/media/image51.jpg",
+      "extracted_file": "assets/docx-media/image51.jpg",
+      "size_bytes": 43048,
+      "sha256": "9bc7eb9f1925cbdae3a736ef548da384990ceea0eced76abdeb96912ccfd5ddc"
+    },
+    {
+      "original_path_in_docx": "word/media/image52.jpg",
+      "extracted_file": "assets/docx-media/image52.jpg",
+      "size_bytes": 178000,
+      "sha256": "76405a6e51df835f9e5fc7d691fa6a3fac8da629375e469c7c6c7da15d803d38"
+    },
+    {
+      "original_path_in_docx": "word/media/image53.png",
+      "extracted_file": "assets/docx-media/image53.png",
+      "size_bytes": 600,
+      "sha256": "f6ac98cd9e1bb5210763924e78b7e4c4db9c7b9e0a5801b1c1829bd56c2e7633"
+    },
+    {
+      "original_path_in_docx": "word/media/image54.jpg",
+      "extracted_file": "assets/docx-media/image54.jpg",
+      "size_bytes": 43833,
+      "sha256": "570ccbc60dcd6e663f8ec1c38795c2c2fb8ec17419b4c00abb76c2c4341d348f"
+    },
+    {
+      "original_path_in_docx": "word/media/image55.jpg",
+      "extracted_file": "assets/docx-media/image55.jpg",
+      "size_bytes": 76577,
+      "sha256": "afba63c227cf1bcb927af7f5a22008743dd3c6ff49c92f4687e8f3031cbc85e3"
+    },
+    {
+      "original_path_in_docx": "word/media/image6.png",
+      "extracted_file": "assets/docx-media/image6.png",
+      "size_bytes": 599,
+      "sha256": "4cb9c574c540b5e2377cef49695985f3823eb69a587a090abaad9843f2111536"
+    },
+    {
+      "original_path_in_docx": "word/media/image7.png",
+      "extracted_file": "assets/docx-media/image7.png",
+      "size_bytes": 593,
+      "sha256": "7a5534b60123887c3c92d07b508396b38384babba7e50615ed5af7cdb40bc771"
+    },
+    {
+      "original_path_in_docx": "word/media/image8.png",
+      "extracted_file": "assets/docx-media/image8.png",
+      "size_bytes": 598,
+      "sha256": "11b45cf49feeae897dfc472df9a44e1d0a2ef0b621e65e8257294f875e96baa7"
+    },
+    {
+      "original_path_in_docx": "word/media/image9.png",
+      "extracted_file": "assets/docx-media/image9.png",
+      "size_bytes": 585,
+      "sha256": "9b0e65754997447b7548d97e69c08331ce3a470ba8100b81119def4f112e68d2"
+    }
+  ]
+}

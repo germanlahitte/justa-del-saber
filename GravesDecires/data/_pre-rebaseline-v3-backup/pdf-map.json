@@ -1,0 +1,809 @@
+{
+  "pdf": "book\\Graves decires de aguda intuición.pdf",
+  "page_count": 79,
+  "images_matched": 4,
+  "images_unmatched": 51,
+  "pages": [
+    {
+      "page": 1,
+      "text_snippet": "Graves \ndecires  \nde \naguda \nintuición",
+      "char_count": 38,
+      "images": []
+    },
+    {
+      "page": 2,
+      "text_snippet": "",
+      "char_count": 0,
+      "images": []
+    },
+    {
+      "page": 3,
+      "text_snippet": "A  Joni, que puso Almafuerte en mi walkman \nA Sandra y a Daniel, que nos dejaron subir el volumen  \n \nA Fede que siempre insistió con Hermética \nA Noley que me obligó a escucharlo. \n \nA Zulma o a Mónica, que nos propuso el ejercicio de leer en \nvoz alta la poesía en las canciones para quitarles la c",
+      "char_count": 719,
+      "images": []
+    },
+    {
+      "page": 4,
+      "text_snippet": "Esto lo hago porque soy uno de los tantos conmovidos por la \npoesía de Ricardo Iorio (1962-2023) y porque lo que elige \ndecir lo entiendo trascendental a su tiempo y a su figura. \n \nQuisiera que sea conocido y recordado no sólo por memes, \nsino por ser esa persona extremadamente sensible y \nempática",
+      "char_count": 1350,
+      "images": []
+    },
+    {
+      "page": 5,
+      "text_snippet": "Solemos decir que algo o alguien tiene sus bemoles para \nseñalar puntos débiles o incongruencias, estableciendo un \nparalelismo un tanto vacuo con el semitono previo a la nota \nque podría ser la síntesis de nuestro objeto de estudio. \n \nSin compartir del todo esa metáfora, elijo extenderla y dejar \n",
+      "char_count": 836,
+      "images": []
+    },
+    {
+      "page": 6,
+      "text_snippet": "\"Loco, V8 ponganlé.  \nComo el motor\" \n \nLa Estética \n \n“Basta ya de signos de la paz​\nBasta de cargar con el morral​\nSi estás cansado de llorar​\nEste es el momento de gritar \nQue estás vacío de liberación​\nY estás muy lleno de represión​\nEl presente te es infeliz​\nhoy tu mente hippie ha de morir” \n ",
+      "char_count": 552,
+      "images": [
+        {
+          "xref": 17,
+          "sha256": "639ab923713d236d63b6c22361c9d8d0e01f81f0e66f527e3a42f92e869c0cb5",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "text_snippet": "La Ética \n \n\"Reflejar el presente inmediato para que un chico de 17 años \nque encuentre un cassette de Hermética, hurgando entre las \ncosas de su padre, advierta cómo vivía éste cuando tenía su \nedad.  \nLa intención es documentar el presente para pulir el futuro y \nser cada vez mejores, contribuir a",
+      "char_count": 725,
+      "images": [
+        {
+          "xref": 21,
+          "sha256": "8e89dd5d65aacde24d55c56b3938966573a1720d4a4f636a7d49c6d9587fd994",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "text_snippet": "La Síntesis \n \n“Fue, sin un porqué, mi gran sueño amasijado \nMucho lo lloré, por inesperado \nSi existe un motivo, a mí no me lo comunicaron \nLos que ayer conmigo compartieron tanto \nPremeditaron apartarme y, al saberlo, me hice a un lado \n \nCanto mi razón para que quien quiera, guarde \nPues voy otra",
+      "char_count": 935,
+      "images": [
+        {
+          "xref": 24,
+          "sha256": "1fec08d30c162ab2c8f8b3eef5f9ffdd6eeaafabe2c1a85b877ac06b9892844f",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "text_snippet": "9",
+      "char_count": 1,
+      "images": [
+        {
+          "xref": 27,
+          "sha256": "79d914f31e350d328ab269a9f9233e08ab68d5a7599b5541fa2670d1faa9b5c0",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "text_snippet": "“Mis años  \ny la madrugada, \nanudan sueños por \ncumplir”\n \n10",
+      "char_count": 61,
+      "images": []
+    },
+    {
+      "page": 11,
+      "text_snippet": "Para que la semilla de la consciencia llegue a vos \nDando vuelta la tierra, en los surcos de la vida, estoy \n \nMaquinaria compleja \nLa cabeza tractoreando. \nLas inclemencias del tiempo estoy aguantando \n \nLa sequía de hermandad no engendra más que suplicios. \n \nAquí estamos, otra vez, cuadrilla de h",
+      "char_count": 771,
+      "images": [
+        {
+          "xref": 32,
+          "sha256": "01466fd339b81e1e19ec76a4e53ef5bdcb559172d115cb80a51149ef613b8df1",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "text_snippet": "Enajenación  \nIndividualismo \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n12",
+      "char_count": 90,
+      "images": [
+        {
+          "xref": 35,
+          "sha256": "9bc7eb9f1925cbdae3a736ef548da384990ceea0eced76abdeb96912ccfd5ddc",
+          "docx_media": "image51.jpg"
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "text_snippet": "“La muerte es ocultar la verdad \n El vacío es dejarse mentir \nOlvídalo y volverá por más” \n \nOlvídalo y volverá por más  \nVíctimas del Vaciamiento - 1994 \nHermética \n \n \n \n“Aunque en virtudes abunde y se juzgue inobjetable \nCuando el humano se hunde siempre busca un responsable \nA menudo nos engañan",
+      "char_count": 441,
+      "images": [
+        {
+          "xref": 38,
+          "sha256": "a3b7532c9b332732a41c958f6e61f85c8e4b59f9bb4aff6a3ee2be723a5e458f",
+          "docx_media": null
+        },
+        {
+          "xref": 39,
+          "sha256": "9520a8724b113053fc39416fd3e27bc5f95b4d62392dc1d8b15cf5b7886bab1e",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "text_snippet": "Desnudar el sinrazón  \nQue modeló nuestras vidas \nParece ser causa perdida \n \nNadie apuesta a detener \nEl motor que contamina \nEl aire que a diario respiras \n \nY que respiraste ayer \nY que mañana tal vez, no lo sé \n \nPor eso hoy \nReflexionando en esto \nLa madrugada pasó \nY dejó… otro día para ser \n ",
+      "char_count": 690,
+      "images": []
+    },
+    {
+      "page": 15,
+      "text_snippet": "Derrame de combustible, exterminio forestal \nEl motor contaminante no se detendrá \nPara ser, hay otro día en el planeta inferior \nComo cualquier día \nComo todo día \nCon o sin mi reflexión \n \nVender, comprar \nComer, cagar \nMorir, nacer \nSufrir, gozar \nOdiar, amar \nSer o no ser​\n \nOtro día para ser \nV",
+      "char_count": 349,
+      "images": [
+        {
+          "xref": 44,
+          "sha256": "72720d94efc221860ccfb3b8ac92dc717721446fe66fa1b2820d1ff8418682db",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "text_snippet": "En todos los sitios, de cualquier ciudad​\nse encuentran los cerdos babeando maldad.​\nSon quienes controlan nuestra identidad​\n y lucran cuidando que no pienses de más. \nSi es amplio tu tiempo para la reflexión,​\nten mucho cuidado, no alces la voz.​\nPues corres un riesgo, que en nombre de Dios​\nlaven",
+      "char_count": 553,
+      "images": [
+        {
+          "xref": 47,
+          "sha256": "9423ec9fa29789a1c1fa816a99fbcd0ff97c28bfa92cf4e98245dac11f320b84",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "text_snippet": "En grises calles infectadas de tensión,​\nsucias paredes, dejan ver la desunión. \nTodo está prohibido, salvo ser uno más​\nde los que olvidan y piden seguridad. \nSuicidando mis horas estoy,​\nmientras insanos sigan viviendo.​\nEncadenados al desamor,​\na la división, a su ciega ambición. \nSolo escapo en ",
+      "char_count": 659,
+      "images": [
+        {
+          "xref": 50,
+          "sha256": "e4b6f2caf3441ca10af430224148973d30a7d9191d376ed2ce45853f75f8d99d",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "text_snippet": "Por nacer en este suelo, hice un pacto, yo con Dios.  \nO tal vez fue con el diablo, no lo sé \nSólo recuerdo el mandato decidor de no callar lo que \ntanto se calló \n \nParece no importarle a quien parece no sentir \nTal vez, porque guardando el pan, se cree dueño del \nbuen vivir \n \nPobre de él \nEl orej",
+      "char_count": 678,
+      "images": [
+        {
+          "xref": 53,
+          "sha256": "343e10cd27f5d65ce64da99ea3e217d49b28f1fb71a2db1da37d0fcc7f5271a4",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 19,
+      "text_snippet": "19",
+      "char_count": 2,
+      "images": [
+        {
+          "xref": 56,
+          "sha256": "db517607f796c1b62341ca873c7c4dbce9d212a3acd95c4dc8791ef20f874336",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 20,
+      "text_snippet": "Y sí. Viva. \n \nSi es la excusa más popular para gritar a los cuatro vientos \ncuando me encuentro incapacitado de explicar lo que no \nentiendo. \nCuando me ponen delante la evidencia de que hago \nexactamente lo que ayer declaré aberrante… ¡Viva la libertad, \ncarajo! \nCuando me cuestionan hacer yunta c",
+      "char_count": 1253,
+      "images": []
+    },
+    {
+      "page": 21,
+      "text_snippet": "Las decisiones, los dirigentes y las leyes son democráticos \ncuando benefician a muchos más de los que perjudican, \nsiempre dentro de un marco de derechos que ninguna \nmayoría puede quitar. Y ése es el verdadero imperio de la \nrazón. Sin retórica. \nSi los beneficiados son la mayoría, empezamos bien.",
+      "char_count": 1454,
+      "images": []
+    },
+    {
+      "page": 22,
+      "text_snippet": "Transitamos un mundo en el que las decisiones tienen un \nespíritu exactamente opuesto. Los beneficiados no sólo se \npueden contar: pueden ser señalados con nombres, apellidos \ny alcurnia. Mientras que los perjudicados se asumen por \nmillones. No tenemos rostro y no importamos. \nEn el medio, y con un",
+      "char_count": 1537,
+      "images": []
+    },
+    {
+      "page": 23,
+      "text_snippet": "derechos universales en privilegios materiales. Que nadie \npueda acumular tanta fuerza que su libertad dependa de la \nimpotencia de los demás. \nNadie puede ni debe ser el dueño del mundo. Nadie necesita \nserlo cuando entendemos que no es natural que la vida sólo \nesté garantizada por el poder adquis",
+      "char_count": 403,
+      "images": []
+    },
+    {
+      "page": 24,
+      "text_snippet": "Represión \n \n“Libertad y sus vestigios \nMás vale ponerse a salvo \nMuchos calzan gorro frigio \nSolamente por ser calvos” \n \nMemoria de siglos  \nÁcido Argentino - 1991 \nHermética \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n24",
+      "char_count": 216,
+      "images": [
+        {
+          "xref": 67,
+          "sha256": "4eb30a75979e645ad6346357e857783b31136b4861365bd83d9116174cedb7c9",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 25,
+      "text_snippet": "25",
+      "char_count": 2,
+      "images": [
+        {
+          "xref": 70,
+          "sha256": "570ccbc60dcd6e663f8ec1c38795c2c2fb8ec17419b4c00abb76c2c4341d348f",
+          "docx_media": "image54.jpg"
+        }
+      ]
+    },
+    {
+      "page": 26,
+      "text_snippet": "De la noche del viernes al domingo por la tarde. \nFui enjaulado cual misto.  \nSometido al amance por legales de oficio. \nQue mi aspecto al parecer, les resultó jodido. \n \nPor metalero y pesado \nAmansadora guacha de averiguación. \nHoras amargas de policial encierro. \n \nOtros tantos conmigo, mastican ",
+      "char_count": 845,
+      "images": [
+        {
+          "xref": 73,
+          "sha256": "52d3ae1c6c629a3b62f3fcf093cb4e5e33d4d8ddf2af0ac80d6d3189e8f483ed",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 27,
+      "text_snippet": "Por quererte ver, lucero del alba.​\nTropecé y caí, al regresar de andar en nada.​\n \nPasa el siglo veinte y la ciudad Central me amarra​\ncon su mano de cemento etéreo, al vicio de madrugada. \nAlcé mis ojos al cielo, cuando cruzaba la plaza.​\nQueriendo verte lucero, pero no pude ver nada. \nNada más qu",
+      "char_count": 863,
+      "images": []
+    },
+    {
+      "page": 28,
+      "text_snippet": "De los llanos apartados del gran amontonamiento​\nDonde dejaba este canto en solitario al cielo abierto. \nMi despertar fue tan triste como mi suerte de mala.​\nLucero que verte quise pero no pude ver nada. \n \nNada más que miserables palomares de concreto.​\nTras el ramaje abatido de unos árboles reseco",
+      "char_count": 506,
+      "images": [
+        {
+          "xref": 78,
+          "sha256": "7c844d13a7af849385b201ef41ed440844ed840d032dc440d8a7f87fcc8c3d4d",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 29,
+      "text_snippet": "Uno más, entre tantos soy \nque olvidar no quiere \nlos delirios del defacto \n \nMe ha dictado la razón \ncantar en repudio \nal genocidio ejecutado \n \nPorque no olviden \nPorque recuerden \nAún, los que hoy mismo, engendrados fueren tal vez \nla impunidad del perro guardián \n \nPor los que eligen quien es g",
+      "char_count": 741,
+      "images": [
+        {
+          "xref": 81,
+          "sha256": "8dd3630337d4d19841c2f5d44e26cb82d766ec33f583df43eb4c3d94c81d2aee",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 30,
+      "text_snippet": "Una extremista obsesión martilla mi conciencia. \nMostrándome que el tiempo no dura más que la eternidad. \nEscribo en canción, mi visión de un mañana bajo tierra. \nDonde poder vivir libres del control satelital. \n \nQuiero que se corra la voz, sin sospecha ni demora. \nFijemos fecha y hora, la precordi",
+      "char_count": 635,
+      "images": [
+        {
+          "xref": 84,
+          "sha256": "70441ccda9c025b902811e41f297356488dd86f1553a28c69298ea031a523fd4",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 31,
+      "text_snippet": "Domesticación \n“Están adorando un santo de madera” \n \n \n \n \n \n“Y vos y yo consumidores de basura \nacrecentamos el poder de esta gente \nque nos impone las reglas de este juego \ny rien al vernos caer en su trampa demente” \n \nCautivos del sistema  \nUn paso más en la batalla - 1984 \nV8 \n \n \n \n \n \n \n \n \n",
+      "char_count": 310,
+      "images": [
+        {
+          "xref": 87,
+          "sha256": "c7b690c676d568063d00ebfe7f24ea6de4b27c345b2de15db87a2c33f2ba37c5",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 32,
+      "text_snippet": "32",
+      "char_count": 2,
+      "images": [
+        {
+          "xref": 90,
+          "sha256": "b1571502cd9de6af3bf9bccd87916dc4e2571e00584aa1113150589b3690743c",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 33,
+      "text_snippet": "Sin ser Testigo de Jehová, \nDios en mi voz se manifiesta. \nNo soy evangelista, adventista ni mormón. \nTampoco cura santurrón. \n \nNo soy doctorado en la ley. \nNo soy ladrón, soplón, ni yuta. \nSépanlo!! \nYo soy el que soy, nada más, \nno soy más ni menos que nadie. \n \nUn laburante es mi papá. \nY mi mam",
+      "char_count": 643,
+      "images": []
+    },
+    {
+      "page": 34,
+      "text_snippet": "Hijos nacidos de quien ayer cantó. \nSon el remake del escapismo. \nSi hoy no tenés para pagar un abogado. \nQuedás tras las rejas de un penitencial. \nY andá a cantarle a Gardel. \n \nYa lárguenme, déjenme ser humano. \nJunto al santafesino, mendocino, \ntucumano, correntino o cordobés. \n \nSer humano junto",
+      "char_count": 353,
+      "images": [
+        {
+          "xref": 95,
+          "sha256": "fac52099f403e87d8b03c8c8c0dd28776379a559e29110bcf494f3c057f3f6ea",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 35,
+      "text_snippet": "“Falsa fe, falso perdón de los pecados. \nDioses que fueron vendidos y comprados \nPor cretinos que olvidaron que el infierno es hoy. \n \nPor la TV, varones putos y egoístas \nMuestran que fue mintiendo amor como sonrisas. \n \nLo peor es dejarse llevar por la mierda \nQue los mal cogidos de antaño siguen ",
+      "char_count": 567,
+      "images": [
+        {
+          "xref": 98,
+          "sha256": "88d732a2ebe5ba9eaae215e60bae8647e7286ce2d07e5e4c46c3b567c9edd641",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 36,
+      "text_snippet": "Madre Tierra, Padre Sol.​\nNi Demonio, ni Señor.​\nPareciera más coherente​\nadorarlos nuevamente. \nQue el engaño santurrón de los muertos vivos.​\nQue este rumbo destructivo o el miedo al castigo. \nMadre Tierra, Padre Sol​\nDioses vivos, hoy por hoy.​\nGrandes testigos silentes,​\nde la humanidad inconsci",
+      "char_count": 731,
+      "images": [
+        {
+          "xref": 101,
+          "sha256": "9a488631afa0d7521a26f97ee8b899546ec34e2ed85420f8b5fafab5a32eadfb",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 37,
+      "text_snippet": "Yo tengo amigos en el más allá, esperándome \nDesencarnados espíritus graves, mentores de mi expresión \nAmigos míos que se fueron ya \nY otros que vivo, no los recuerdo \n \nSon los que intuyo y visten mi cantar con pasión \nFui como ellos en el más allá, y ellos como yo hoy \nUn ida y vuelta del reencarn",
+      "char_count": 626,
+      "images": [
+        {
+          "xref": 104,
+          "sha256": "df480eafd2b2a4d0d25c281283c82522e449bd2b542b3d7a17a585c2d846060e",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 38,
+      "text_snippet": "38",
+      "char_count": 2,
+      "images": [
+        {
+          "xref": 107,
+          "sha256": "afba63c227cf1bcb927af7f5a22008743dd3c6ff49c92f4687e8f3031cbc85e3",
+          "docx_media": "image55.jpg"
+        }
+      ]
+    },
+    {
+      "page": 39,
+      "text_snippet": "Destrucción del entramado social \n“El Vaciamiento” \n \n \n \n \n \n \n \n \n \n“Si estás pensando sólo en vos, \nJamás lo entenderás.” \n \nEl fin de los inicuos \nEl fin de los inicuos - 1986 \nV8 \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n39",
+      "char_count": 281,
+      "images": [
+        {
+          "xref": 110,
+          "sha256": "aa2ed2ec7238ec8709ff6c87aa6fd752842a8b6d6c536bd2a33c26daf391cf59",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 40,
+      "text_snippet": "40",
+      "char_count": 2,
+      "images": [
+        {
+          "xref": 113,
+          "sha256": "2b0e08b0a91f6e59d3adc4c62d78bf9a58a526b7480fe4dfea0270effd4b15fc",
+          "docx_media": null
+        },
+        {
+          "xref": 114,
+          "sha256": "294563eab311ce2e5f26e51e8db24e5bac34d5556ed34a0fd9564ee9e2df69a7",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 41,
+      "text_snippet": "En las mugrientas esquinas de Liniers pierdo los días porque \nno me toca escapar​\nEl gran apego a lo ilusorio se refleja en la vidrieras de un \ntrucho centro comercial \nLa idolatría populosa se dibuja en largas filas para adorar y \nno pensar​\nLa piedra muerta del desvío, falsamente milagrosa, sigue ",
+      "char_count": 814,
+      "images": []
+    },
+    {
+      "page": 42,
+      "text_snippet": "En la esquina, un policía está peleando con su hembra porque \nella nunca le fue fiel​\nBajo el paso de las vías, los mendigos se revuelcan.​\nMuy pocos los quieren mirar \nY la imberbe horda humana que desciende de los trenes​\nDesesperada y alocada​\nContamina mi cabeza y busco amarlos como sea ​\nPara n",
+      "char_count": 524,
+      "images": [
+        {
+          "xref": 119,
+          "sha256": "c859e8624b4921b4bf28e735d6338c175797b6c8ea4d521b7f1c17d722910262",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 43,
+      "text_snippet": "De Pacheco a La Paternal \nDe Dock Sud a 3 de Febrero \nMil amigos, con el corazón, esperan esta canción \nPara atravesar el trago amargo de este mal momento \n \nMientras el mundo,  \nPolicía y ladrón \nMe bautizan sonriendo \nGil trabajador \nGil, gil trabajador \n \nBestia humana que duermes aún de la cuna ",
+      "char_count": 878,
+      "images": [
+        {
+          "xref": 122,
+          "sha256": "8c958584474a7f9d6e824df1608a3d244ed23357d0b25e33fdbff44f140ec3ec",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 44,
+      "text_snippet": "Como estaba ahí Dios, estuve yo también​\nAnte el desfile de las inclemencias, contemplando tanta \nmiseria \ny yo pensé pa´mis adentros: “Puta que tiene paciencia” \n \n¿Cómo tener tanto poder y permitir que esto pueda suceder?​\n¿Será tal vez que quiera saber cuánto aguanta el hombre a \ntravés de la fe?",
+      "char_count": 780,
+      "images": [
+        {
+          "xref": 125,
+          "sha256": "b14e2c6777fbcb5216072ee781bfff0adec4c4aabe38cdd576ecd2c0f3bf5618",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 45,
+      "text_snippet": "Planetaria depredación, respaldada en las armas.​\nDando pasos al abismo, vas restando esperanzas \nEs de muchos no querer ver, o no darte importancia​\nA tu marcha de exterminio, que diariamente avanza. \n​\nMientras la humana familia duerme.​\nPachamama en el olvido se disuelve.​\nGran chusma, exige mila",
+      "char_count": 531,
+      "images": [
+        {
+          "xref": 128,
+          "sha256": "9723890ca24abf06d5fef090aa17c3087f3d7e71e2f6c084d2a829e74dd22ffc",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 46,
+      "text_snippet": "46",
+      "char_count": 2,
+      "images": [
+        {
+          "xref": 131,
+          "sha256": "18a2e785dd4c396bf332c17747d7ee0884261e2a7d80644c93ba39b61862237a",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 47,
+      "text_snippet": "Los políticos son los representantes del pueblo. Nunca lo \nentendí hasta que terminé convencido de que es una gran \nverdad. \nCuando veo la falta de organización, cuando noto la cantidad \nde falencias en cada barrio y la ausencia total de entidades \nvecinales, me parece natural que la clase dirigente",
+      "char_count": 1202,
+      "images": []
+    },
+    {
+      "page": 48,
+      "text_snippet": "Es necesario retomar la senda de la comunidad. Individuos \nunidos en pos de un objetivo común, acaso pequeño o de \ncorto alcance. Cualquier grupo que introduzca mejoras en su \ncomunidad engrandece a la nación, propone un ejemplo y \npromueve a sus dirigentes. \nY es cierto que no todos estamos prepara",
+      "char_count": 1304,
+      "images": []
+    },
+    {
+      "page": 49,
+      "text_snippet": "organización. Ante la negación constante de lo público como \nposibilidad y la falta de participación, crecemos idiotas. \nCarecemos de educación en el dominio de lo público, de \nanclaje y de un horizonte ideológico desde el cual someter a \njuicio las ideas y los discursos que predominan y emanan de \n",
+      "char_count": 1303,
+      "images": []
+    },
+    {
+      "page": 50,
+      "text_snippet": "el tablero. No son dirigentes: son choferes que sacan patente \npara manejar lo que hay, tal como está. \nY con esto no digo que son todos iguales. Digo que son \nexactamente proporcionales a los votantes: representantes \ndel pueblo. \nUna mayoría enajenada y ensimismada que desconoce que \nde los laberi",
+      "char_count": 1023,
+      "images": []
+    },
+    {
+      "page": 51,
+      "text_snippet": "51",
+      "char_count": 2,
+      "images": []
+    },
+    {
+      "page": 52,
+      "text_snippet": "Los Nadies \n“Sin poder esquivar el dolor ajeno” \n \n \n \nSi me estás buscando me encontrarás​\npor el camino que a Luján sigue la procesión,​\nun hogar llamado Jesús de Nazaret​\ncalle de tierra, cruzando el paso a nivel Padre Fahy \nEllos festejan verme llegar​\ny yo, su apuro por abrirme la tranquera​\nun",
+      "char_count": 458,
+      "images": [
+        {
+          "xref": 144,
+          "sha256": "071df3a7412873ac0fdb4271c2689b76126325129c5b2de9fe9167d84bb2c7a9",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 53,
+      "text_snippet": "Olvidar​\nYo sé bien que no podés​\nComo la sociedad olvida​\nque fuiste obligado a marchar en su defensa. \nRecordando el mal momento.​\nAtrincherado en tu habitación.​\nSoledad, humo y penumbras.​\nDespertares de ultratumba. \nApocalipsis del sustento interior​\nAndar sin encontrarle alivio al tormento​\nDe",
+      "char_count": 543,
+      "images": [
+        {
+          "xref": 147,
+          "sha256": "484a32811c54925ad4cb23916c45d49474f790c6adc52de834639abc571bf7c4",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 54,
+      "text_snippet": "En la fila tempranera de hospital, \nel pueblo soporta la espera buscando sanar. \nEl desgano evidente del profesional, \nmotiva el trato prepotente del auxiliar. \n \nMedicina, tu verdad déjame ver. \n \nToda joven que asista brinda ocasión, \nde ordenarle se desvista pa’ la observación. \nExperimentan sus ",
+      "char_count": 692,
+      "images": [
+        {
+          "xref": 150,
+          "sha256": "7fc0f4f309d83146d77214dee5334fd7e23d1eff1512cb7ab29d858843f2ee29",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 55,
+      "text_snippet": "Sirva otra vuelta, pulpero.​\nQue no soy chancho.​\nSoy bicho que no tiene rancho.​\nQue anda arrastrando penas y alegrías.​\nY en eso de la repartida, las malas van ganando. \nSirva otra vuelta, pulpero, a ver.​\nPara mis pares del asentamiento.​\nQue están cargando con el peso hoy,​\nante la ley, por indo",
+      "char_count": 961,
+      "images": []
+    },
+    {
+      "page": 56,
+      "text_snippet": "Que lo que uno tiene, tiene que ganarlo.​\nPor eso es que, con once familias,​\nle hemos ganado, una vez, al Estado.​\nEso sí que es triste.​\nPal que no tiene rancho.​\nNi donde caerse muerto.​ \nSirva otra vuelta, pulpero  \nPiedra Libre - 2001 \nAlmafuerte \n \n \n56",
+      "char_count": 259,
+      "images": [
+        {
+          "xref": 155,
+          "sha256": "eb1462cced85e004d8c47ff09cd6ded54dc3e293a314f709e5561e879f5b8d5a",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 57,
+      "text_snippet": "Tengo un amigo!!  \nSí \nSí \n \nAmanecer en Open Door. \nLegal crucifixión del ser. \n \nSin tener familiares que vengan a reclamarme. \n \nSin visitas, dice el doctor. \n \nEs terminal \nHalopidol. \nSolo estoy viendo amanecer.  \n \nTengo un amigo! \nSí \n \nAmanecer en Open Door \nPiedra Libre - 2001 \nAlmafuerte \n",
+      "char_count": 308,
+      "images": [
+        {
+          "xref": 158,
+          "sha256": "3a27cb2fbc737df134c88156a5f056f0e5ab6a1b34f3f64dcc2a5b86d59374fb",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 58,
+      "text_snippet": "Regresando, donde duermen mis huesos. \nEl sol, con su cachetada, sacude mi plexo. \nObligándome a reflexionar en que nadie me espera, \nY en qué corta es la vida de muchachos calaveras. \n \nLargas son las horas, cuando malo es el momento. \nRelojes sin agujas desangran un desmadre de silencios. \n \nY dor",
+      "char_count": 679,
+      "images": [
+        {
+          "xref": 161,
+          "sha256": "e79493c10015b4dc59671c03fb5d81975905af0d267639f1ccabbf01a090e207",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 59,
+      "text_snippet": "Desarrollo de la subjetividad \nLa libertad individual \n \n \n“Encuentra ya el camino a seguir. \n  Los rostros del mal están cuidando que no te apartes de sus filas \n  Estúpidos son sus argumentos, para que tu ofrendes la vida.” \n \nCamino al sepulcro \nUn paso más en la batalla - 1984 \nV8 \n \n \n \n59",
+      "char_count": 295,
+      "images": [
+        {
+          "xref": 164,
+          "sha256": "978e4c2c7f4c5967ef02631131211a9dfef68d709ed7e9805af158b18ec540f9",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 60,
+      "text_snippet": "Hoy desperté, a un nuevo día de esta cruenta realidad​\nque nos imponen, ante su gozo, fuerzas siniestras del mal. \nMasturbando mi mente con lo inmoral.​\nQuitándome el tiempo a pensar  \nen expulsar de mi mente, su sembrado mal. \nQuiero pensar y comprender cual es mi tarea acá.​\nTal vez será poder viv",
+      "char_count": 910,
+      "images": [
+        {
+          "xref": 167,
+          "sha256": "82114cfc43e5a83a3aeee85669ba61b87860abb4b4b66c51db626393f80d4950",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 61,
+      "text_snippet": "Ajeno al tiempo se que quisieras seguir \nPero mil voces te ahogan para que formes la cola del seguro \nporvenir. \n \nPor eso te vi escapando en las horas sin sol \nDe las miradas oscuras que aprobaron las torturas del fugado \nrepresor. \n \nSon quienes no alcanzan la paz \nPor sus viejos miedos. \nY hoy es",
+      "char_count": 857,
+      "images": [
+        {
+          "xref": 170,
+          "sha256": "260c9561dc009ab2a0e7833eb115c20b0d688f935c45fa4232233df3a8e1596c",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 62,
+      "text_snippet": "Vamos, che \n¿por qué dejar que tus sueños se desperdicien? \nSi no sos vos, será muy triste \n \n¿Por qué falsear? si ser uno es ganar \n¿Por qué engañarse y mentirse? \nYo sé, dirás: \"muy duro es aguantar\" \nMas quien aguanta es el que existe \n \nSé vos, nomás, y al mundo salvarás \nAunque muchos lo hagan ",
+      "char_count": 421,
+      "images": [
+        {
+          "xref": 173,
+          "sha256": "3a47a58e67c771002c33a881ccf16b110578898ffc82726d532f0a1b7dfd2f34",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 63,
+      "text_snippet": "Seres dañados sujetos al mal​\nMutilaron a quien quiso amar, cambiar, renovar \no tan solo reír \n \nCon falsas historias, quisieron callar las almas  \nque en la inmensidad del mar​\nahogaron el grito que desvaneció su vivir \n \nRompe tus horas pensando,  \nantes que los viejos reyes entonen un falso himno",
+      "char_count": 728,
+      "images": [
+        {
+          "xref": 176,
+          "sha256": "f5e2a3b482151f33c3080905e3a112dd190ddc1a3d49f55c8af23d5f4d189103",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 64,
+      "text_snippet": "La libertad de todos \n“Lo soñamos ayer \nY lo cumplimos hoy” \n \n \n \n \n64",
+      "char_count": 71,
+      "images": [
+        {
+          "xref": 179,
+          "sha256": "26bacbfda376f86487dd1a555d3f51f9e5cb01674c77207cf439b6f4d8333593",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 65,
+      "text_snippet": "\"Salir de gira, para llevarte en vivo el concierto, exalta mi vida \n  Cumple con lo que fue mi deseo \n  Cuando ya lejos de la ciudad central,  \nlos horizontes me ven rutas saldar \n  Para llegar  \ny mostrar que soy quien quise ser\" \n \nAyer deseo, hoy realidad \nVíctimas del vaciamiento - 1994 \nHerméti",
+      "char_count": 523,
+      "images": [
+        {
+          "xref": 182,
+          "sha256": "f3ac5f8cd48fe1acba65e10b036955c6016823446cf5947ff86710b1424f9c7e",
+          "docx_media": null
+        },
+        {
+          "xref": 183,
+          "sha256": "ccb296f5882e169c0ce71de7be465c477ac43ee760830daf499e826101d24cab",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 66,
+      "text_snippet": "Hoy... Hoy es \nYo convidándote a mi fiesta estoy \nMetal pesado, argento, de vientos fueguinos. \n \nSé que los vecinos se quejarán, \nno te cortés si la patrulla está en la puerta \n \nSi no hay ortiva, todo va a estar bien​\nflores quemándose perfumarán el balurdo​\nrisas ciertas \nde libertad  \nque da el ",
+      "char_count": 526,
+      "images": [
+        {
+          "xref": 186,
+          "sha256": "39d5f7b19646a760f500b42628c712098ac67c5cdf936b5050154080d7e37eaf",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 67,
+      "text_snippet": "“Desde el maestro, a su alumnado \nDesde los padres, hasta sus hijos \nDesde el predicador, hasta sus fieles \nDesde el curador, hasta el paciente \nY todo lo que humanamente pueda ser \n \nIncorregibles nubes de hampa \nNutridas por injusticia \nDesaparezcan con solo olvidarlas \nY la verdad honre la vida \n",
+      "char_count": 673,
+      "images": [
+        {
+          "xref": 189,
+          "sha256": "a253ef8097a659469056b791daa31dd4ecfe20694ae0c4e3be4c6fba0058ab85",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 68,
+      "text_snippet": "Orgullo argentino quiero expresar \nCon este recite que supe heredar \nPor ser quien no olvida y no ha de olvidar \nPatria, bandera y sentir nacional. \n \nNo te enganchés con la ficción \nArma que esgrime el mentidor \n \nNo es cualquier cosa tener razón \nEs dar la vida, poniendo el pecho \n \nYo estoy clava",
+      "char_count": 600,
+      "images": [
+        {
+          "xref": 192,
+          "sha256": "3a95e2fc51893f4a2888dc1e2fc628c18304e74b1f5e8b65e47a566f4e958d36",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 69,
+      "text_snippet": "Se va la vida y el tiempo a perder \nEs una espina que intento quitarme \nY así mi herida cerrada tal vez \nMe dé la dicha de mil libertades \n \nDesde temprano se puso a ladrar mi perro interno que morder \nno sabe \nSerá por eso, no puedo aplacar, la gran manija que a diario \nme invade \n \nBusco una estro",
+      "char_count": 833,
+      "images": [
+        {
+          "xref": 195,
+          "sha256": "bc7c8bca7834b5d5e7856a71662de4d229f4fd00d3bdecb6ca5105547cbce2b1",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 70,
+      "text_snippet": "Las redes sociales son estructuras de manipulación. Su uso \ncomo consumidor es potencialmente peligroso. Someterse \ncotidianamente a su distracción condiciona nuestra atención \ny acostumbra al cerebro a una recompensa inmediata y \npermanente. \n \nAburrirse es algo que nadie se permite. El ocio es un ",
+      "char_count": 1251,
+      "images": []
+    },
+    {
+      "page": 71,
+      "text_snippet": "aprender. \nConsume \nenergía, \nno \nes \nnecesariamente \ngratificante y es voluntario; es decir, requiere voluntad. \n \nEs mucho menos doloroso no pensar. \n \nEs muy frustrante conversar, discutir y convencer a la \nmáquina que tenemos dentro. \n \nConstruirse a sí mismo es forjar los pensamientos y calibra",
+      "char_count": 1164,
+      "images": []
+    },
+    {
+      "page": 72,
+      "text_snippet": "La \nfelicidad \nse \nencuentra, en parte, al saldar esas \nincongruencias. Es la tranquilidad de saber que nuestra \nmanera de pensar acompaña nuestra manera de sentir y que \nnuestras decisiones responden a ambas. \n \nEs imprescindible encontrarle explicación a todo eso que nos \npasa por dentro, que palp",
+      "char_count": 1100,
+      "images": []
+    },
+    {
+      "page": 73,
+      "text_snippet": "maquinaria pesada del subdesarrollo emocional que nos \nquiere consumidores y pacientes. Y ser paciente de esta \nrealidad es una sociopatía. \n \nPuede ser de manera inconsciente, pero no reparar en las \nfallas del orden general de las cosas es también una decisión \npersonal que se toma todos los días.",
+      "char_count": 960,
+      "images": []
+    },
+    {
+      "page": 74,
+      "text_snippet": "Existe la mentira: el fruto de esconder mezquindades detrás \nde argumentos nobles. \n \nExisten los ingenuos. \n \nExisten los desatendidos. Esquivos de la empatía. \n \nExisten los que no saben qué hacer y eligen la evasión. \n \nExisten los derrotados. \n \nExisten los necios. Los que no entienden razones. ",
+      "char_count": 911,
+      "images": []
+    },
+    {
+      "page": 75,
+      "text_snippet": "hasta en las soluciones que propongo. Pero tengo un principio \nnoble y tengo muchas razones para creer que lo que digo está \namparado por ese principio, para confiar en algunos y para \ndudar de un montón. \n \nDecir lo que pienso es creer en mí. \n \nPorque trato todos los días de pensar lo que siento. ",
+      "char_count": 462,
+      "images": []
+    },
+    {
+      "page": 76,
+      "text_snippet": "76",
+      "char_count": 2,
+      "images": [
+        {
+          "xref": 210,
+          "sha256": "76405a6e51df835f9e5fc7d691fa6a3fac8da629375e469c7c6c7da15d803d38",
+          "docx_media": "image52.jpg"
+        }
+      ]
+    },
+    {
+      "page": 77,
+      "text_snippet": "De tanto esquivar soledad \nYa no hay nada que me espante \n \nTodo lo que tuve una vez \nHoy, es ayer \nHoy, es distante \n \nDe nada vale recordar lo que fuera algún día \nDe nada vale llorar las horas perdidas \nPues allí, está la muerte \nEsperando \n \nSoy quien ayer cantó “Sé vos” \nHoy, por ser yo, transi",
+      "char_count": 760,
+      "images": [
+        {
+          "xref": 213,
+          "sha256": "b6415b8349461c3dfcc9e3f4818b439d0e3b4d027ef6bc392214e81bae3fd7a7",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 78,
+      "text_snippet": "“Si me ves volver, \nno me atiendas  \nni me abras la \npuerta. \nLoco, solitario  \ny enredado, \nno soy yo” \n \n \n \n78",
+      "char_count": 113,
+      "images": [
+        {
+          "xref": 216,
+          "sha256": "1b1cc35c6028a530b75f0803e1ed48931c27f6d8938f5434c00f30c1c98cc257",
+          "docx_media": null
+        }
+      ]
+    },
+    {
+      "page": 79,
+      "text_snippet": "“Ricardo y la libertad” fue el borrador en el que comencé a \ncompilar letras que me gustaban y en el que plasmé en papel \nalgunas reflexiones y pensamientos. \n \nNo todo es tan lineal ni responde a un principio de causalidad, \npero \nson \ncuestiones \nque \nse \ncharlan \n—directa \ne \nindirectamente— con ",
+      "char_count": 1348,
+      "images": []
+    }
+  ]
+}

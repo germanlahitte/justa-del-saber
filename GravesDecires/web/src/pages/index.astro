@@ -1,0 +1,86 @@
+---
+// HOME — Etapa 3 (revisión aprobada): la portada debe sentirse parte de
+// "Graves decires...", no un selector de modo tipo dashboard. LEER y
+// EXPLORAR siguen siendo la distinción estructural, pero se presentan como
+// dos formas de entrar a la misma obra, no como botones de una app.
+import Layout from '../layouts/Layout.astro';
+import PrototypeBadge from '../components/PrototypeBadge.astro';
+import { getCollection } from 'astro:content';
+
+const bookUnits = await getCollection('bookUnits');
+const readings = await getCollection('readings');
+const concepts = await getCollection('concepts');
+const arcs = await getCollection('mapArcs');
+
+// Opening fragment: unit 0 is the title page; unit 2 (index "1") holds the
+// author's dedication opening lines. We take the very first non-empty
+// verbatim lines of the book as an epigraph for the portal — nothing
+// invented, just the book's own first words.
+const titleUnit = bookUnits.find((u) => u.id === '0');
+const firstLines = titleUnit?.data.text_verbatim.trim() ?? '';
+---
+
+<Layout title="Portada">
+  <main class="mx-auto flex min-h-screen max-w-5xl flex-col justify-between px-6 py-16 sm:px-10">
+    <header class="mb-16">
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-ink-faint">
+        Un sitio construido alrededor de una obra cerrada
+      </p>
+    </header>
+
+    <section class="mb-20">
+      <h1 class="text-4xl leading-tight font-normal sm:text-6xl">
+        {firstLines.split('\n').map((line) => <span class="block">{line}</span>)}
+      </h1>
+      <p class="prose-book mt-6 text-lg text-ink-soft">
+        Un libro sobre las letras, declaraciones y el recorrido artístico de
+        Ricardo Iorio — y un territorio nuevo para leerlo de otra manera.
+      </p>
+    </section>
+
+    <section class="mb-20 grid gap-6 sm:grid-cols-2">
+      <a
+        href="/libro"
+        class="group relative flex flex-col justify-between rounded-sm border border-rule bg-paper-dim/40 p-8 transition-colors hover:border-ink-faint"
+      >
+        <div>
+          <p class="font-mono text-xs uppercase tracking-wider text-ink-faint">Modo lectura</p>
+          <h2 class="mt-3 text-2xl font-normal">Leer la obra</h2>
+          <p class="mt-3 text-sm leading-relaxed text-ink-soft">
+            Recorré "Graves decires..." tal como fue editado: capítulos,
+            letras, imágenes y códigos QR originales, en su orden.
+          </p>
+        </div>
+        <span class="mt-8 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wide text-ink-faint group-hover:text-ink">
+          {bookUnits.length} unidades del libro →
+        </span>
+      </a>
+
+      <a
+        href="/mapa"
+        class="group relative flex flex-col justify-between rounded-sm border border-rule bg-paper-dim/40 p-8 transition-colors hover:border-accent"
+      >
+        <div>
+          <p class="font-mono text-xs uppercase tracking-wider text-accent">Modo exploración</p>
+          <h2 class="mt-3 text-2xl font-normal">Explorar sus ideas</h2>
+          <p class="mt-3 text-sm leading-relaxed text-ink-soft">
+            Una lectura crítica que atraviesa el libro: {concepts.length} conceptos,
+            {readings.length} lecturas y {arcs.length} arcos que ponen letras,
+            declaraciones y épocas en relación.
+          </p>
+        </div>
+        <span class="mt-8 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wide text-ink-faint group-hover:text-accent">
+          Empezar por el mapa →
+        </span>
+      </a>
+    </section>
+
+    <footer class="flex flex-wrap items-center justify-between gap-4 border-t border-rule pt-6">
+      <p class="prose-book text-xs text-ink-faint">
+        La obra permanece intacta. El análisis es una capa aparte, siempre
+        distinguible, que podés decidir abrir o no.
+      </p>
+      <PrototypeBadge label="Prototipo visual v0.1" />
+    </footer>
+  </main>
+</Layout>

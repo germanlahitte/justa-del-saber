@@ -1,0 +1,284 @@
+{
+  "unchanged_count": 3,
+  "renamed_count": 52,
+  "removed_count": 0,
+  "added_count": 0,
+  "unchanged": [
+    {
+      "old_id": "asset-image21",
+      "file": "image21.jpg"
+    },
+    {
+      "old_id": "asset-image39",
+      "file": "image39.jpg"
+    },
+    {
+      "old_id": "asset-image51",
+      "file": "image51.jpg"
+    }
+  ],
+  "renamed": [
+    {
+      "old_id": "asset-image1",
+      "old_file": "image1.png",
+      "new_file": "image15.png"
+    },
+    {
+      "old_id": "asset-image10",
+      "old_file": "image10.jpg",
+      "new_file": "image7.jpg"
+    },
+    {
+      "old_id": "asset-image11",
+      "old_file": "image11.png",
+      "new_file": "image4.png"
+    },
+    {
+      "old_id": "asset-image12",
+      "old_file": "image12.png",
+      "new_file": "image6.png"
+    },
+    {
+      "old_id": "asset-image13",
+      "old_file": "image13.png",
+      "new_file": "image31.png"
+    },
+    {
+      "old_id": "asset-image14",
+      "old_file": "image14.png",
+      "new_file": "image1.png"
+    },
+    {
+      "old_id": "asset-image15",
+      "old_file": "image15.png",
+      "new_file": "image5.png"
+    },
+    {
+      "old_id": "asset-image16",
+      "old_file": "image16.png",
+      "new_file": "image37.png"
+    },
+    {
+      "old_id": "asset-image17",
+      "old_file": "image17.png",
+      "new_file": "image10.png"
+    },
+    {
+      "old_id": "asset-image18",
+      "old_file": "image18.jpg",
+      "new_file": "image40.jpg"
+    },
+    {
+      "old_id": "asset-image19",
+      "old_file": "image19.jpg",
+      "new_file": "image43.jpg"
+    },
+    {
+      "old_id": "asset-image2",
+      "old_file": "image2.png",
+      "new_file": "image9.png"
+    },
+    {
+      "old_id": "asset-image20",
+      "old_file": "image20.png",
+      "new_file": "image13.png"
+    },
+    {
+      "old_id": "asset-image22",
+      "old_file": "image22.png",
+      "new_file": "image32.png"
+    },
+    {
+      "old_id": "asset-image23",
+      "old_file": "image23.png",
+      "new_file": "image24.png"
+    },
+    {
+      "old_id": "asset-image24",
+      "old_file": "image24.png",
+      "new_file": "image30.png"
+    },
+    {
+      "old_id": "asset-image25",
+      "old_file": "image25.png",
+      "new_file": "image28.png"
+    },
+    {
+      "old_id": "asset-image26",
+      "old_file": "image26.png",
+      "new_file": "image44.png"
+    },
+    {
+      "old_id": "asset-image27",
+      "old_file": "image27.png",
+      "new_file": "image22.png"
+    },
+    {
+      "old_id": "asset-image28",
+      "old_file": "image28.jpg",
+      "new_file": "image29.jpg"
+    },
+    {
+      "old_id": "asset-image29",
+      "old_file": "image29.png",
+      "new_file": "image20.png"
+    },
+    {
+      "old_id": "asset-image3",
+      "old_file": "image3.png",
+      "new_file": "image14.png"
+    },
+    {
+      "old_id": "asset-image30",
+      "old_file": "image30.png",
+      "new_file": "image23.png"
+    },
+    {
+      "old_id": "asset-image31",
+      "old_file": "image31.png",
+      "new_file": "image12.png"
+    },
+    {
+      "old_id": "asset-image32",
+      "old_file": "image32.png",
+      "new_file": "image25.png"
+    },
+    {
+      "old_id": "asset-image33",
+      "old_file": "image33.png",
+      "new_file": "image47.png"
+    },
+    {
+      "old_id": "asset-image34",
+      "old_file": "image34.png",
+      "new_file": "image26.png"
+    },
+    {
+      "old_id": "asset-image35",
+      "old_file": "image35.png",
+      "new_file": "image17.png"
+    },
+    {
+      "old_id": "asset-image36",
+      "old_file": "image36.png",
+      "new_file": "image48.png"
+    },
+    {
+      "old_id": "asset-image37",
+      "old_file": "image37.png",
+      "new_file": "image45.png"
+    },
+    {
+      "old_id": "asset-image38",
+      "old_file": "image38.png",
+      "new_file": "image33.png"
+    },
+    {
+      "old_id": "asset-image4",
+      "old_file": "image4.png",
+      "new_file": "image11.png"
+    },
+    {
+      "old_id": "asset-image40",
+      "old_file": "image40.png",
+      "new_file": "image34.png"
+    },
+    {
+      "old_id": "asset-image41",
+      "old_file": "image41.png",
+      "new_file": "image38.png"
+    },
+    {
+      "old_id": "asset-image42",
+      "old_file": "image42.png",
+      "new_file": "image18.png"
+    },
+    {
+      "old_id": "asset-image43",
+      "old_file": "image43.png",
+      "new_file": "image53.png"
+    },
+    {
+      "old_id": "asset-image44",
+      "old_file": "image44.png",
+      "new_file": "image52.png"
+    },
+    {
+      "old_id": "asset-image45",
+      "old_file": "image45.png",
+      "new_file": "image36.png"
+    },
+    {
+      "old_id": "asset-image46",
+      "old_file": "image46.png",
+      "new_file": "image35.png"
+    },
+    {
+      "old_id": "asset-image47",
+      "old_file": "image47.png",
+      "new_file": "image55.png"
+    },
+    {
+      "old_id": "asset-image48",
+      "old_file": "image48.png",
+      "new_file": "image46.png"
+    },
+    {
+      "old_id": "asset-image49",
+      "old_file": "image49.png",
+      "new_file": "image42.png"
+    },
+    {
+      "old_id": "asset-image5",
+      "old_file": "image5.jpg",
+      "new_file": "image19.jpg"
+    },
+    {
+      "old_id": "asset-image50",
+      "old_file": "image50.png",
+      "new_file": "image41.png"
+    },
+    {
+      "old_id": "asset-image52",
+      "old_file": "image52.jpg",
+      "new_file": "image50.jpg"
+    },
+    {
+      "old_id": "asset-image53",
+      "old_file": "image53.png",
+      "new_file": "image49.png"
+    },
+    {
+      "old_id": "asset-image54",
+      "old_file": "image54.jpg",
+      "new_file": "image27.jpg"
+    },
+    {
+      "old_id": "asset-image55",
+      "old_file": "image55.jpg",
+      "new_file": "image54.jpg"
+    },
+    {
+      "old_id": "asset-image6",
+      "old_file": "image6.png",
+      "new_file": "image8.png"
+    },
+    {
+      "old_id": "asset-image7",
+      "old_file": "image7.png",
+      "new_file": "image2.png"
+    },
+    {
+      "old_id": "asset-image8",
+      "old_file": "image8.png",
+      "new_file": "image3.png"
+    },
+    {
+      "old_id": "asset-image9",
+      "old_file": "image9.png",
+      "new_file": "image16.png"
+    }
+  ],
+  "removed": [],
+  "added": []
+}

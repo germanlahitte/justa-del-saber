@@ -1,0 +1,599 @@
+{
+  "version": "0.2",
+  "source": "FUTURE-ANALYSIS",
+  "status": "draft-consolidated",
+  "concepts": [
+    {
+      "id": "concept-libertad",
+      "name": "Libertad",
+      "definition": "Capacidad de constituirse como sujeto y conducir la propia vida según un criterio que pueda reconocerse como propio.",
+      "key_distinction": "Libertad no equivale simplemente a ausencia de prohibición.",
+      "relations": {
+        "opposes": [
+          "Represión"
+        ],
+        "requires": [
+          "Subjetividad",
+          "Discernimiento"
+        ],
+        "can_degrade_into": [
+          "Individualismo"
+        ],
+        "universalizes_as": [
+          "Libertad de todos"
+        ],
+        "pedagogical_completion": [
+          "Emancipación"
+        ]
+      }
+    },
+    {
+      "id": "concept-represion",
+      "name": "Represión",
+      "definition": "Limitación exterior de la autonomía mediante coerción, prohibición, persecución, disciplinamiento o imposición.",
+      "key_distinction": "En la represión, el poder todavía necesita ejercerse desde afuera.",
+      "relations": {
+        "opposes": [
+          "Libertad"
+        ],
+        "can_produce": [
+          "Captura"
+        ],
+        "can_evolve_into": [
+          "Domesticación"
+        ]
+      }
+    },
+    {
+      "id": "concept-captura",
+      "name": "Captura",
+      "definition": "Proceso mediante el cual fuerzas externas intervienen no sólo sobre lo que una persona puede hacer, sino también sobre aquello que desea, valora, teme, piensa o considera propio.",
+      "hypothesis": "Una persona puede experimentar como propia una forma de vida que no construyó libremente.",
+      "relations": {
+        "deepens": [
+          "Represión"
+        ],
+        "threatens": [
+          "Subjetividad"
+        ],
+        "leads_to": [
+          "Domesticación"
+        ],
+        "resisted_by": [
+          "Discernimiento"
+        ]
+      }
+    },
+    {
+      "id": "concept-domesticacion",
+      "name": "Domesticación",
+      "definition": "Interiorización del mecanismo de dominación hasta el punto en que el sujeto reproduce autónomamente aquello que inicialmente debía imponérsele.",
+      "hypothesis": "La forma más eficaz de represión es aquella que deja de necesitar al represor.",
+      "relations": {
+        "culmination_of": [
+          "Captura"
+        ],
+        "negates": [
+          "Autonomía"
+        ],
+        "structural_inverse_of": [
+          "Emancipación"
+        ]
+      }
+    },
+    {
+      "id": "concept-subjetividad",
+      "name": "Subjetividad",
+      "definition": "Construcción de una posición propia desde la cual interpretar la experiencia, formular deseos, producir juicios y tomar decisiones.",
+      "relations": {
+        "enables": [
+          "Autonomía"
+        ],
+        "requires": [
+          "Discernimiento"
+        ],
+        "threatened_by": [
+          "Captura"
+        ],
+        "expressed_as": [
+          "Ser uno mismo"
+        ],
+        "limited_by": [
+          "Falibilidad"
+        ]
+      }
+    },
+    {
+      "id": "concept-intuicion",
+      "name": "Intuición",
+      "definition": "Percepción inicial de que algo merece ser interrogado aun antes de disponer de una explicación completa.",
+      "key_distinction": "No reemplaza al pensamiento ni garantiza verdad: lo pone en movimiento.",
+      "relations": {
+        "initiates": [
+          "Discernimiento"
+        ],
+        "feeds": [
+          "Subjetividad"
+        ]
+      }
+    },
+    {
+      "id": "concept-discernimiento",
+      "name": "Discernimiento",
+      "definition": "Capacidad de someter aquello que se recibe —ideas, tradiciones, discursos, valores, prejuicios y experiencias— a juicio antes de hacerlo propio.",
+      "formula": "No simplemente heredar: saber heredar.",
+      "relations": {
+        "protects_from": [
+          "Captura"
+        ],
+        "builds": [
+          "Subjetividad"
+        ],
+        "transforms": [
+          "Herencia"
+        ],
+        "enables": [
+          "Autonomía"
+        ],
+        "supports": [
+          "Integridad"
+        ]
+      }
+    },
+    {
+      "id": "concept-herencia",
+      "name": "Herencia",
+      "definition": "Conjunto de lenguajes, valores, historias, tradiciones, pertenencias y experiencias recibidas de quienes nos precedieron.",
+      "key_distinction": "Recibir no equivale a heredar plenamente.",
+      "relations": {
+        "requires": [
+          "Discernimiento"
+        ],
+        "projects_forward_through": [
+          "Transmisión"
+        ],
+        "can_become": [
+          "Nueva voz"
+        ]
+      }
+    },
+    {
+      "id": "concept-autonomia",
+      "name": "Autonomía / Ser uno mismo",
+      "definition": "Capacidad de asumir una posición propia y conducir la propia existencia sin delegar en otro la tarea de determinar quién se debe ser.",
+      "key_distinction": "Autonomía no equivale a individualismo.",
+      "relations": {
+        "arises_from": [
+          "Subjetividad"
+        ],
+        "requires": [
+          "Discernimiento"
+        ],
+        "realizes": [
+          "Libertad"
+        ],
+        "can_degrade_into": [
+          "Individualismo"
+        ],
+        "opens_to": [
+          "El Otro"
+        ],
+        "stabilized_by": [
+          "Integridad"
+        ]
+      }
+    },
+    {
+      "id": "concept-individualismo",
+      "name": "Individualismo",
+      "definition": "Reducción de la libertad al ámbito del individuo, considerando secundarias o irrelevantes las condiciones en las que los demás pueden ejercer la suya.",
+      "relations": {
+        "possible_deviation_of": [
+          "Autonomía"
+        ],
+        "ignores": [
+          "El Otro"
+        ],
+        "tensions_with": [
+          "Comunidad"
+        ],
+        "prevents": [
+          "Libertad de todos"
+        ]
+      }
+    },
+    {
+      "id": "concept-otro",
+      "name": "El Otro",
+      "definition": "Reconocimiento de que fuera del yo existen otros sujetos cuyos deseos, sufrimientos, libertades y proyectos poseen dignidad propia.",
+      "relations": {
+        "limits": [
+          "Individualismo"
+        ],
+        "enables": [
+          "Amor"
+        ],
+        "grounds": [
+          "Comunidad"
+        ],
+        "universalizes": [
+          "Libertad"
+        ]
+      }
+    },
+    {
+      "id": "concept-los-nadies",
+      "name": "Los Nadies",
+      "definition": "Categoría interpretativa que reúne a quienes aparecen desplazados, invisibilizados, descartados o fuera de los relatos dominantes.",
+      "function": "Obliga a que la libertad abandone la abstracción y confronte existencias concretas.",
+      "relations": {
+        "embodies": [
+          "El Otro"
+        ],
+        "interpellates": [
+          "Libertad"
+        ],
+        "leads_to": [
+          "Amor"
+        ],
+        "belongs_to": [
+          "Comunidad"
+        ]
+      }
+    },
+    {
+      "id": "concept-amor",
+      "name": "Amor",
+      "definition": "Movimiento mediante el cual el sujeto sale de la clausura sobre sí mismo y reconoce activamente la existencia del otro.",
+      "key_distinction": "No se reduce a sentimiento romántico; puede ser práctica, búsqueda y disposición activa.",
+      "relations": {
+        "presupposes": [
+          "El Otro"
+        ],
+        "combats": [
+          "Individualismo"
+        ],
+        "grounds_ethically": [
+          "Comunidad"
+        ],
+        "leads_to": [
+          "Libertad de todos"
+        ],
+        "requires": [
+          "Integridad"
+        ]
+      }
+    },
+    {
+      "id": "concept-comunidad",
+      "name": "Comunidad",
+      "definition": "Trama de relaciones mediante la cual individuos diferentes pueden reconocerse, organizarse, cooperar, disputar intereses y hacerse responsables de un mundo compartido.",
+      "relations": {
+        "requires": [
+          "El Otro"
+        ],
+        "sustained_by": [
+          "Organización"
+        ],
+        "gives_content_to": [
+          "Democracia"
+        ],
+        "can_expand_as": [
+          "Patria"
+        ]
+      }
+    },
+    {
+      "id": "concept-organizacion",
+      "name": "Organización",
+      "definition": "Conversión de vínculos sociales dispersos en formas relativamente estables de acción colectiva.",
+      "hypothesis": "Cuando desaparecen las organizaciones sociales no desaparecen necesariamente los cargos: desaparecen los mecanismos sociales capaces de producir dirigentes y representación.",
+      "relations": {
+        "structures": [
+          "Comunidad"
+        ],
+        "forms_subjects_for": [
+          "Democracia"
+        ],
+        "combats": [
+          "Aislamiento"
+        ],
+        "produces": [
+          "Representación"
+        ]
+      }
+    },
+    {
+      "id": "concept-democracia",
+      "name": "Democracia",
+      "definition": "Forma de organización política cuya vitalidad depende no sólo del voto y las instituciones formales, sino de la capacidad efectiva de una sociedad para organizarse, deliberar, producir representación y reconocer la libertad de sus integrantes.",
+      "relations": {
+        "requires": [
+          "Organización"
+        ],
+        "politically_expresses": [
+          "Comunidad"
+        ],
+        "institutionalizes": [
+          "Libertad de todos"
+        ]
+      }
+    },
+    {
+      "id": "concept-patria",
+      "name": "Patria",
+      "definition": "Pertenencia histórica y comunitaria que vincula al sujeto con aquello que recibió, con quienes comparten su presente y con quienes habitarán después.",
+      "formula": "Esto es mío → esto también está a mi cargo.",
+      "relations": {
+        "received_as": [
+          "Herencia"
+        ],
+        "requires": [
+          "Discernimiento"
+        ],
+        "expands": [
+          "Comunidad"
+        ],
+        "generates": [
+          "Responsabilidad"
+        ],
+        "projects_through": [
+          "Transmisión"
+        ]
+      }
+    },
+    {
+      "id": "concept-responsabilidad",
+      "name": "Responsabilidad",
+      "definition": "Consecuencia ética del reconocimiento de que la propia acción afecta un mundo compartido y a personas cuya existencia no puede considerarse indiferente.",
+      "relations": {
+        "arises_from": [
+          "El Otro"
+        ],
+        "transforms": [
+          "Patria"
+        ],
+        "sustains": [
+          "Comunidad"
+        ],
+        "orients": [
+          "Transmisión"
+        ],
+        "expresses": [
+          "Integridad"
+        ]
+      }
+    },
+    {
+      "id": "concept-libertad-de-todos",
+      "name": "Libertad de todos",
+      "definition": "Universalización de la pretensión de libertad: aquello que reclamo legítimamente para mí debo poder reconocer también en los demás.",
+      "hypothesis": "Una libertad que sólo puede realizarse para algunos a costa de otros deja de funcionar como principio universal y se convierte en privilegio.",
+      "relations": {
+        "universalizes": [
+          "Libertad"
+        ],
+        "requires": [
+          "El Otro",
+          "Comunidad"
+        ],
+        "horizon_for": [
+          "Democracia"
+        ]
+      }
+    },
+    {
+      "id": "concept-transmision",
+      "name": "Transmisión",
+      "definition": "Acto mediante el cual una experiencia, una verdad, una memoria o una razón es ofrecida a otro sin exigir que sea reproducida intacta.",
+      "key_distinction": "Transmitir no es imponer.",
+      "relations": {
+        "projects": [
+          "Herencia"
+        ],
+        "requires": [
+          "Responsabilidad"
+        ],
+        "must_allow": [
+          "Discernimiento"
+        ],
+        "completes_in": [
+          "Emancipación"
+        ]
+      }
+    },
+    {
+      "id": "concept-emancipacion",
+      "name": "Emancipación",
+      "definition": "Proceso mediante el cual alguien adquiere capacidad suficiente para pensar, juzgar y actuar sin permanecer subordinado a quien contribuyó a su formación.",
+      "hypothesis": "La forma más lograda de emancipación es aquella que deja de necesitar al emancipador.",
+      "formula": "Para ser vos no me necesitás a mí.",
+      "relations": {
+        "completes": [
+          "Transmisión"
+        ],
+        "realizes": [
+          "Autonomía"
+        ],
+        "structural_inverse_of": [
+          "Domesticación"
+        ],
+        "requires": [
+          "Integridad"
+        ]
+      }
+    },
+    {
+      "id": "concept-integridad",
+      "name": "Integridad",
+      "definition": "Condición de un sujeto que procura ser entero: no delega en una autoridad, una pareja, un ídolo, una ideología o una comunidad la tarea de completarlo; y busca correspondencia entre aquello que reconoce como verdadero, aquello que expresa y la forma en que procura vivir.",
+      "dimensions": [
+        "Integridad ontológica: reconocerse entero; no necesitar algo externo para constituirse como sujeto completo.",
+        "Integridad ética: procurar correspondencia entre verdad, palabra y acción."
+      ],
+      "key_distinctions": [
+        "Integridad no equivale a aislamiento.",
+        "Integridad no equivale a coherencia perfecta.",
+        "Necesitar vínculos no equivale a necesitar que otro me complete."
+      ],
+      "formula": "Ser íntegro es hacerse responsable de ser uno mismo.",
+      "relations": {
+        "requires": [
+          "Discernimiento"
+        ],
+        "orients": [
+          "Autonomía"
+        ],
+        "links": [
+          "Verdad",
+          "Acción"
+        ],
+        "admits": [
+          "Falibilidad"
+        ],
+        "demands": [
+          "Responsabilidad"
+        ],
+        "supports": [
+          "Transmisión"
+        ],
+        "enables_non_dependent": [
+          "Amor"
+        ],
+        "condition_for": [
+          "Emancipación"
+        ]
+      }
+    },
+    {
+      "id": "concept-verdad",
+      "name": "Verdad",
+      "definition": "Aquello que el sujeto reconoce, después de su experiencia y discernimiento, como digno de ser sostenido, expresado o transmitido.",
+      "scope_note": "No pretende resolver una teoría filosófica de la verdad; describe el uso recurrente de verdad, razón y mis verdades dentro del corpus.",
+      "formula": "La verdad es aquello que reconozco; la integridad es lo que estoy dispuesto a hacer con ello.",
+      "relations": {
+        "examined_through": [
+          "Discernimiento"
+        ],
+        "demands": [
+          "Integridad"
+        ],
+        "offered_through": [
+          "Transmisión"
+        ],
+        "can_exceed_individual_through": [
+          "Trascendencia"
+        ]
+      }
+    },
+    {
+      "id": "concept-falibilidad",
+      "name": "Falibilidad / Contradicción",
+      "definition": "Reconocimiento de que ninguna conquista subjetiva, ética o intelectual vuelve al individuo definitivamente coherente con aquello que alguna vez comprendió o defendió.",
+      "function": "Evita convertir a Iorio en autoridad moral infalible y permite separar la validez posible de una idea de la conducta posterior de quien la formuló.",
+      "relations": {
+        "tests": [
+          "Integridad"
+        ],
+        "requires": [
+          "Discernimiento"
+        ],
+        "prepares": [
+          "Retirada"
+        ]
+      }
+    },
+    {
+      "id": "concept-legado",
+      "name": "Legado",
+      "definition": "Aquello que permanece disponible para otros después de que quien lo produjo deja de estar presente.",
+      "relations": {
+        "results_from": [
+          "Transmisión"
+        ],
+        "becomes": [
+          "Herencia"
+        ],
+        "enables": [
+          "Nueva voz"
+        ]
+      }
+    },
+    {
+      "id": "concept-trascendencia",
+      "name": "Trascendencia",
+      "definition": "Posibilidad de que aquello que un individuo encontró o expresó continúe más allá de su existencia particular.",
+      "reading": "La verdad no sobrevive porque pertenezca al autor; puede sobrevivir precisamente porque nunca le perteneció enteramente.",
+      "relations": {
+        "crosses": [
+          "Legado"
+        ],
+        "feeds": [
+          "Herencia"
+        ],
+        "enables": [
+          "Nueva voz"
+        ]
+      }
+    },
+    {
+      "id": "concept-retirada",
+      "name": "Retirada",
+      "definition": "Renuncia del transmisor a ocupar indefinidamente el lugar de autoridad, referencia o respuesta para quienes recibieron su obra.",
+      "formula": "Ya dije → ya entregué → no me esperes → seguí.",
+      "relations": {
+        "recognizes": [
+          "Falibilidad"
+        ],
+        "completes": [
+          "Emancipación"
+        ],
+        "releases_toward": [
+          "Nueva voz"
+        ]
+      }
+    },
+    {
+      "id": "concept-nueva-voz",
+      "name": "Nueva voz",
+      "definition": "Aparición de una expresión propia producida por quien recibió una herencia pero no se limitó a repetirla.",
+      "book_function": "El epílogo realiza narrativamente este concepto: la última voz ya no es la de Iorio, sino la de quien recibió, discernió y escribió.",
+      "relations": {
+        "receives": [
+          "Legado"
+        ],
+        "exercises": [
+          "Discernimiento"
+        ],
+        "demonstrates": [
+          "Emancipación"
+        ],
+        "produces_new": [
+          "Transmisión"
+        ]
+      }
+    }
+  ],
+  "structural_relations": [
+    {
+      "id": "relation-domesticacion-emancipacion",
+      "name": "Domesticación ↔ Emancipación",
+      "description": "Inversos estructurales: la domesticación vuelve innecesario al represor porque lo interioriza; la emancipación vuelve innecesario al maestro porque construye criterio propio."
+    },
+    {
+      "id": "relation-herencia-transmision",
+      "name": "Herencia ↔ Transmisión",
+      "description": "Recibir → discernir → hacer propio → transmitir."
+    },
+    {
+      "id": "relation-autonomia-integridad-amor",
+      "name": "Autonomía ↔ Integridad ↔ Amor",
+      "description": "Autonomía: puedo ser yo. Integridad: no necesito que otro me complete. Amor: desde esa integridad puedo vincularme con el otro sin usarlo para completarme."
+    },
+    {
+      "id": "relation-verdad-integridad-falibilidad",
+      "name": "Verdad ↔ Integridad ↔ Falibilidad",
+      "description": "La verdad puede ser reconocida; la integridad intenta vivir de acuerdo con ella; la falibilidad recuerda que esa correspondencia nunca está garantizada."
+    }
+  ]
+}

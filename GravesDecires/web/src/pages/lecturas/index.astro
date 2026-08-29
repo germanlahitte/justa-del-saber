@@ -1,0 +1,35 @@
+---
+// Minimal index of all 33 Readings — enough to reach any /lecturas/[id]
+// page from navigation without depending only on drawer links. Not one of
+// the 6 prototype surfaces to detail visually, kept intentionally plain.
+import Layout from '../../layouts/Layout.astro';
+import PrototypeBadge from '../../components/PrototypeBadge.astro';
+import { getCollection } from 'astro:content';
+
+const readings = (await getCollection('readings')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout title="Lecturas">
+  <main class="mx-auto max-w-3xl px-6 py-14 sm:px-10">
+    <a href="/" class="font-mono text-xs uppercase tracking-wide text-ink-faint hover:text-ink">← Portada</a>
+    <header class="mt-6 mb-8 flex items-start justify-between gap-4">
+      <div>
+        <h1 class="text-3xl font-normal">Lecturas</h1>
+        <p class="prose-book mt-2 text-sm text-ink-soft">
+          {readings.length} lecturas consolidadas (READINGS v0.3).
+        </p>
+      </div>
+      <PrototypeBadge label="Índice plano, sin filtros todavía" />
+    </header>
+    <ol class="divide-y divide-rule border-y border-rule">
+      {readings.map((r) => (
+        <li>
+          <a href={`/lecturas/${r.id}`} class="flex items-center justify-between gap-4 py-3 hover:bg-paper-dim/40">
+            <span class="text-sm text-ink">{r.data.title}</span>
+            <span class="font-mono text-[10px] text-ink-faint">{r.data.section}</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </main>
+</Layout>

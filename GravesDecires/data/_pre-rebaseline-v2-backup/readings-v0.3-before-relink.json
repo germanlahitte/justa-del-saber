@@ -1,0 +1,3057 @@
+{
+  "version": "0.3",
+  "layer": "FUTURE-ANALYSIS/READINGS",
+  "status": "canonical-consolidated",
+  "source_version": "READINGS v0.2 + exact BOOK linking + CONCEPTS v0.3 normalization",
+  "contracts": {
+    "book": {
+      "reference_field": "book_refs[].book_unit",
+      "canonical_key": "unit",
+      "source": "BOOK",
+      "mutability": "read-only"
+    },
+    "concepts": {
+      "version": "0.3",
+      "reference_field": "concept_ids[]",
+      "source": "CONCEPTS"
+    },
+    "readings": {
+      "connection_field": "connections[]",
+      "connection_key": "reading id"
+    },
+    "facets": {
+      "field": "tags[]",
+      "note": "Analytic terms useful for navigation but not modeled as first-class Concepts."
+    }
+  },
+  "editorial_principles": [],
+  "readings": [
+    {
+      "id": "reading-estetica-etica-sintesis",
+      "order": 1,
+      "title": "Estética / Ética / Síntesis",
+      "section": "Arquitectura y método",
+      "kind": "structural-reading",
+      "thesis": "La secuencia V8 = Estética, Hermética = Ética, Almafuerte = Síntesis funciona como dispositivo narrativo del libro, no como taxonomía exhaustiva de las bandas.",
+      "connections": [
+        "reading-saber-heredar",
+        "reading-no-me-necesitas",
+        "reading-nuevamente"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 2,
+          "relation": "structural-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [],
+            "matched_anchors": [
+              "La Estética",
+              "La Síntesis"
+            ],
+            "anchor_hits": 2,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              25,
+              52
+            ]
+          }
+        },
+        {
+          "book_unit": 3,
+          "relation": "structural-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              6,
+              7,
+              9
+            ],
+            "matched_anchors": [
+              "La Estética",
+              "La Ética",
+              "La Síntesis",
+              "Canto mi razón para que quien quiera, guarde"
+            ],
+            "anchor_hits": 4,
+            "page_overlap_hits": 3,
+            "docx_paragraph_range": [
+              53,
+              180
+            ]
+          }
+        },
+        {
+          "book_unit": 47,
+          "relation": "structural-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              77,
+              78
+            ],
+            "matched_anchors": [
+              "La Estética",
+              "La Ética"
+            ],
+            "anchor_hits": 2,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              1396,
+              1450
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-subjetividad",
+        "concept-transmision",
+        "concept-responsabilidad",
+        "concept-herencia",
+        "concept-legado",
+        "concept-integridad"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-individualismo-enajenado",
+      "order": 2,
+      "title": "El individuo puede estar enajenado precisamente cuando se cree más individual",
+      "section": "Enajenación / Individualismo",
+      "kind": "arc-reading",
+      "thesis": "Enajenación e individualismo no son opuestos: una sociedad puede exaltar elección, consumo y expresión individual mientras modela de antemano buena parte del sujeto que elige.",
+      "connections": [
+        "reading-tiempo-subjetividad",
+        "reading-no-querer-ver",
+        "reading-la-vida-es-lo-que-es"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 6,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              12,
+              13
+            ],
+            "matched_anchors": [
+              "Enajenación",
+              "Individualismo",
+              "Olvídalo y volverá por más",
+              "Memoria de Siglos"
+            ],
+            "anchor_hits": 4,
+            "page_overlap_hits": 2,
+            "docx_paragraph_range": [
+              212,
+              277
+            ]
+          }
+        },
+        {
+          "book_unit": 7,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              15
+            ],
+            "matched_anchors": [
+              "Otro día para ser"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              278,
+              323
+            ]
+          }
+        },
+        {
+          "book_unit": 8,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              16
+            ],
+            "matched_anchors": [
+              "Siervos del Mal"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              324,
+              331
+            ]
+          }
+        },
+        {
+          "book_unit": 9,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              17
+            ],
+            "matched_anchors": [
+              "Ciega ambición"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              332,
+              341
+            ]
+          }
+        },
+        {
+          "book_unit": 10,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              18
+            ],
+            "matched_anchors": [
+              "Por nacer"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              342,
+              365
+            ]
+          }
+        },
+        {
+          "book_unit": 12,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              24,
+              25
+            ],
+            "matched_anchors": [
+              "Memoria de Siglos"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              410,
+              445
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-enajenacion",
+        "concept-individualismo",
+        "concept-captura",
+        "concept-subjetividad",
+        "concept-discernimiento"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-tiempo-subjetividad",
+      "order": 3,
+      "title": "El día como territorio de disputa",
+      "section": "Enajenación / Individualismo",
+      "kind": "transversal-reading",
+      "thesis": "El tiempo no aparece como problema de productividad sino como condición de conciencia: tener, perder o ver administradas las horas afecta la posibilidad misma de construirse como sujeto.",
+      "connections": [
+        "reading-individualismo-enajenado",
+        "reading-represor-programado",
+        "reading-la-vida-es-lo-que-es"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 7,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              15
+            ],
+            "matched_anchors": [
+              "Otro día para ser"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              278,
+              323
+            ]
+          }
+        },
+        {
+          "book_unit": 8,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              16
+            ],
+            "matched_anchors": [
+              "Siervos del Mal"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              324,
+              331
+            ]
+          }
+        },
+        {
+          "book_unit": 9,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              17
+            ],
+            "matched_anchors": [
+              "Ciega ambición"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              332,
+              341
+            ]
+          }
+        },
+        {
+          "book_unit": 10,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              18
+            ],
+            "matched_anchors": [
+              "Por nacer"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              342,
+              365
+            ]
+          }
+        },
+        {
+          "book_unit": 36,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              60
+            ],
+            "matched_anchors": [
+              "Ideando la fuga"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1051,
+              1065
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-tiempo",
+        "concept-subjetividad",
+        "concept-captura",
+        "concept-autonomia"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-no-querer-ver",
+      "order": 4,
+      "title": "Hay cosas que colaboramos en no saber",
+      "section": "Enajenación / Individualismo",
+      "kind": "transversal-reading",
+      "thesis": "El corpus desplaza progresivamente la responsabilidad desde el engaño exterior hacia la comodidad interior: ciertas verdades pueden ser evitadas porque reconocerlas obligaría a modificar la propia vida.",
+      "connections": [
+        "reading-conciencia-comun",
+        "reading-presencia-tranquera",
+        "reading-integridad"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 6,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              12,
+              13
+            ],
+            "matched_anchors": [
+              "Memoria de Siglos"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              212,
+              277
+            ]
+          }
+        },
+        {
+          "book_unit": 10,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              18
+            ],
+            "matched_anchors": [
+              "Por nacer"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              342,
+              365
+            ]
+          }
+        },
+        {
+          "book_unit": 12,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              24,
+              25
+            ],
+            "matched_anchors": [
+              "Memoria de Siglos"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              410,
+              445
+            ]
+          }
+        },
+        {
+          "book_unit": 23,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              42
+            ],
+            "matched_anchors": [
+              "En las calles de Liniers"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              820,
+              829
+            ]
+          }
+        },
+        {
+          "book_unit": 26,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              45
+            ],
+            "matched_anchors": [
+              "Hacia el abismo"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              877,
+              889
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-responsabilidad",
+        "concept-discernimiento",
+        "concept-individualismo",
+        "concept-otro"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-represion-confisca-vida",
+      "order": 5,
+      "title": "La represión confisca vida, no sólo libertad jurídica",
+      "section": "Represión",
+      "kind": "arc-reading",
+      "thesis": "La experiencia represiva es leída en unidades existenciales: horas, cuerpo, mirada, identidad y posibilidad de habitar la propia ciudad.",
+      "connections": [
+        "reading-tiempo-subjetividad",
+        "reading-represor-programado",
+        "reading-represion-sin-represor"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 3,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              6,
+              7,
+              9
+            ],
+            "matched_anchors": [
+              "Represión"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              53,
+              180
+            ]
+          }
+        },
+        {
+          "book_unit": 11,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              19
+            ],
+            "matched_anchors": [
+              "Represión"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              366,
+              409
+            ]
+          }
+        },
+        {
+          "book_unit": 12,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              24,
+              25
+            ],
+            "matched_anchors": [
+              "Represión"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              410,
+              445
+            ]
+          }
+        },
+        {
+          "book_unit": 13,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              26
+            ],
+            "matched_anchors": [
+              "Presa fácil",
+              "Lucero del alba"
+            ],
+            "anchor_hits": 2,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              446,
+              473
+            ]
+          }
+        },
+        {
+          "book_unit": 14,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              28
+            ],
+            "matched_anchors": [
+              "Lucero del alba"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              474,
+              491
+            ]
+          }
+        },
+        {
+          "book_unit": 15,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              29,
+              30
+            ],
+            "matched_anchors": [
+              "Los delirios del defacto",
+              "De un mañana bajo tierra"
+            ],
+            "anchor_hits": 2,
+            "page_overlap_hits": 2,
+            "docx_paragraph_range": [
+              492,
+              546
+            ]
+          }
+        },
+        {
+          "book_unit": 28,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [],
+            "matched_anchors": [
+              "Represión"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              909,
+              934
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-represion",
+        "concept-tiempo",
+        "concept-identidad",
+        "concept-libertad"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-represor-programado",
+      "order": 6,
+      "title": "El represor también es producido por la maquinaria",
+      "section": "Represión",
+      "kind": "transversal-reading",
+      "thesis": "El sistema no está compuesto únicamente por víctimas pasivas y villanos absolutamente autónomos: necesita producir individuos capaces de ejecutar sus funciones.",
+      "connections": [
+        "reading-represion-confisca-vida",
+        "reading-represion-sin-represor"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 13,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              26
+            ],
+            "matched_anchors": [
+              "Presa fácil",
+              "Lucero del alba"
+            ],
+            "anchor_hits": 2,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              446,
+              473
+            ]
+          }
+        },
+        {
+          "book_unit": 14,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              28
+            ],
+            "matched_anchors": [
+              "Lucero del alba"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              474,
+              491
+            ]
+          }
+        },
+        {
+          "book_unit": 15,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              29,
+              30
+            ],
+            "matched_anchors": [
+              "Los delirios del defacto",
+              "De un mañana bajo tierra"
+            ],
+            "anchor_hits": 2,
+            "page_overlap_hits": 2,
+            "docx_paragraph_range": [
+              492,
+              546
+            ]
+          }
+        },
+        {
+          "book_unit": 16,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              31
+            ],
+            "matched_anchors": [
+              "Domesticación",
+              "Cautivos del sistema"
+            ],
+            "anchor_hits": 2,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              547,
+              573
+            ]
+          }
+        },
+        {
+          "book_unit": 19,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              34
+            ],
+            "matched_anchors": [],
+            "anchor_hits": 0,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              653,
+              668
+            ]
+          }
+        },
+        {
+          "book_unit": 20,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              35,
+              36,
+              37
+            ],
+            "matched_anchors": [],
+            "anchor_hits": 0,
+            "page_overlap_hits": 3,
+            "docx_paragraph_range": [
+              669,
+              732
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-represion",
+        "concept-domesticacion",
+        "concept-responsabilidad"
+      ],
+      "tags": [
+        "obediencia"
+      ]
+    },
+    {
+      "id": "reading-represion-sin-represor",
+      "order": 7,
+      "title": "La forma más eficaz de represión es aquella que deja de necesitar al represor",
+      "section": "Represión",
+      "kind": "transversal-reading",
+      "thesis": "La dominación se profundiza cuando deja de actuar principalmente como prohibición exterior y empieza a organizar desde dentro deseos, hábitos, recompensas y criterios.",
+      "connections": [
+        "reading-individualismo-enajenado",
+        "reading-la-vida-es-lo-que-es",
+        "reading-no-me-necesitas"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 3,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              6,
+              7,
+              9
+            ],
+            "matched_anchors": [
+              "Represión"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              53,
+              180
+            ]
+          }
+        },
+        {
+          "book_unit": 11,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              19
+            ],
+            "matched_anchors": [
+              "Represión"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              366,
+              409
+            ]
+          }
+        },
+        {
+          "book_unit": 12,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              24,
+              25
+            ],
+            "matched_anchors": [
+              "Represión"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              410,
+              445
+            ]
+          }
+        },
+        {
+          "book_unit": 13,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              26
+            ],
+            "matched_anchors": [],
+            "anchor_hits": 0,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              446,
+              473
+            ]
+          }
+        },
+        {
+          "book_unit": 14,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              28
+            ],
+            "matched_anchors": [],
+            "anchor_hits": 0,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              474,
+              491
+            ]
+          }
+        },
+        {
+          "book_unit": 15,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              29,
+              30
+            ],
+            "matched_anchors": [],
+            "anchor_hits": 0,
+            "page_overlap_hits": 2,
+            "docx_paragraph_range": [
+              492,
+              546
+            ]
+          }
+        },
+        {
+          "book_unit": 16,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              31
+            ],
+            "matched_anchors": [
+              "Domesticación",
+              "Cautivos del sistema"
+            ],
+            "anchor_hits": 2,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              547,
+              573
+            ]
+          }
+        },
+        {
+          "book_unit": 19,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              34
+            ],
+            "matched_anchors": [],
+            "anchor_hits": 0,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              653,
+              668
+            ]
+          }
+        },
+        {
+          "book_unit": 20,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              35,
+              36,
+              37
+            ],
+            "matched_anchors": [],
+            "anchor_hits": 0,
+            "page_overlap_hits": 3,
+            "docx_paragraph_range": [
+              669,
+              732
+            ]
+          }
+        },
+        {
+          "book_unit": 28,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [],
+            "matched_anchors": [
+              "Represión"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              909,
+              934
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-represion",
+        "concept-captura",
+        "concept-domesticacion",
+        "concept-subjetividad",
+        "concept-libertad"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-domesticacion-cultural",
+      "order": 8,
+      "title": "Primero cambia la manera de nombrar el mundo; después cambia la manera de usarlo",
+      "section": "Domesticación",
+      "kind": "arc-reading",
+      "thesis": "La domesticación cultural no sólo impone opiniones: produce categorías, jerarquías y maneras de percibir que luego parecen naturales.",
+      "connections": [
+        "reading-saber-heredar",
+        "reading-patria-responsabilidad"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 16,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              31
+            ],
+            "matched_anchors": [
+              "Domesticación",
+              "Cautivos del sistema"
+            ],
+            "anchor_hits": 2,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              547,
+              573
+            ]
+          }
+        },
+        {
+          "book_unit": 19,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              34
+            ],
+            "matched_anchors": [
+              "Ser humano junto a los míos"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              653,
+              668
+            ]
+          }
+        },
+        {
+          "book_unit": 20,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              35,
+              36,
+              37
+            ],
+            "matched_anchors": [
+              "1999",
+              "Sentir indiano",
+              "Del más allá"
+            ],
+            "anchor_hits": 3,
+            "page_overlap_hits": 3,
+            "docx_paragraph_range": [
+              669,
+              732
+            ]
+          }
+        },
+        {
+          "book_unit": 29,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              52
+            ],
+            "matched_anchors": [
+              "1999"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              935,
+              947
+            ]
+          }
+        },
+        {
+          "book_unit": 30,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              53
+            ],
+            "matched_anchors": [
+              "1999"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              948,
+              954
+            ]
+          }
+        },
+        {
+          "book_unit": 41,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              66
+            ],
+            "matched_anchors": [
+              "1999"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              1156,
+              1171
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-domesticacion",
+        "concept-herencia",
+        "concept-discernimiento",
+        "concept-identidad",
+        "concept-memoria"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-conciencia-comun",
+      "order": 9,
+      "title": "La familia existe; lo que se perdió es la conciencia de familia",
+      "section": "Destrucción del entramado social",
+      "kind": "arc-reading",
+      "thesis": "La destrucción del entramado social no significa necesariamente ausencia física de vínculos o instituciones, sino pérdida de la capacidad de percibir experiencias dispersas como parte de una realidad común sobre la que se puede actuar.",
+      "connections": [
+        "reading-no-querer-ver",
+        "reading-anestesia-cotidiana",
+        "reading-pueblo-libre-sometido",
+        "reading-presencia-tranquera"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 9,
+          "relation": "section-and-essay-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              17
+            ],
+            "matched_anchors": [
+              "El fin de los inicuos"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              332,
+              341
+            ]
+          }
+        },
+        {
+          "book_unit": 22,
+          "relation": "section-and-essay-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              39,
+              40
+            ],
+            "matched_anchors": [
+              "Destrucción del entramado social",
+              "El fin de los inicuos"
+            ],
+            "anchor_hits": 2,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              744,
+              819
+            ]
+          }
+        },
+        {
+          "book_unit": 23,
+          "relation": "section-and-essay-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              42
+            ],
+            "matched_anchors": [
+              "En las calles de Liniers"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              820,
+              829
+            ]
+          }
+        },
+        {
+          "book_unit": 24,
+          "relation": "section-and-essay-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              43
+            ],
+            "matched_anchors": [
+              "Gil Trabajador"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              830,
+              860
+            ]
+          }
+        },
+        {
+          "book_unit": 25,
+          "relation": "section-and-essay-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              44
+            ],
+            "matched_anchors": [
+              "Como estaba ahí Dios"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              861,
+              876
+            ]
+          }
+        },
+        {
+          "book_unit": 26,
+          "relation": "section-and-essay-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              45
+            ],
+            "matched_anchors": [
+              "Hacia el abismo"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              877,
+              889
+            ]
+          }
+        },
+        {
+          "book_unit": 39,
+          "relation": "section-and-essay-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              63,
+              64
+            ],
+            "matched_anchors": [
+              "El fin de los inicuos"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              1112,
+              1133
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-comunidad",
+        "concept-responsabilidad"
+      ],
+      "tags": [
+        "aislamiento",
+        "conciencia común"
+      ]
+    },
+    {
+      "id": "reading-anestesia-cotidiana",
+      "order": 10,
+      "title": "El ocio puede aliviar sin liberar",
+      "section": "Destrucción del entramado social",
+      "kind": "close-reading",
+      "thesis": "El blanco no es el descanso, la parrilla, el vino ni la diversión; es la anestesia cuando toda la energía posterior al sufrimiento se consume en recuperarse apenas lo suficiente para soportar nuevamente aquello que lo produce.",
+      "connections": [
+        "reading-conciencia-comun",
+        "reading-prioridades-colectivas"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 24,
+          "relation": "close-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              43
+            ],
+            "matched_anchors": [
+              "Gil Trabajador"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              830,
+              860
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-enajenacion",
+        "concept-libertad"
+      ],
+      "tags": [
+        "trabajo",
+        "conciencia común"
+      ]
+    },
+    {
+      "id": "reading-pueblo-libre-sometido",
+      "order": 11,
+      "title": "La libertad jurídica no agota la libertad real",
+      "section": "Destrucción del entramado social",
+      "kind": "transversal-reading",
+      "thesis": "Puede existir libertad formal junto con una coacción material enorme.",
+      "connections": [
+        "reading-anestesia-cotidiana",
+        "reading-libertad-de-todos"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 26,
+          "relation": "close-and-essay-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              45
+            ],
+            "matched_anchors": [
+              "Hacia el abismo"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              877,
+              889
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-libertad",
+        "concept-represion",
+        "concept-democracia"
+      ],
+      "tags": [
+        "desigualdad",
+        "trabajo"
+      ]
+    },
+    {
+      "id": "reading-prioridades-colectivas",
+      "order": 12,
+      "title": "El problema no es que falten recursos, sino qué decidimos hacer con ellos",
+      "section": "Destrucción del entramado social",
+      "kind": "essay-linked-reading",
+      "thesis": "La coexistencia entre sufrimientos materialmente evitables y grandes capacidades técnicas desplaza la pregunta desde la escasez absoluta hacia la asignación colectiva de recursos.",
+      "connections": [
+        "reading-pueblo-libre-sometido",
+        "reading-libertad-de-todos"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 25,
+          "relation": "essay-linked-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              44
+            ],
+            "matched_anchors": [
+              "Como estaba ahí Dios"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              861,
+              876
+            ]
+          }
+        },
+        {
+          "book_unit": 26,
+          "relation": "essay-linked-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              45
+            ],
+            "matched_anchors": [
+              "Hacia el abismo"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              877,
+              889
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-democracia",
+        "concept-comunidad",
+        "concept-responsabilidad"
+      ],
+      "tags": [
+        "recursos"
+      ]
+    },
+    {
+      "id": "reading-los-nadies-giro-etico",
+      "order": 13,
+      "title": "De “¿qué está mal?” a “¿a quién le duele?”",
+      "section": "Los Nadies",
+      "kind": "arc-reading",
+      "thesis": "Los Nadies produce un giro desde la conciencia crítica hacia la proximidad ética: el otro deja de ser categoría y vuelve a ser persona.",
+      "connections": [
+        "reading-conciencia-comun",
+        "reading-presencia-tranquera",
+        "reading-visitante-memoria",
+        "reading-cascara-institucional",
+        "reading-escuela-merendero",
+        "reading-open-door-amigo"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 29,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              52
+            ],
+            "matched_anchors": [
+              "Los Nadies",
+              "Sin poder esquivar el dolor ajeno",
+              "Si me estás buscando"
+            ],
+            "anchor_hits": 3,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              935,
+              947
+            ]
+          }
+        },
+        {
+          "book_unit": 30,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              53
+            ],
+            "matched_anchors": [
+              "El visitante"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              948,
+              954
+            ]
+          }
+        },
+        {
+          "book_unit": 31,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              54
+            ],
+            "matched_anchors": [
+              "Hospitalarias Realidades"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              955,
+              978
+            ]
+          }
+        },
+        {
+          "book_unit": 32,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              56
+            ],
+            "matched_anchors": [
+              "Sirva otra vuelta, pulpero"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              979,
+              987
+            ]
+          }
+        },
+        {
+          "book_unit": 33,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              57
+            ],
+            "matched_anchors": [
+              "Amanecer en Open Door"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              988,
+              1011
+            ]
+          }
+        },
+        {
+          "book_unit": 34,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              58
+            ],
+            "matched_anchors": [
+              "Regresando"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1012,
+              1036
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-otro",
+        "concept-amor",
+        "concept-responsabilidad",
+        "concept-comunidad",
+        "concept-los-nadies"
+      ],
+      "tags": [
+        "empatía"
+      ]
+    },
+    {
+      "id": "reading-presencia-tranquera",
+      "order": 14,
+      "title": "Presencia: cruzar la tranquera",
+      "section": "Los Nadies",
+      "kind": "close-reading",
+      "thesis": "Ayudar aparece sin grandilocuencia como presencia recíproca: “un algo” que permite continuar.",
+      "connections": [
+        "reading-los-nadies-giro-etico",
+        "reading-visitante-memoria"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 29,
+          "relation": "close-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              52
+            ],
+            "matched_anchors": [
+              "Si me estás buscando"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              935,
+              947
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-otro",
+        "concept-amor"
+      ],
+      "tags": [
+        "presencia",
+        "cuidado"
+      ]
+    },
+    {
+      "id": "reading-visitante-memoria",
+      "order": 15,
+      "title": "Memoria: la sociedad olvida; la canción recuerda",
+      "section": "Los Nadies",
+      "kind": "close-reading",
+      "thesis": "El arte puede devolver presencia a quien una sociedad convirtió en invisible, sin pretender reparar por sí solo aquello que lo hirió.",
+      "connections": [
+        "reading-estetica-etica-sintesis",
+        "reading-los-nadies-giro-etico",
+        "reading-cascara-institucional"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 30,
+          "relation": "close-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              53
+            ],
+            "matched_anchors": [
+              "El visitante"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              948,
+              954
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-memoria",
+        "concept-transmision",
+        "concept-otro",
+        "concept-responsabilidad"
+      ],
+      "tags": [
+        "cuidado"
+      ]
+    },
+    {
+      "id": "reading-cascara-institucional",
+      "order": 16,
+      "title": "Una institución puede seguir funcionando después de olvidar para quién existe",
+      "section": "Los Nadies",
+      "kind": "close-reading",
+      "thesis": "La destrucción del entramado social alcanza una forma profunda cuando la institución conserva edificio, cargos, procedimientos y usuarios, pero pierde la relación humana que justificaba su existencia.",
+      "connections": [
+        "reading-conciencia-comun",
+        "reading-los-nadies-giro-etico",
+        "reading-escuela-merendero"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 31,
+          "relation": "comparative-close-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              54
+            ],
+            "matched_anchors": [
+              "Hospitalarias Realidades"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              955,
+              978
+            ]
+          }
+        },
+        {
+          "book_unit": 33,
+          "relation": "comparative-close-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              57
+            ],
+            "matched_anchors": [
+              "Amanecer en Open Door"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              988,
+              1011
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-comunidad",
+        "concept-responsabilidad"
+      ],
+      "tags": [
+        "institución",
+        "cuidado"
+      ]
+    },
+    {
+      "id": "reading-escuela-merendero",
+      "order": 17,
+      "title": "El entramado puede reconstruirse desde abajo",
+      "section": "Los Nadies",
+      "kind": "close-reading",
+      "thesis": "Frente a instituciones distantes o deterioradas, el capítulo muestra personas sin reconocimiento formal produciendo institucionalidad concreta.",
+      "connections": [
+        "reading-conciencia-comun",
+        "reading-cascara-institucional",
+        "reading-libertad-de-todos"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 32,
+          "relation": "close-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              56
+            ],
+            "matched_anchors": [
+              "Sirva otra vuelta, pulpero"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              979,
+              987
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-comunidad",
+        "concept-organizacion",
+        "concept-transmision",
+        "concept-responsabilidad"
+      ],
+      "tags": [
+        "dignidad"
+      ]
+    },
+    {
+      "id": "reading-open-door-amigo",
+      "order": 18,
+      "title": "“Tengo un amigo”: todavía recuerda la humanidad",
+      "section": "Los Nadies",
+      "kind": "close-reading",
+      "thesis": "No es necesario negar la enfermedad del internado para devolverle dignidad; basta reconocer que sigue siendo alguien.",
+      "connections": [
+        "reading-los-nadies-giro-etico",
+        "reading-cascara-institucional",
+        "reading-la-vida-es-lo-que-es"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 33,
+          "relation": "close-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              57
+            ],
+            "matched_anchors": [
+              "Amanecer en Open Door"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              988,
+              1011
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-otro",
+        "concept-identidad"
+      ],
+      "tags": [
+        "dignidad",
+        "cuidado"
+      ]
+    },
+    {
+      "id": "reading-la-vida-es-lo-que-es",
+      "order": 19,
+      "title": "“La vida es lo que es”: mirar antes de convertir al otro en símbolo",
+      "section": "Los Nadies",
+      "kind": "closing-reading",
+      "thesis": "El principio ético del capítulo puede formularse como una resistencia a sustituir a la persona concreta por la categoría que construimos sobre ella.",
+      "connections": [
+        "reading-los-nadies-giro-etico",
+        "reading-open-door-amigo",
+        "reading-ideando-la-fuga"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 34,
+          "relation": "closing-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              58
+            ],
+            "matched_anchors": [
+              "Regresando"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1012,
+              1036
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-otro",
+        "concept-falibilidad"
+      ],
+      "tags": [
+        "realidad",
+        "empatía"
+      ]
+    },
+    {
+      "id": "reading-ideando-la-fuga",
+      "order": 20,
+      "title": "La primera fuga es recuperar la posibilidad de pensar",
+      "section": "Desarrollo de la subjetividad / La libertad individual",
+      "kind": "close-reading",
+      "thesis": "Antes de elegir libremente, tiene que existir un sujeto capaz de construir la elección.",
+      "connections": [
+        "reading-tiempo-subjetividad",
+        "reading-represion-sin-represor",
+        "reading-libertad-interior"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 35,
+          "relation": "close-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              59
+            ],
+            "matched_anchors": [
+              "Desarrollo de la subjetividad",
+              "La libertad individual",
+              "Camino al sepulcro"
+            ],
+            "anchor_hits": 3,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1037,
+              1050
+            ]
+          }
+        },
+        {
+          "book_unit": 36,
+          "relation": "close-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              60
+            ],
+            "matched_anchors": [
+              "Ideando la fuga"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1051,
+              1065
+            ]
+          }
+        },
+        {
+          "book_unit": 45,
+          "relation": "close-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [],
+            "matched_anchors": [
+              "Desarrollo de la subjetividad"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              1248,
+              1338
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-subjetividad",
+        "concept-captura",
+        "concept-autonomia",
+        "concept-discernimiento",
+        "concept-intuicion"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-libertad-interior",
+      "order": 21,
+      "title": "Si buscás libertad, no la busques solamente afuera",
+      "section": "Desarrollo de la subjetividad / La libertad individual",
+      "kind": "close-reading",
+      "thesis": "La libertad exterior es necesaria pero insuficiente: el miedo, los mandatos y las expectativas ajenas pueden seguir gobernando al sujeto desde dentro.",
+      "connections": [
+        "reading-ideando-la-fuga",
+        "reading-se-vos"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 37,
+          "relation": "close-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              61
+            ],
+            "matched_anchors": [
+              "Tu eres su seguridad"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1066,
+              1094
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-libertad",
+        "concept-identidad",
+        "concept-autonomia",
+        "concept-integridad"
+      ],
+      "tags": [
+        "miedo"
+      ]
+    },
+    {
+      "id": "reading-se-vos",
+      "order": 22,
+      "title": "“Sé vos”: la victoria consiste en no perderse a uno mismo",
+      "section": "Desarrollo de la subjetividad / La libertad individual",
+      "kind": "close-reading",
+      "thesis": "Ser uno mismo es presentado como tarea, resistencia y responsabilidad, no como licencia para el egoísmo.",
+      "connections": [
+        "reading-libertad-interior",
+        "reading-integridad",
+        "reading-amor-actividad"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 38,
+          "relation": "close-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              62
+            ],
+            "matched_anchors": [
+              "Se vos",
+              "Sé vos"
+            ],
+            "anchor_hits": 2,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1095,
+              1111
+            ]
+          }
+        },
+        {
+          "book_unit": 47,
+          "relation": "close-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              77,
+              78
+            ],
+            "matched_anchors": [
+              "Se vos",
+              "Sé vos"
+            ],
+            "anchor_hits": 2,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              1396,
+              1450
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-integridad",
+        "concept-autonomia",
+        "concept-subjetividad",
+        "concept-falibilidad"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-integridad",
+      "order": 23,
+      "title": "Integridad: uno no necesita que algo exterior lo complete",
+      "section": "Desarrollo de la subjetividad / La libertad individual",
+      "kind": "transversal-reading",
+      "thesis": "Integridad nombra una forma de autonomía más profunda que la autosuficiencia: ser entero no significa no necesitar vínculos, sino no delegar en otro la tarea de otorgar existencia, criterio o identidad.",
+      "connections": [
+        "reading-se-vos",
+        "reading-del-yo-al-nosotros",
+        "reading-no-me-necesitas"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 36,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              60
+            ],
+            "matched_anchors": [
+              "Ideando la fuga"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1051,
+              1065
+            ]
+          }
+        },
+        {
+          "book_unit": 37,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              61
+            ],
+            "matched_anchors": [
+              "Tu eres su seguridad"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1066,
+              1094
+            ]
+          }
+        },
+        {
+          "book_unit": 38,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              62
+            ],
+            "matched_anchors": [
+              "Se vos"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1095,
+              1111
+            ]
+          }
+        },
+        {
+          "book_unit": 39,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              63,
+              64
+            ],
+            "matched_anchors": [
+              "Antes que los Viejos Reyes"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1112,
+              1133
+            ]
+          }
+        },
+        {
+          "book_unit": 47,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              77,
+              78
+            ],
+            "matched_anchors": [
+              "Se vos",
+              "Por ser yo",
+              "Si me ves volver"
+            ],
+            "anchor_hits": 3,
+            "page_overlap_hits": 2,
+            "docx_paragraph_range": [
+              1396,
+              1450
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-integridad",
+        "concept-autonomia",
+        "concept-amor",
+        "concept-comunidad",
+        "concept-emancipacion"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-del-yo-al-nosotros",
+      "order": 24,
+      "title": "La subjetividad desarrollada tiene que poder querer algo con otros",
+      "section": "La libertad de todos",
+      "kind": "arc-reading",
+      "thesis": "La autonomía individual no es el destino final del recorrido: habilita la posibilidad de imaginar, sostener y realizar proyectos compartidos.",
+      "connections": [
+        "reading-integridad",
+        "reading-libertad-de-todos",
+        "reading-patria-responsabilidad"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 18,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [],
+            "matched_anchors": [
+              "Hoy es"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              629,
+              652
+            ]
+          }
+        },
+        {
+          "book_unit": 37,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              61
+            ],
+            "matched_anchors": [
+              "Hoy es"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              1066,
+              1094
+            ]
+          }
+        },
+        {
+          "book_unit": 39,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              63,
+              64
+            ],
+            "matched_anchors": [
+              "La libertad de todos"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1112,
+              1133
+            ]
+          }
+        },
+        {
+          "book_unit": 40,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              65
+            ],
+            "matched_anchors": [
+              "Ayer deseo, hoy realidad",
+              "Debes saberlo"
+            ],
+            "anchor_hits": 2,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1134,
+              1155
+            ]
+          }
+        },
+        {
+          "book_unit": 41,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              66
+            ],
+            "matched_anchors": [
+              "Hoy es"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1156,
+              1171
+            ]
+          }
+        },
+        {
+          "book_unit": 42,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              67
+            ],
+            "matched_anchors": [
+              "Todo es en vano si no hay amor"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1172,
+              1197
+            ]
+          }
+        },
+        {
+          "book_unit": 43,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              68
+            ],
+            "matched_anchors": [
+              "Orgullo argentino"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1198,
+              1222
+            ]
+          }
+        },
+        {
+          "book_unit": 44,
+          "relation": "section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              69
+            ],
+            "matched_anchors": [
+              "Patria al hombro"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1223,
+              1247
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-autonomia",
+        "concept-amor",
+        "concept-comunidad"
+      ],
+      "tags": [
+        "acción"
+      ]
+    },
+    {
+      "id": "reading-libertad-de-todos",
+      "order": 25,
+      "title": "La libertad sólo puede sostenerse como principio si puede ser libertad de todos",
+      "section": "La libertad de todos",
+      "kind": "essay-linked-reading",
+      "thesis": "La presencia del otro somete la libertad individual a una prueba de universalización.",
+      "connections": [
+        "reading-pueblo-libre-sometido",
+        "reading-prioridades-colectivas",
+        "reading-escuela-merendero",
+        "reading-del-yo-al-nosotros",
+        "reading-patria-responsabilidad"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 39,
+          "relation": "essay-and-section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              63,
+              64
+            ],
+            "matched_anchors": [
+              "La libertad de todos"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1112,
+              1133
+            ]
+          }
+        },
+        {
+          "book_unit": 40,
+          "relation": "essay-and-section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              65
+            ],
+            "matched_anchors": [
+              "Ayer deseo, hoy realidad",
+              "Debes saberlo"
+            ],
+            "anchor_hits": 2,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1134,
+              1155
+            ]
+          }
+        },
+        {
+          "book_unit": 41,
+          "relation": "essay-and-section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              66
+            ],
+            "matched_anchors": [],
+            "anchor_hits": 0,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1156,
+              1171
+            ]
+          }
+        },
+        {
+          "book_unit": 42,
+          "relation": "essay-and-section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              67
+            ],
+            "matched_anchors": [
+              "Todo es en vano si no hay amor"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1172,
+              1197
+            ]
+          }
+        },
+        {
+          "book_unit": 43,
+          "relation": "essay-and-section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              68
+            ],
+            "matched_anchors": [],
+            "anchor_hits": 0,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1198,
+              1222
+            ]
+          }
+        },
+        {
+          "book_unit": 44,
+          "relation": "essay-and-section-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              69
+            ],
+            "matched_anchors": [],
+            "anchor_hits": 0,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1223,
+              1247
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-libertad-de-todos",
+        "concept-otro",
+        "concept-democracia",
+        "concept-organizacion",
+        "concept-comunidad"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-saber-heredar",
+      "order": 26,
+      "title": "Saber heredar",
+      "section": "La libertad de todos",
+      "kind": "close-reading",
+      "thesis": "Heredar plenamente no es recibir de manera automática: supone discernir qué aceptar, qué rechazar, qué transformar y qué transmitir.",
+      "connections": [
+        "reading-domesticacion-cultural",
+        "reading-patria-responsabilidad",
+        "reading-no-me-necesitas",
+        "reading-nuevamente"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 43,
+          "relation": "close-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              68
+            ],
+            "matched_anchors": [
+              "Orgullo argentino"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1198,
+              1222
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-herencia",
+        "concept-discernimiento",
+        "concept-patria",
+        "concept-identidad",
+        "concept-integridad"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-patria-responsabilidad",
+      "order": 27,
+      "title": "Patria: pertenecer es hacerse cargo",
+      "section": "La libertad de todos",
+      "kind": "transversal-reading",
+      "thesis": "La patria adquiere espesor ético cuando deja de significar sólo identificación y pasa a significar responsabilidad por un mundo compartido.",
+      "connections": [
+        "reading-escuela-merendero",
+        "reading-del-yo-al-nosotros",
+        "reading-libertad-de-todos",
+        "reading-saber-heredar"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 43,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              68
+            ],
+            "matched_anchors": [
+              "Orgullo argentino"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1198,
+              1222
+            ]
+          }
+        },
+        {
+          "book_unit": 44,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              69
+            ],
+            "matched_anchors": [
+              "Patria al hombro"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1223,
+              1247
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-patria",
+        "concept-comunidad",
+        "concept-responsabilidad",
+        "concept-transmision",
+        "concept-otro"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-amor-actividad",
+      "order": 28,
+      "title": "El amor como actividad",
+      "section": "Amor, transmisión y emancipación",
+      "kind": "transversal-reading",
+      "thesis": "El amor puede leerse como práctica de salida de la clausura sobre uno mismo, no sólo como sentimiento espontáneo.",
+      "connections": [
+        "reading-los-nadies-giro-etico",
+        "reading-integridad",
+        "reading-del-yo-al-nosotros",
+        "reading-libertad-de-todos"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 23,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              42
+            ],
+            "matched_anchors": [
+              "En las calles de Liniers"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              820,
+              829
+            ]
+          }
+        },
+        {
+          "book_unit": 40,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              65
+            ],
+            "matched_anchors": [
+              "Debes saberlo"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1134,
+              1155
+            ]
+          }
+        },
+        {
+          "book_unit": 42,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              67
+            ],
+            "matched_anchors": [
+              "Todo es en vano si no hay amor"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1172,
+              1197
+            ]
+          }
+        },
+        {
+          "book_unit": 44,
+          "relation": "transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              69
+            ],
+            "matched_anchors": [
+              "Patria al hombro"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1223,
+              1247
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-amor",
+        "concept-otro",
+        "concept-responsabilidad",
+        "concept-comunidad",
+        "concept-integridad"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-no-me-necesitas",
+      "order": 29,
+      "title": "Para ser vos no me necesitás a mí",
+      "section": "Amor, transmisión y emancipación",
+      "kind": "transversal-reading",
+      "thesis": "La emancipación tiene una simetría inversa con la domesticación: ambas vuelven innecesaria una autoridad exterior, pero una porque la autoridad fue interiorizada y la otra porque el sujeto adquirió criterio propio.",
+      "connections": [
+        "reading-represion-sin-represor",
+        "reading-integridad",
+        "reading-saber-heredar",
+        "reading-se-vos-por-ser-yo",
+        "reading-nuevamente"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 2,
+          "relation": "structural-transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [],
+            "matched_anchors": [
+              "La Estética",
+              "La Síntesis"
+            ],
+            "anchor_hits": 2,
+            "page_overlap_hits": 0,
+            "docx_paragraph_range": [
+              25,
+              52
+            ]
+          }
+        },
+        {
+          "book_unit": 3,
+          "relation": "structural-transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              6,
+              7,
+              9
+            ],
+            "matched_anchors": [
+              "La Estética",
+              "La Ética",
+              "La Síntesis"
+            ],
+            "anchor_hits": 3,
+            "page_overlap_hits": 2,
+            "docx_paragraph_range": [
+              53,
+              180
+            ]
+          }
+        },
+        {
+          "book_unit": 38,
+          "relation": "structural-transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              62
+            ],
+            "matched_anchors": [
+              "Se vos"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1095,
+              1111
+            ]
+          }
+        },
+        {
+          "book_unit": 47,
+          "relation": "structural-transversal-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              77,
+              78
+            ],
+            "matched_anchors": [
+              "La Estética",
+              "La Ética",
+              "Se vos",
+              "Por ser yo",
+              "Si me ves volver"
+            ],
+            "anchor_hits": 5,
+            "page_overlap_hits": 2,
+            "docx_paragraph_range": [
+              1396,
+              1450
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-emancipacion",
+        "concept-transmision",
+        "concept-autonomia",
+        "concept-integridad",
+        "concept-discernimiento"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-se-vos-por-ser-yo",
+      "order": 30,
+      "title": "De “Sé vos” a “Por ser yo”: la identidad puesta a prueba por el tiempo",
+      "section": "Límite biográfico y cierre",
+      "kind": "arc-reading",
+      "thesis": "El pasaje desplaza una consigna identitaria hacia la experiencia temporal, costosa y falible de intentar vivirla.",
+      "connections": [
+        "reading-se-vos",
+        "reading-no-me-necesitas",
+        "reading-nuevamente",
+        "reading-si-me-ves-volver"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 38,
+          "relation": "arc-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              62
+            ],
+            "matched_anchors": [
+              "Se vos"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1095,
+              1111
+            ]
+          }
+        },
+        {
+          "book_unit": 47,
+          "relation": "arc-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              77,
+              78
+            ],
+            "matched_anchors": [
+              "Se vos",
+              "Por ser yo"
+            ],
+            "anchor_hits": 2,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1396,
+              1450
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-autonomia",
+        "concept-integridad",
+        "concept-falibilidad",
+        "concept-tiempo"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-nuevamente",
+      "order": 31,
+      "title": "“Nuevamente”: la verdad no pertenece por completo a quien la dice",
+      "section": "Límite biográfico y cierre",
+      "kind": "close-reading",
+      "thesis": "La palabra final permite leer verdad y razón como algo que precede y excede al individuo que circunstancialmente las formula.",
+      "connections": [
+        "reading-saber-heredar",
+        "reading-no-me-necesitas",
+        "reading-se-vos-por-ser-yo",
+        "reading-si-me-ves-volver",
+        "reading-epilogo-demostracion"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 47,
+          "relation": "close-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              77,
+              78
+            ],
+            "matched_anchors": [
+              "Por ser yo"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1396,
+              1450
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-verdad",
+        "concept-trascendencia",
+        "concept-legado",
+        "concept-herencia",
+        "concept-nueva-voz"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-si-me-ves-volver",
+      "order": 32,
+      "title": "“Si me ves volver”: advertencia y retirada",
+      "section": "Límite biográfico y cierre",
+      "kind": "closing-reading",
+      "thesis": "El fragmento admite simultáneamente una advertencia sobre la propia incoherencia y un gesto de retirada del referente.",
+      "connections": [
+        "reading-no-me-necesitas",
+        "reading-se-vos-por-ser-yo",
+        "reading-nuevamente",
+        "reading-epilogo-demostracion"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 47,
+          "relation": "closing-reading-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              77,
+              78
+            ],
+            "matched_anchors": [
+              "Si me ves volver"
+            ],
+            "anchor_hits": 1,
+            "page_overlap_hits": 1,
+            "docx_paragraph_range": [
+              1396,
+              1450
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-falibilidad",
+        "concept-retirada",
+        "concept-emancipacion",
+        "concept-legado"
+      ],
+      "tags": []
+    },
+    {
+      "id": "reading-epilogo-demostracion",
+      "order": 33,
+      "title": "El epílogo como demostración: la última voz ya no es Iorio",
+      "section": "Límite biográfico y cierre",
+      "kind": "book-structure-reading",
+      "thesis": "El libro no termina en Por ser yo ni en “Si me ves volver”: termina cuando quien recibió la voz toma la palabra.",
+      "connections": [
+        "reading-estetica-etica-sintesis",
+        "reading-saber-heredar",
+        "reading-no-me-necesitas",
+        "reading-nuevamente",
+        "reading-si-me-ves-volver"
+      ],
+      "book_refs": [
+        {
+          "book_unit": 47,
+          "relation": "book-structure-basis",
+          "source": "BOOK",
+          "evidence": {
+            "pdf_pages": [
+              77,
+              78
+            ],
+            "matched_anchors": [
+              "Por ser yo",
+              "Si me ves volver",
+              "Ricardo y la libertad"
+            ],
+            "anchor_hits": 3,
+            "page_overlap_hits": 2,
+            "docx_paragraph_range": [
+              1396,
+              1450
+            ]
+          }
+        }
+      ],
+      "book_unit_link_status": "resolved-exact-book-model",
+      "status": "draft-consolidated-v0.2",
+      "concept_ids": [
+        "concept-herencia",
+        "concept-discernimiento",
+        "concept-emancipacion",
+        "concept-nueva-voz",
+        "concept-legado",
+        "concept-transmision",
+        "concept-integridad"
+      ],
+      "tags": []
+    }
+  ]
+}

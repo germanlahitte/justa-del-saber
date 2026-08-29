@@ -1,0 +1,345 @@
+{
+  "version": "0.2",
+  "layer": "FUTURE-ANALYSIS",
+  "status": "canonical-structural-map",
+  "depends_on": {
+    "book": "BOOK canonical model",
+    "concepts": "CONCEPTS v0.3",
+    "readings": "READINGS v0.3"
+  },
+  "purpose": "Representar el desarrollo general de las ideas del libro sin duplicar BOOK ni reemplazar READINGS. El Master Map organiza relaciones ya documentadas.",
+  "core_thesis": "El recorrido general va desde formas externas e internas de captura de la subjetividad hacia la construcción de un criterio propio; de allí se abre al otro, a la comunidad y a la libertad universalizable; finalmente, la transmisión sólo se completa cuando quien recibe puede continuar sin depender de quien transmitió.",
+  "arcs": [
+    {
+      "id": "arc-01-captura",
+      "order": 1,
+      "title": "Captura de la subjetividad",
+      "question": "¿Cuánto de aquello que pensamos, deseamos y hacemos puede seguir llamándose propio?",
+      "concept_ids": [
+        "concept-enajenacion",
+        "concept-represion",
+        "concept-captura",
+        "concept-domesticacion",
+        "concept-tiempo",
+        "concept-identidad"
+      ],
+      "reading_ids": [
+        "reading-individualismo-enajenado",
+        "reading-tiempo-subjetividad",
+        "reading-no-querer-ver",
+        "reading-represion-confisca-vida",
+        "reading-represor-programado",
+        "reading-represion-sin-represor",
+        "reading-domesticacion-cultural"
+      ],
+      "claim": "La pérdida de libertad no comienza necesariamente con una prohibición. También puede producirse cuando el sujeto entrega tiempo, juicio, deseo e identidad hasta reproducir por sí mismo aquello que antes debía imponerse."
+    },
+    {
+      "id": "arc-02-ruptura-social",
+      "order": 2,
+      "title": "Ruptura del entramado social",
+      "question": "¿Qué ocurre cuando sujetos aislados dejan de reconocerse como parte de una trama común?",
+      "concept_ids": [
+        "concept-individualismo",
+        "concept-comunidad",
+        "concept-organizacion",
+        "concept-responsabilidad",
+        "concept-memoria"
+      ],
+      "reading_ids": [
+        "reading-conciencia-comun",
+        "reading-anestesia-cotidiana",
+        "reading-pueblo-libre-sometido",
+        "reading-prioridades-colectivas"
+      ],
+      "claim": "La desorganización social no es sólo pobreza institucional: debilita la capacidad colectiva de producir prioridades, memoria, representación y cuidado."
+    },
+    {
+      "id": "arc-03-los-nadies",
+      "order": 3,
+      "title": "Los Nadies: del diagnóstico al dolor ajeno",
+      "question": "¿Quién paga concretamente el costo de esa ruptura?",
+      "concept_ids": [
+        "concept-los-nadies",
+        "concept-otro",
+        "concept-amor",
+        "concept-responsabilidad",
+        "concept-comunidad",
+        "concept-memoria"
+      ],
+      "reading_ids": [
+        "reading-los-nadies-giro-etico",
+        "reading-presencia-tranquera",
+        "reading-visitante-memoria",
+        "reading-cascara-institucional",
+        "reading-escuela-merendero",
+        "reading-open-door-amigo",
+        "reading-la-vida-es-lo-que-es"
+      ],
+      "claim": "El libro cambia de escala: deja de preguntar sólo qué está mal y obliga a mirar a quién le duele. El otro deja de ser abstracción y aparece como persona concreta cuya humanidad puede ser reconocida o descartada."
+    },
+    {
+      "id": "arc-04-construccion-de-si",
+      "order": 4,
+      "title": "Construcción de sí",
+      "question": "¿Cómo recuperar una subjetividad que pueda llamarse propia?",
+      "concept_ids": [
+        "concept-intuicion",
+        "concept-subjetividad",
+        "concept-discernimiento",
+        "concept-autonomia",
+        "concept-identidad",
+        "concept-integridad",
+        "concept-tiempo"
+      ],
+      "reading_ids": [
+        "reading-ideando-la-fuga",
+        "reading-libertad-interior",
+        "reading-se-vos",
+        "reading-integridad"
+      ],
+      "claim": "La libertad empieza como trabajo interior: pensar, discernir, reconocer miedos y herencias, y construir una posición propia. 'Ser uno mismo' no es espontaneidad sino tarea."
+    },
+    {
+      "id": "arc-05-del-yo-al-nosotros",
+      "order": 5,
+      "title": "Del yo al nosotros",
+      "question": "¿Qué impide que la autonomía termine convertida en individualismo?",
+      "concept_ids": [
+        "concept-otro",
+        "concept-amor",
+        "concept-comunidad",
+        "concept-responsabilidad",
+        "concept-patria",
+        "concept-organizacion"
+      ],
+      "reading_ids": [
+        "reading-del-yo-al-nosotros",
+        "reading-amor-actividad",
+        "reading-patria-responsabilidad",
+        "reading-saber-heredar"
+      ],
+      "claim": "La autonomía sólo alcanza espesor ético cuando reconoce al otro. Amor, patria y comunidad dejan de ser identidades pasivas y se vuelven formas de responsabilidad."
+    },
+    {
+      "id": "arc-06-libertad-de-todos",
+      "order": 6,
+      "title": "La libertad de todos",
+      "question": "¿Cuándo una libertad deja de ser privilegio y se vuelve principio?",
+      "concept_ids": [
+        "concept-libertad",
+        "concept-libertad-de-todos",
+        "concept-democracia",
+        "concept-organizacion",
+        "concept-comunidad",
+        "concept-responsabilidad"
+      ],
+      "reading_ids": [
+        "reading-libertad-de-todos",
+        "reading-del-yo-al-nosotros"
+      ],
+      "claim": "La libertad se universaliza cuando aquello que reclamo para mí puede reconocerse también en los demás. Desde allí, democracia y organización social aparecen como condiciones de una libertad compartida."
+    },
+    {
+      "id": "arc-07-transmision",
+      "order": 7,
+      "title": "Herencia, transmisión y emancipación",
+      "question": "¿Cómo transmitir sin producir obediencia?",
+      "concept_ids": [
+        "concept-herencia",
+        "concept-discernimiento",
+        "concept-transmision",
+        "concept-emancipacion",
+        "concept-legado",
+        "concept-memoria"
+      ],
+      "reading_ids": [
+        "reading-estetica-etica-sintesis",
+        "reading-saber-heredar",
+        "reading-no-me-necesitas"
+      ],
+      "claim": "Heredar no es repetir y transmitir no es imponer. La transmisión logra su forma más alta cuando quien recibe puede apropiarse, discernir y continuar sin quedar subordinado al transmisor."
+    },
+    {
+      "id": "arc-08-limite-biografico",
+      "order": 8,
+      "title": "Límite biográfico y falibilidad",
+      "question": "¿Qué ocurre cuando quien transmitió no permanece a la altura de aquello que dijo?",
+      "concept_ids": [
+        "concept-falibilidad",
+        "concept-integridad",
+        "concept-autonomia",
+        "concept-retirada",
+        "concept-tiempo"
+      ],
+      "reading_ids": [
+        "reading-se-vos-por-ser-yo",
+        "reading-si-me-ves-volver"
+      ],
+      "claim": "La validez posible de una idea no exige convertir a quien la formuló en autoridad moral permanente. La contradicción biográfica forma parte del problema y prepara la retirada del referente."
+    },
+    {
+      "id": "arc-09-trascendencia",
+      "order": 9,
+      "title": "Después del individuo",
+      "question": "¿Qué puede continuar cuando el individuo desaparece?",
+      "concept_ids": [
+        "concept-verdad",
+        "concept-legado",
+        "concept-trascendencia",
+        "concept-nueva-voz",
+        "concept-transmision",
+        "concept-emancipacion"
+      ],
+      "reading_ids": [
+        "reading-nuevamente",
+        "reading-si-me-ves-volver",
+        "reading-epilogo-demostracion"
+      ],
+      "claim": "La obra puede sobrevivir a su autor sin conservarlo como autoridad. Aquello transmitido se vuelve herencia cuando otra voz lo recibe, lo discierne y produce algo propio."
+    }
+  ],
+  "structural_hypotheses": [
+    {
+      "id": "H-01",
+      "title": "Represión → Domesticación",
+      "statement": "La forma más eficaz de represión es aquella que deja de necesitar al represor.",
+      "concept_ids": [
+        "concept-represion",
+        "concept-captura",
+        "concept-domesticacion"
+      ],
+      "reading_ids": [
+        "reading-represion-sin-represor"
+      ]
+    },
+    {
+      "id": "H-02",
+      "title": "Transmisión → Emancipación",
+      "statement": "La forma más lograda de emancipación es aquella que deja de necesitar al emancipador.",
+      "concept_ids": [
+        "concept-transmision",
+        "concept-emancipacion",
+        "concept-autonomia"
+      ],
+      "reading_ids": [
+        "reading-no-me-necesitas",
+        "reading-epilogo-demostracion"
+      ]
+    },
+    {
+      "id": "H-03",
+      "title": "Autonomía → Integridad",
+      "statement": "Ser uno mismo no implica aislarse: implica no delegar en otro la tarea de completarse.",
+      "concept_ids": [
+        "concept-autonomia",
+        "concept-integridad",
+        "concept-otro"
+      ],
+      "reading_ids": [
+        "reading-integridad",
+        "reading-se-vos"
+      ]
+    },
+    {
+      "id": "H-04",
+      "title": "Integridad → Amor",
+      "statement": "Sólo un sujeto que no necesita usar al otro para completarse puede abrirse al amor como actividad y reconocimiento.",
+      "concept_ids": [
+        "concept-integridad",
+        "concept-amor",
+        "concept-otro"
+      ],
+      "reading_ids": [
+        "reading-amor-actividad"
+      ]
+    },
+    {
+      "id": "H-05",
+      "title": "Herencia → Discernimiento",
+      "statement": "Heredar plenamente no es repetir: es saber heredar.",
+      "concept_ids": [
+        "concept-herencia",
+        "concept-discernimiento",
+        "concept-identidad"
+      ],
+      "reading_ids": [
+        "reading-saber-heredar"
+      ]
+    },
+    {
+      "id": "H-06",
+      "title": "Libertad → Universalización",
+      "statement": "La libertad individual alcanza universalidad cuando reconoce al otro como sujeto de esa misma libertad.",
+      "concept_ids": [
+        "concept-libertad",
+        "concept-otro",
+        "concept-libertad-de-todos",
+        "concept-democracia"
+      ],
+      "reading_ids": [
+        "reading-libertad-de-todos"
+      ]
+    },
+    {
+      "id": "H-07",
+      "title": "Verdad → Trascendencia",
+      "statement": "Una verdad puede exceder a quien la formula; el individuo puede ser una manifestación contingente de algo que reaparece.",
+      "concept_ids": [
+        "concept-verdad",
+        "concept-trascendencia",
+        "concept-legado"
+      ],
+      "reading_ids": [
+        "reading-nuevamente"
+      ]
+    },
+    {
+      "id": "H-08",
+      "title": "Retirada → Nueva voz",
+      "statement": "La transmisión se completa cuando el referente puede retirarse y la voz siguiente ya no es una repetición de la suya.",
+      "concept_ids": [
+        "concept-retirada",
+        "concept-emancipacion",
+        "concept-nueva-voz"
+      ],
+      "reading_ids": [
+        "reading-si-me-ves-volver",
+        "reading-epilogo-demostracion"
+      ]
+    }
+  ],
+  "band_meta_axis": [
+    {
+      "band": "V8",
+      "role": "La Estética",
+      "function": "Irrupción, lenguaje, gesto, identidad y posibilidad de aparecer como otra cosa."
+    },
+    {
+      "band": "Hermética",
+      "role": "La Ética",
+      "function": "Responsabilidad de la voz, documentación del presente y transmisión hacia quien vendrá."
+    },
+    {
+      "band": "Almafuerte",
+      "role": "La Síntesis",
+      "function": "Integración de voz, experiencia, pérdida, patria, amor, contradicción, tiempo, legado y transmisión."
+    }
+  ],
+  "terminal_structure": {
+    "sequence": [
+      "reading-se-vos-por-ser-yo",
+      "reading-nuevamente",
+      "reading-si-me-ves-volver",
+      "reading-epilogo-demostracion"
+    ],
+    "meaning": "El cierre no culmina en una doctrina de Iorio sino en la salida de Iorio. La última operación del libro es producir una voz que ya no depende de él."
+  },
+  "navigation_entry_points": {
+    "by_concept": true,
+    "by_reading": true,
+    "by_book_unit": true,
+    "by_arc": true,
+    "by_band_meta_axis": true
+  }
+}

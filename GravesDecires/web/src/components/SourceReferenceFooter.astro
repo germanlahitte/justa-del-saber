@@ -1,0 +1,92 @@
+---
+// SourceReferenceFooter — regla editorial de la re-baseline (§3/§5): los
+// SourceReference/QR se muestran SIEMPRE en el pie de la página web,
+// alineados a la derecha, y funcionan como link directo a la URL de la
+// fuente. Es una adaptación consciente al medio web (en el libro impreso
+// el QR vive junto a la letra; en la web se consolida en el pie para no
+// interrumpir la lectura del fragmento con el bloque técnico del QR).
+//
+// Generaliza el antiguo SongReferenceFooter: un QR del libro no siempre
+// apunta a una canción (puede ser una entrevista, conferencia de prensa,
+// video, declaración u otra fuente). El contenido mostrado se adapta a
+// source_ref.type:
+//
+//   song             -> Título / Banda · Disco · Año
+//   press-conference -> Descripción (ej. "Conferencia de prensa de
+//                        Hermética — Oberá Rock, 1993") / Banda · Evento · Año
+//   interview/video/declaration/other -> Descripción + los campos
+//                        disponibles (autor/persona/banda/evento/año)
+//
+// El bloque completo es clickeable (no solo el título), y conserva
+// además el QR original como enlace equivalente.
+//
+// El asset del QR se preserva byte a byte (servido vía /api/asset/[file],
+// igual que en el resto del sitio) — esta es una reubicación de layout,
+// nunca una regeneración del QR.
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  sourceRef: CollectionEntry<'sourceReferences'>;
+  qrAsset: CollectionEntry<'assets'> | undefined;
+  // Optional override for the "p.N" label. By default the label is the
+  // SourceReference's own pdf_page (the page where the reference physically
+  // lives on paper). A web-only footer that REUSES a canonical reference
+  // from another page (e.g. p24 reusing "Memoria de Siglos" from p13,
+  // decision 9) must instead label the page the reader is CURRENTLY on.
+  pageLabelOverride?: number;
+}
+const { sourceRef, qrAsset, pageLabelOverride } = Astro.props;
+const fileName = qrAsset?.data.extracted_file.split('/').pop();
+const ref = sourceRef.data.source_ref;
+const href = sourceRef.data.qr_value;
+
+const pageLabel = pageLabelOverride ?? sourceRef.data.pdf_page;
+
+const isSong = ref?.type === 'song';
+
+const primaryLine = isSong ? ref?.title : ref?.description;
+const secondaryParts = isSong
+  ? [ref?.band, ref?.album].filter(Boolean)
+  : [ref?.band ?? ref?.author ?? ref?.person, ref?.event].filter(Boolean);
+const yearLine = ref?.year;
+
+const ariaLabel = ref
+  ? `${isSong ? 'Escuchar' : 'Abrir'} ${primaryLine ?? 'fuente citada'} — abre en una pestaña nueva`
+  : 'Enlace original del código QR — abre en una pestaña nueva';
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="group flex items-start justify-end gap-3 border-t border-rule pt-4 no-underline"
+  aria-label={ariaLabel}
+>
+  {fileName && (
+    <span class="shrink-0 border border-rule bg-paper-dim/40 p-1.5 transition-colors group-hover:border-accent">
+      <img
+        src={`/api/asset/${fileName}`}
+        alt="Código QR original del libro"
+        width="72"
+        loading="lazy"
+        class="block"
+      />
+    </span>
+  )}
+  <span class="flex flex-col items-end gap-0.5 text-right">
+    <span class="font-mono text-[10px] text-ink-faint">p.{pageLabel}</span>
+    {ref ? (
+      <>
+        <span class="text-sm font-medium text-ink group-hover:text-accent">{primaryLine}</span>
+        {secondaryParts.length > 0 && (
+          <span class="text-xs text-ink-soft">{secondaryParts.join(' · ')}</span>
+        )}
+        {yearLine && <span class="font-mono text-xs text-ink-faint">{yearLine}</span>}
+      </>
+    ) : (
+      <span class="text-xs text-ink-soft underline decoration-dotted underline-offset-2 group-hover:text-accent">
+        Abrir enlace original →
+      </span>
+    )}
+  </span>
+</a>

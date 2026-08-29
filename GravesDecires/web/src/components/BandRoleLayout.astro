@@ -1,0 +1,76 @@
+---
+// BandRoleLayout — variante de presentación reservada para las páginas de
+// V8/La Estética, Hermética/La Ética y Almafuerte/La Síntesis (declaradas
+// en data/editorial/page-presentation.json con layout: "band-role").
+//
+// Composición: frase corta opcional arriba a la derecha, título principal,
+// letra/declaración debajo, reseña breve de la banda en zona inferior
+// derecha. El SourceReference/QR NO se renderiza acá: la ruta lo coloca en
+// el slot `footer` del PageShell (ancorado al borde inferior de la hoja),
+// igual que en el resto de las páginas.
+//
+// IMPORTANTE: no hardcodea números de página. La separación entre
+// "letra/declaración" y "reseña de la banda" se deriva ESTRUCTURALMENTE
+// del propio documento: dentro de un bloque band-role, la reseña siempre
+// queda después del mayor salto de índice de párrafo (el DOCX original
+// deja ese espaciado entre la letra y el párrafo de reseña en las tres
+// páginas). Esto es una lectura de estructura, no una suposición de
+// contenido — no busca palabras clave ni asume qué dice la reseña.
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  page: CollectionEntry<'pages'>;
+  presentation: CollectionEntry<'pagePresentations'>;
+  shortPhraseText: string | null;
+}
+
+// `presentation` is accepted for interface consistency with PageView and
+// future use (e.g. presentation.data.role.band/role_label as an explicit
+// label) but the title/lyric/review split below is derived purely from
+// `page` structure, never from this metadata.
+const { page, shortPhraseText } = Astro.props;
+
+const textBlocks = page.data.blocks.filter((b) => b.text_verbatim_slice.trim());
+const headingIdx = textBlocks.findIndex((b) => b.style === 'Heading2' || b.style === 'Heading1');
+const titleBlock = headingIdx >= 0 ? textBlocks[headingIdx] : null;
+const afterTitle = headingIdx >= 0 ? textBlocks.slice(headingIdx + 1) : textBlocks;
+
+// Find the largest paragraph-index gap among the blocks that follow the
+// title — that gap is the structural boundary between the lyric/statement
+// and the band review paragraph(s).
+let splitAt = afterTitle.length;
+let maxGap = -1;
+for (let i = 1; i < afterTitle.length; i++) {
+  const gap = afterTitle[i].docx_paragraph_index - afterTitle[i - 1].docx_paragraph_index;
+  if (gap > maxGap) {
+    maxGap = gap;
+    splitAt = i;
+  }
+}
+const lyricBlocks = afterTitle.slice(0, splitAt);
+const reviewBlocks = afterTitle.slice(splitAt);
+---
+
+<div class="space-y-8">
+  {shortPhraseText && (
+    <p class="text-right font-mono text-sm text-ink-faint italic">{shortPhraseText}</p>
+  )}
+
+  {titleBlock && (
+    <h2 class="text-3xl font-normal text-ink">{titleBlock.text_verbatim_slice}</h2>
+  )}
+
+  <div class="space-y-1">
+    {lyricBlocks.map((b) => (
+      <p class="text-lg leading-relaxed whitespace-pre-line text-ink">{b.text_verbatim_slice}</p>
+    ))}
+  </div>
+
+  {reviewBlocks.length > 0 && (
+    <div class="ml-auto max-w-md space-y-1 text-right">
+      {reviewBlocks.map((b) => (
+        <p class="text-sm leading-relaxed whitespace-pre-line text-ink-soft">{b.text_verbatim_slice}</p>
+      ))}
+    </div>
+  )}
+</div>

@@ -1,0 +1,76 @@
+{
+  "version": "0.3",
+  "source_readings": "READINGS v0.2-linked",
+  "target_contract": {
+    "concept_labels": "REMOVE",
+    "concept_ids": "ADD canonical IDs from CONCEPTS v0.3",
+    "tags": "ADD residual analytic facets",
+    "connections": "REWRITE from Rxx aliases to canonical reading IDs",
+    "book_refs": "PRESERVE verbatim",
+    "book_unit_link_status": "PRESERVE verbatim"
+  },
+  "label_aliases": {
+    "otro": "concept-otro",
+    "contradiccion": "concept-falibilidad",
+    "alienacion": "concept-enajenacion"
+  },
+  "facet_terms": [
+    "accion",
+    "aislamiento",
+    "conciencia comun",
+    "cuidado",
+    "desigualdad",
+    "dignidad",
+    "empatia",
+    "institucion",
+    "miedo",
+    "obediencia",
+    "presencia",
+    "realidad",
+    "recursos",
+    "trabajo"
+  ],
+  "supplemental_concepts": {
+    "reading-los-nadies-giro-etico": [
+      "concept-los-nadies"
+    ],
+    "reading-ideando-la-fuga": [
+      "concept-intuicion"
+    ]
+  },
+  "reading_order_aliases": {
+    "R01": "reading-estetica-etica-sintesis",
+    "R02": "reading-individualismo-enajenado",
+    "R03": "reading-tiempo-subjetividad",
+    "R04": "reading-no-querer-ver",
+    "R05": "reading-represion-confisca-vida",
+    "R06": "reading-represor-programado",
+    "R07": "reading-represion-sin-represor",
+    "R08": "reading-domesticacion-cultural",
+    "R09": "reading-conciencia-comun",
+    "R10": "reading-anestesia-cotidiana",
+    "R11": "reading-pueblo-libre-sometido",
+    "R12": "reading-prioridades-colectivas",
+    "R13": "reading-los-nadies-giro-etico",
+    "R14": "reading-presencia-tranquera",
+    "R15": "reading-visitante-memoria",
+    "R16": "reading-cascara-institucional",
+    "R17": "reading-escuela-merendero",
+    "R18": "reading-open-door-amigo",
+    "R19": "reading-la-vida-es-lo-que-es",
+    "R20": "reading-ideando-la-fuga",
+    "R21": "reading-libertad-interior",
+    "R22": "reading-se-vos",
+    "R23": "reading-integridad",
+    "R24": "reading-del-yo-al-nosotros",
+    "R25": "reading-libertad-de-todos",
+    "R26": "reading-saber-heredar",
+    "R27": "reading-patria-responsabilidad",
+    "R28": "reading-amor-actividad",
+    "R29": "reading-no-me-necesitas",
+    "R30": "reading-se-vos-por-ser-yo",
+    "R31": "reading-nuevamente",
+    "R32": "reading-si-me-ves-volver",
+    "R33": "reading-epilogo-demostracion"
+  }
+}

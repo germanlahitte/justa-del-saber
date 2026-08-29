@@ -1,0 +1,91 @@
+---
+// ARC DETAIL — question, claim, Concepts, Readings, entry points to BOOK.
+import Layout from '../../layouts/Layout.astro';
+import SourceTag from '../../components/SourceTag.astro';
+import { getCollection, getEntry } from 'astro:content';
+import { getFirstPageByBookUnit } from '../../lib/bookUnitPage';
+
+export async function getStaticPaths() {
+  const arcs = await getCollection('mapArcs');
+  return arcs.map((a) => ({ params: { arc: a.id } }));
+}
+
+const { arc: arcParam } = Astro.params;
+const arc = await getEntry('mapArcs', arcParam!);
+if (!arc) return Astro.redirect('/mapa');
+
+const allConcepts = await getCollection('concepts');
+const conceptById = new Map(allConcepts.map((c) => [c.id, c]));
+const allReadings = await getCollection('readings');
+const readingById = new Map(allReadings.map((r) => [r.id, r]));
+const pageByUnit = await getFirstPageByBookUnit();
+
+const readingsInArc = arc.data.reading_ids
+  .map((id) => readingById.get(id))
+  .filter((r): r is NonNullable<typeof r> => Boolean(r));
+---
+
+<Layout title={arc.data.title}>
+  <main class="mx-auto max-w-3xl px-6 py-14 sm:px-10">
+    <a href="/mapa" class="font-mono text-xs uppercase tracking-wide text-ink-faint hover:text-ink">← Mapa</a>
+
+    <header class="mt-6 mb-8">
+      <p class="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-accent">
+        <SourceTag source="FUTURE-ANALYSIS" />
+        Arco {arc.data.order} de 9
+      </p>
+      <h1 class="mt-3 text-3xl font-normal text-ink">{arc.data.title}</h1>
+      <p class="prose-book mt-3 text-lg text-ink-soft italic">{arc.data.question}</p>
+    </header>
+
+    <p class="prose-book mb-10 text-base leading-relaxed text-ink">{arc.data.claim}</p>
+
+    <section class="mb-10 border-t border-rule pt-6">
+      <h2 class="font-mono text-xs uppercase tracking-wider text-ink-faint">Conceptos de este arco</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        {arc.data.concept_ids.map((cid) => {
+          const c = conceptById.get(cid);
+          return c ? (
+            <a
+              href={`/conceptos/${c.id}`}
+              class="rounded-sm border border-rule px-2 py-1 text-sm text-ink-soft hover:border-accent hover:text-accent"
+            >
+              {c.data.name}
+            </a>
+          ) : null;
+        })}
+      </div>
+    </section>
+
+    <section class="border-t border-rule pt-6">
+      <h2 class="font-mono text-xs uppercase tracking-wider text-ink-faint">
+        Lecturas de este arco ({readingsInArc.length})
+      </h2>
+      <ul class="mt-3 space-y-4">
+        {readingsInArc.map((r) => {
+          const units = [...new Set(r.data.book_refs.map((ref) => ref.book_unit))];
+          return (
+            <li class="border border-rule p-4">
+              <a href={`/lecturas/${r.id}`} class="text-sm font-medium text-ink hover:text-accent">
+                {r.data.title}
+              </a>
+              <p class="prose-book mt-1 text-xs text-ink-soft">{r.data.thesis}</p>
+              <div class="mt-3 flex flex-wrap items-center gap-2">
+                <span class="font-mono text-[10px] uppercase tracking-wide text-ink-faint">→ libro:</span>
+                {units.map((u) => (
+                  <a
+                    href={`/libro/p/${pageByUnit.get(u) ?? 1}`}
+                    class="rounded-sm border border-rule px-1.5 py-0.5 font-mono text-[11px] text-ink-soft hover:border-accent hover:text-accent"
+                    title={`unidad ${u}`}
+                  >
+                    p.{pageByUnit.get(u) ?? '?'}
+                  </a>
+                ))}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  </main>
+</Layout>

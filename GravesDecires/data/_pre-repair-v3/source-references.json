@@ -1,0 +1,887 @@
+{
+  "source": "BOOK + ASSET + EDITORIAL (derived, read-only)",
+  "model": "SourceReference — generalized entity for any external source a QR in the book points to (song, interview, press-conference, video, declaration, other). Replaces the earlier SongReference model (data/song-references.json, retired) which incorrectly assumed every QR was a song.",
+  "note": "Editorial overrides are resolved by SHA-256 content identity (legacy entries via asset_id + a saved old->new remap table; DEC-13+ entries via asset_sha256 directly), never by DOCX-internal filename, which Word renumbers on every re-save.",
+  "total_qr_assets": 43,
+  "resolved_count": 43,
+  "unresolved_count": 0,
+  "resolved_by_type": {
+    "song": 42,
+    "press-conference": 1
+  },
+  "unresolved_asset_id_remaps": [],
+  "songs_with_credit_but_no_qr": [
+    {
+      "title": "Camino al sepulcro",
+      "band": "V8"
+    },
+    {
+      "title": "El amasijo de un gran sueño",
+      "band": "Almafuerte"
+    },
+    {
+      "title": "Ideando la fuga",
+      "band": "V8"
+    },
+    {
+      "title": "Los delirios del defacto",
+      "band": "Almafuerte"
+    },
+    {
+      "title": "Memoria de siglos",
+      "band": "Hermética"
+    },
+    {
+      "title": "Patria al hombro",
+      "band": "Almafuerte"
+    },
+    {
+      "title": "Presa fácil",
+      "band": "Almafuerte"
+    },
+    {
+      "title": "Ser humano junto a los míos",
+      "band": "Almafuerte"
+    },
+    {
+      "title": "Todo es en vano si no hay amor",
+      "band": "Almafuerte"
+    }
+  ],
+  "references": [
+    {
+      "qr_asset_id": "asset-image1",
+      "qr_value": "https://open.spotify.com/intl-es/track/6l3Ff4NbNkGdECrAQh9Se4?si=0f5d16caae954907",
+      "pdf_page": 55,
+      "book_units": [
+        37
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Se vos",
+        "band": "Almafuerte",
+        "album": "Almafuerte",
+        "year": 1998,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          1110,
+          1112
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image10",
+      "qr_value": "https://open.spotify.com/intl-es/track/7DOGpaCNsjoo5jjZnkEMYH?si=5d570708cc32490b",
+      "pdf_page": 8,
+      "book_units": [
+        23
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Gil Trabajador",
+        "band": "Hermética",
+        "album": "Ácido Argentino",
+        "year": 1991,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          841,
+          843
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image11",
+      "qr_value": "https://open.spotify.com/intl-es/track/3l7ihSOrFwIMBBDcMpfKVL?si=e9d7413d013242f5",
+      "pdf_page": 42,
+      "book_units": [
+        19
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Gil Trabajador",
+        "band": "Hermética",
+        "album": "Ácido Argentino",
+        "year": 1991,
+        "decision_id": null,
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "RESTORED (previous validated baseline; song still a printed credit in THIS book-model)"
+    },
+    {
+      "qr_asset_id": "asset-image12",
+      "qr_value": "https://open.spotify.com/intl-es/track/2JiodPAAXzYPp3OV9oA1gT?si=96b990efd030499c",
+      "pdf_page": 27,
+      "book_units": [
+        32
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Amanecer en Open Door",
+        "band": "Almafuerte",
+        "album": "Piedra Libre",
+        "year": 2001,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          1007,
+          1009
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image13",
+      "qr_value": "https://open.spotify.com/intl-es/track/5dQ9nup0Lsc3Z5nQKK9PYd?si=a2a7c963cbb84dd9",
+      "pdf_page": 62,
+      "book_units": [],
+      "source_ref": {
+        "type": "song",
+        "title": "Antes que los Viejos Reyes",
+        "band": "V8",
+        "album": "El fin de los inicuos",
+        "year": 1986,
+        "decision_id": null,
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "RESTORED (previous validated baseline; song still a printed credit in THIS book-model)"
+    },
+    {
+      "qr_asset_id": "asset-image14",
+      "qr_value": "https://open.spotify.com/intl-es/track/305nzjHiIAnr1DmyZcRLRD?si=c2cd2c98e8cb4831",
+      "pdf_page": 13,
+      "book_units": [],
+      "source_ref": {
+        "type": "song",
+        "title": "Olvídalo y volverá por más",
+        "band": "Hermética",
+        "album": "Víctimas del Vaciamiento",
+        "year": 1994,
+        "decision_id": "DEC-01",
+        "credit_paragraph_range": [
+          260,
+          262
+        ]
+      },
+      "resolution_source": "EDITORIAL (asset-context, re-resolved by content identity)"
+    },
+    {
+      "qr_asset_id": "asset-image15",
+      "qr_value": "https://open.spotify.com/intl-es/track/0RK3rIJW884dpTq89P21NN?si=c87328087b704d5b",
+      "pdf_page": 64,
+      "book_units": [
+        19
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Debes saberlo",
+        "band": "Almafuerte",
+        "album": "Toro y Pampa",
+        "year": 2006,
+        "decision_id": "DEC-04",
+        "credit_paragraph_range": [
+          1155,
+          1157
+        ]
+      },
+      "resolution_source": "EDITORIAL (asset-context, re-resolved by content identity)"
+    },
+    {
+      "qr_asset_id": "asset-image16",
+      "qr_value": "https://open.spotify.com/intl-es/track/6UXRmSINHZ0mEL2bknDKdN?si=62bfd15523e14842",
+      "pdf_page": 38,
+      "book_units": [
+        24
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Como estaba ahí Dios",
+        "band": "Almafuerte",
+        "album": "Ultimando",
+        "year": 2003,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          856,
+          858
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image17",
+      "qr_value": "https://open.spotify.com/intl-es/track/4X2nqt4Pu1lcmYYeuGBjkG?si=6b04e18ea3b5475f",
+      "pdf_page": 18,
+      "book_units": [],
+      "source_ref": {
+        "type": "song",
+        "title": "Por nacer",
+        "band": "Almafuerte",
+        "album": "Del Entorno",
+        "year": 1996,
+        "decision_id": null,
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "RESTORED (previous validated baseline; song still a printed credit in THIS book-model)"
+    },
+    {
+      "qr_asset_id": "asset-image18",
+      "qr_value": "https://open.spotify.com/intl-es/track/2eRXQeH1NZkZyr1jdTQWle?si=6b0f25d8cc674375",
+      "pdf_page": 57,
+      "book_units": [],
+      "source_ref": {
+        "type": "song",
+        "title": "Regresando",
+        "band": "Almafuerte",
+        "album": "Piedra libre",
+        "year": 2001,
+        "decision_id": null,
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "RESTORED (previous validated baseline; song still a printed credit in THIS book-model)"
+    },
+    {
+      "qr_asset_id": "asset-image2",
+      "qr_value": "https://open.spotify.com/intl-es/track/6Qa3SYPRN4RpN7ORAjsgWQ?si=527f75a9dc7c4c7f",
+      "pdf_page": 34,
+      "book_units": [
+        40
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "1999",
+        "band": "Almafuerte",
+        "album": "Del Entorno",
+        "year": 1996,
+        "decision_id": null,
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "RESTORED (previous validated baseline; song still a printed credit in THIS book-model)"
+    },
+    {
+      "qr_asset_id": "asset-image20",
+      "qr_value": "https://open.spotify.com/intl-es/track/5im6eXJOOr6iDuWd3Y7flW?si=748d8695376b4cdb",
+      "pdf_page": 44,
+      "book_units": [
+        6
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Hacia el abismo",
+        "band": "Almafuerte",
+        "album": "Del entorno",
+        "year": 1996,
+        "decision_id": null,
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "RESTORED (previous validated baseline; song still a printed credit in THIS book-model)"
+    },
+    {
+      "qr_asset_id": "asset-image22",
+      "qr_value": "https://open.spotify.com/intl-es/track/6woKpva7Uwdpxr3tqhHbhD?si=d5dfa2f583e1475b",
+      "pdf_page": 64,
+      "book_units": [
+        25
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Ayer deseo, hoy realidad",
+        "band": "Hermética",
+        "album": "Víctimas del vaciamiento",
+        "year": 1994,
+        "decision_id": "DEC-03",
+        "credit_paragraph_range": [
+          1143,
+          1145
+        ]
+      },
+      "resolution_source": "EDITORIAL (asset-context, re-resolved by content identity)"
+    },
+    {
+      "qr_asset_id": "asset-image23",
+      "qr_value": "https://open.spotify.com/intl-es/track/6wkSYibNvkulaL96eJGEyC?si=5e916e62cb7146ce",
+      "pdf_page": 25,
+      "book_units": [
+        36
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Tu eres su seguridad",
+        "band": "Hermética",
+        "album": "Hermética",
+        "year": 1989,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          1093,
+          1095
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image24",
+      "qr_value": "https://open.spotify.com/intl-es/track/174gCegpUjug5Z2yQ8ectM?si=828fba36b7204659",
+      "pdf_page": 13,
+      "book_units": [
+        34
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Memoria de Siglos",
+        "band": "Hermética",
+        "album": "Ácido Argentino",
+        "year": 1991,
+        "decision_id": "DEC-02",
+        "credit_paragraph_range": [
+          271,
+          273
+        ]
+      },
+      "resolution_source": "EDITORIAL (asset-context, re-resolved by content identity)"
+    },
+    {
+      "qr_asset_id": "asset-image25",
+      "qr_value": "https://open.spotify.com/intl-es/track/1vceYAVuScSsCQwvbkWT8j?si=7585f06694634091",
+      "pdf_page": 17,
+      "book_units": [
+        22
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "En las calles de Liniers",
+        "band": "Hermética",
+        "album": "Ácido Argentino",
+        "year": 1991,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          806,
+          808
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image26",
+      "qr_value": "https://open.spotify.com/intl-es/track/6BwNzZsnpmxFgezVbGWyRs?si=257ca0b7514548f0",
+      "pdf_page": 28,
+      "book_units": [
+        13
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Lucero del alba",
+        "band": "Almafuerte",
+        "album": "Del Entorno",
+        "year": 1996,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          470,
+          472
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image28",
+      "qr_value": "https://open.spotify.com/intl-es/track/6Z8sv0vpi9I8yYanAJWz3v?si=ed7db129aabf4ee7",
+      "pdf_page": 41,
+      "book_units": [
+        30
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Hospitalarias Realidades",
+        "band": "Hermética",
+        "album": "Víctimas del vaciamiento",
+        "year": 1994,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          962,
+          964
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image3",
+      "qr_value": "https://open.spotify.com/intl-es/track/3JWXX7tlSPCoeRFOxcikhR?si=2ad4f57b961943a4",
+      "pdf_page": 36,
+      "book_units": [],
+      "source_ref": {
+        "type": "song",
+        "title": "Del más allá",
+        "band": "Almafuerte",
+        "album": "Almafuerte",
+        "year": 1998,
+        "decision_id": null,
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "RESTORED (previous validated baseline; song still a printed credit in THIS book-model)"
+    },
+    {
+      "qr_asset_id": "asset-image30",
+      "qr_value": "https://open.spotify.com/intl-es/track/4DWvOeinTzhj4DeGYn9tqz?si=4119adad896a4188",
+      "pdf_page": 60,
+      "book_units": [
+        40
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Tu eres su seguridad",
+        "band": "Hermética",
+        "album": "Hermética",
+        "year": 1989,
+        "decision_id": null,
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "RESTORED (previous validated baseline; song still a printed credit in THIS book-model)"
+    },
+    {
+      "qr_asset_id": "asset-image31",
+      "qr_value": "https://open.spotify.com/intl-es/track/4MUhGA8YfsYDqD4NhTUtSf?si=0e62673df06d47c7",
+      "pdf_page": 61,
+      "book_units": [
+        9
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Ciega ambición",
+        "band": "V8",
+        "album": "El fin de los inicuos",
+        "year": 1986,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          336,
+          338
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image32",
+      "qr_value": "https://open.spotify.com/intl-es/track/5VkftS3xixRBFbJjWzY2cf?si=889d0d089bbc4675",
+      "pdf_page": 15,
+      "book_units": [],
+      "source_ref": {
+        "type": "song",
+        "title": "Otro día para ser",
+        "band": "Hermética",
+        "album": "Víctimas del vaciamiento",
+        "year": 1994,
+        "decision_id": null,
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "RESTORED (previous validated baseline; song still a printed credit in THIS book-model)"
+    },
+    {
+      "qr_asset_id": "asset-image33",
+      "qr_value": "https://open.spotify.com/intl-es/track/1PiIgwH7hUH8CrCcpiekH7?si=49a735e0defd4e2e",
+      "pdf_page": 65,
+      "book_units": [
+        19
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Hoy es",
+        "band": "Almafuerte",
+        "album": "A fondo blanco",
+        "year": 1999,
+        "decision_id": null,
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "RESTORED (previous validated baseline; song still a printed credit in THIS book-model)"
+    },
+    {
+      "qr_asset_id": "asset-image34",
+      "qr_value": "https://open.spotify.com/intl-es/track/0Ssu7J0wxOxbNyQn4LTnQe?si=ade991112cc44027",
+      "pdf_page": 77,
+      "book_units": [
+        47
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Por ser yo",
+        "band": "Almafuerte",
+        "album": "Piedra libre",
+        "year": 2001,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          1426,
+          1428
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image35",
+      "qr_value": "https://www.youtube.com/watch?v=0xI8UhUaOO8&ab_channel=HELLROCK",
+      "pdf_page": 7,
+      "book_units": [
+        42
+      ],
+      "source_ref": {
+        "type": "press-conference",
+        "description": "Conferencia de prensa de Hermética — Oberá Rock, 1993",
+        "band": "Hermética",
+        "author": null,
+        "person": null,
+        "event": "Oberá Rock",
+        "year": 1993,
+        "decision_id": "DEC-14"
+      },
+      "resolution_source": "EDITORIAL (asset-context, re-resolved by content identity)"
+    },
+    {
+      "qr_asset_id": "asset-image36",
+      "qr_value": "https://open.spotify.com/intl-es/track/402W9iALZu6LtOC6kc8hq4?si=5e42b1507ad44d11",
+      "pdf_page": 59,
+      "book_units": [
+        43
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Orgullo argentino",
+        "band": "Almafuerte",
+        "album": "Piedra libre",
+        "year": 2001,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          1219,
+          1221
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image37",
+      "qr_value": "https://open.spotify.com/intl-es/track/4dhMxlB0xQXYafSN13NPft?si=b80ed4f505474d5b",
+      "pdf_page": 68,
+      "book_units": [
+        41
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Hoy es",
+        "band": "Almafuerte",
+        "album": "A fondo blanco",
+        "year": 1999,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          1169,
+          1171
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image38",
+      "qr_value": "https://open.spotify.com/intl-es/track/2eYIlRr6RkpU85a9ncU4bK?si=7b7992461aca441f",
+      "pdf_page": 16,
+      "book_units": [
+        14
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Siervos del Mal",
+        "band": "V8",
+        "album": "Un paso más en la batalla",
+        "year": 1984,
+        "decision_id": null,
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "RESTORED (previous validated baseline; song still a printed credit in THIS book-model)"
+    },
+    {
+      "qr_asset_id": "asset-image4",
+      "qr_value": "https://open.spotify.com/intl-es/track/3JfieA8AhdSTGXHAAAr4Uy?si=63b5e48082974d4a",
+      "pdf_page": 6,
+      "book_units": [
+        3
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Brigadas Metálicas",
+        "band": "V8",
+        "album": "Luchando por el metal",
+        "year": 1983,
+        "decision_id": "DEC-13",
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "EDITORIAL (asset-context, re-resolved by content identity)"
+    },
+    {
+      "qr_asset_id": "asset-image42",
+      "qr_value": "https://open.spotify.com/intl-es/track/0RmwVg25oTbhHs1gaIZNiw?si=d094ee8f9c224b6e",
+      "pdf_page": 52,
+      "book_units": [
+        47
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Por ser yo",
+        "band": "Almafuerte",
+        "album": "Piedra libre",
+        "year": 2001,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          1426,
+          1428
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image44",
+      "qr_value": "https://open.spotify.com/intl-es/track/0KNUb4xONAX9MaY6DdpUvn?si=67fc329855ef412b",
+      "pdf_page": 35,
+      "book_units": [
+        3
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Sentir indiano",
+        "band": "Almafuerte",
+        "album": "Mundo Guanaco",
+        "year": 1995,
+        "decision_id": null,
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "RESTORED (previous validated baseline; song still a printed credit in THIS book-model)"
+    },
+    {
+      "qr_asset_id": "asset-image45",
+      "qr_value": "https://open.spotify.com/intl-es/track/5fFR6IEDb4VOQDAol4pR9G?si=695d3eed2b6241c0",
+      "pdf_page": 66,
+      "book_units": [
+        29
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "El visitante",
+        "band": "Almafuerte",
+        "album": "A fondo blanco",
+        "year": 1999,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          938,
+          940
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image46",
+      "qr_value": "https://open.spotify.com/intl-es/track/6xHgQwHoSm3JaaEmTKiT7v?si=63a9c5dc53664b8d",
+      "pdf_page": 51,
+      "book_units": [
+        15
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Cautivos del sistema",
+        "band": "V8",
+        "album": "Un paso más en la batalla",
+        "year": 1984,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          542,
+          544
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image47",
+      "qr_value": "https://open.spotify.com/intl-es/track/7MxQs6yYYMdlPctpF5WQGF?si=a77a1d69587d4405",
+      "pdf_page": 53,
+      "book_units": [
+        28
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Si me estás buscando",
+        "band": "Almafuerte",
+        "album": "A fondo blanco",
+        "year": 1999,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          930,
+          932
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image48",
+      "qr_value": "https://open.spotify.com/intl-es/track/0ArCOqIQ5rNIEg2YZYMUou?si=8b02abaeb7664bed",
+      "pdf_page": 67,
+      "book_units": [
+        31
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Sirva otra vuelta, pulpero",
+        "band": "Almafuerte",
+        "album": "Piedra Libre",
+        "year": 2001,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          984,
+          986
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image49",
+      "qr_value": "https://open.spotify.com/intl-es/track/3svUZhKr5L1yfd55BqAgHc?si=4bb813a56d2a4c85",
+      "pdf_page": 33,
+      "book_units": [
+        8
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Siervos del Mal",
+        "band": "V8",
+        "album": "Un paso más en la batalla",
+        "year": 1984,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          326,
+          328
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image5",
+      "qr_value": "https://open.spotify.com/intl-es/track/1JmZcgj8z6qCOLWK9m673J?si=cd3532ede1e34937",
+      "pdf_page": 43,
+      "book_units": [
+        5
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Yo traigo la semilla",
+        "band": "Almafuerte",
+        "album": "Ultimando",
+        "year": 2003,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          208,
+          210
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image52",
+      "qr_value": "https://open.spotify.com/intl-es/track/5h6i3AEIuCowRyypsQx2Gq?si=e5872929e15949cb",
+      "pdf_page": 30,
+      "book_units": [],
+      "source_ref": {
+        "type": "song",
+        "title": "Cautivos del sistema",
+        "band": "V8",
+        "album": "Un paso más en la batalla",
+        "year": 1984,
+        "decision_id": null,
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "RESTORED (previous validated baseline; song still a printed credit in THIS book-model)"
+    },
+    {
+      "qr_asset_id": "asset-image53",
+      "qr_value": "https://open.spotify.com/intl-es/track/5HS39PXqvK3YyKhPJb608Y?si=cdc45ffdf54443e5",
+      "pdf_page": 29,
+      "book_units": [
+        3
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "De un mañana bajo tierra",
+        "band": "Almafuerte",
+        "album": "Piedra Libre",
+        "year": 2001,
+        "decision_id": null,
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "RESTORED (previous validated baseline; song still a printed credit in THIS book-model)"
+    },
+    {
+      "qr_asset_id": "asset-image55",
+      "qr_value": "https://open.spotify.com/intl-es/track/7G17t7MKSuvlU7WsMT83YN?si=2160a6ee204d46dc",
+      "pdf_page": 76,
+      "book_units": [],
+      "source_ref": {
+        "type": "song",
+        "title": "Por ser yo",
+        "band": "Almafuerte",
+        "album": "Piedra libre",
+        "year": 2001,
+        "decision_id": null,
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "RESTORED (previous validated baseline; song still a printed credit in THIS book-model)"
+    },
+    {
+      "qr_asset_id": "asset-image6",
+      "qr_value": "https://open.spotify.com/intl-es/track/3QFUkM0hMpUfvVumwwXXVE?si=0d2a1dfd03274c76",
+      "pdf_page": 56,
+      "book_units": [
+        6
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Amanecer en Open Door",
+        "band": "Almafuerte",
+        "album": "Piedra Libre",
+        "year": 2001,
+        "decision_id": null,
+        "credit_paragraph_range": null
+      },
+      "resolution_source": "RESTORED (previous validated baseline; song still a printed credit in THIS book-model)"
+    },
+    {
+      "qr_asset_id": "asset-image8",
+      "qr_value": "https://open.spotify.com/intl-es/track/26qopSV1KsnVIl2FwjAcJS?si=6b09cd4680bb4e16",
+      "pdf_page": 58,
+      "book_units": [
+        38
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "Antes que los Viejos Reyes",
+        "band": "V8",
+        "album": "El fin de los inicuos",
+        "year": 1986,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          1124,
+          1126
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    },
+    {
+      "qr_asset_id": "asset-image9",
+      "qr_value": "https://open.spotify.com/intl-es/track/6NVfU6IQuxPqH6hKtiSOMH?si=324580c12b994cfe",
+      "pdf_page": 11,
+      "book_units": [
+        21
+      ],
+      "source_ref": {
+        "type": "song",
+        "title": "El fin de los inicuos",
+        "band": "V8",
+        "album": "El fin de los inicuos",
+        "year": 1986,
+        "decision_id": null,
+        "credit_paragraph_range": [
+          741,
+          743
+        ]
+      },
+      "resolution_source": "BOOK (printed credit, same unit, single credit)"
+    }
+  ]
+}

@@ -1,0 +1,479 @@
+{
+  "source": {
+    "docx": "book/Graves decires de aguda intuición.docx",
+    "pdf": "book/Graves decires de aguda intuición.pdf"
+  },
+  "note": "Verbatim structural model. Text copied from DOCX without edits. PDF is the canonical visual reference.",
+  "songs_detected": [
+    {
+      "title": "Yo traigo la semilla",
+      "album": "Ultimando",
+      "year": 2003,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        208,
+        210
+      ]
+    },
+    {
+      "title": "Olvídalo y volverá por más",
+      "album": "Víctimas del Vaciamiento",
+      "year": 1994,
+      "band": "Hermética",
+      "credit_para_range": [
+        260,
+        262
+      ]
+    },
+    {
+      "title": "Memoria de Siglos",
+      "album": "Ácido Argentino",
+      "year": 1991,
+      "band": "Hermética",
+      "credit_para_range": [
+        271,
+        273
+      ]
+    },
+    {
+      "title": "Otro día para ser",
+      "album": "Víctimas del vaciamiento",
+      "year": 1994,
+      "band": "Hermética",
+      "credit_para_range": [
+        318,
+        320
+      ]
+    },
+    {
+      "title": "Siervos del Mal",
+      "album": "Un paso más en la batalla",
+      "year": 1984,
+      "band": "V8",
+      "credit_para_range": [
+        326,
+        328
+      ]
+    },
+    {
+      "title": "Ciega ambición",
+      "album": "El fin de los inicuos",
+      "year": 1986,
+      "band": "V8",
+      "credit_para_range": [
+        336,
+        338
+      ]
+    },
+    {
+      "title": "Por nacer",
+      "album": "Del Entorno",
+      "year": 1996,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        360,
+        362
+      ]
+    },
+    {
+      "title": "Memoria de siglos",
+      "album": "Ácido Argentino",
+      "year": 1991,
+      "band": "Hermética",
+      "credit_para_range": [
+        408,
+        410
+      ]
+    },
+    {
+      "title": "Presa fácil",
+      "album": "Del entorno",
+      "year": 1996,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        453,
+        455
+      ]
+    },
+    {
+      "title": "Lucero del alba",
+      "album": "Del Entorno",
+      "year": 1996,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        470,
+        472
+      ]
+    },
+    {
+      "title": "Los delirios del defacto",
+      "album": "Del entorno",
+      "year": 1996,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        502,
+        504
+      ]
+    },
+    {
+      "title": "De un mañana bajo tierra",
+      "album": "Piedra Libre",
+      "year": 2001,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        523,
+        525
+      ]
+    },
+    {
+      "title": "Cautivos del sistema",
+      "album": "Un paso más en la batalla",
+      "year": 1984,
+      "band": "V8",
+      "credit_para_range": [
+        542,
+        544
+      ]
+    },
+    {
+      "title": "Ser humano junto a los míos",
+      "album": "Almafuerte",
+      "year": 1998,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        646,
+        648
+      ]
+    },
+    {
+      "title": "1999",
+      "album": "Del Entorno",
+      "year": 1996,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        675,
+        677
+      ]
+    },
+    {
+      "title": "Sentir indiano",
+      "album": "Mundo Guanaco",
+      "year": 1995,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        689,
+        691
+      ]
+    },
+    {
+      "title": "Del más allá",
+      "album": "Almafuerte",
+      "year": 1998,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        712,
+        714
+      ]
+    },
+    {
+      "title": "El fin de los inicuos",
+      "album": "El fin de los inicuos",
+      "year": 1986,
+      "band": "V8",
+      "credit_para_range": [
+        741,
+        743
+      ]
+    },
+    {
+      "title": "En las calles de Liniers",
+      "album": "Ácido Argentino",
+      "year": 1991,
+      "band": "Hermética",
+      "credit_para_range": [
+        806,
+        808
+      ]
+    },
+    {
+      "title": "Gil Trabajador",
+      "album": "Ácido Argentino",
+      "year": 1991,
+      "band": "Hermética",
+      "credit_para_range": [
+        841,
+        843
+      ]
+    },
+    {
+      "title": "Como estaba ahí Dios",
+      "album": "Ultimando",
+      "year": 2003,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        856,
+        858
+      ]
+    },
+    {
+      "title": "Hacia el abismo",
+      "album": "Del entorno",
+      "year": 1996,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        870,
+        872
+      ]
+    },
+    {
+      "title": "Si me estás buscando",
+      "album": "A fondo blanco",
+      "year": 1999,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        925,
+        927
+      ]
+    },
+    {
+      "title": "El visitante",
+      "album": "A fondo blanco",
+      "year": 1999,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        935,
+        937
+      ]
+    },
+    {
+      "title": "Hospitalarias Realidades",
+      "album": "Víctimas del vaciamiento",
+      "year": 1994,
+      "band": "Hermética",
+      "credit_para_range": [
+        959,
+        961
+      ]
+    },
+    {
+      "title": "Sirva otra vuelta, pulpero",
+      "album": "Piedra Libre",
+      "year": 2001,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        981,
+        983
+      ]
+    },
+    {
+      "title": "Amanecer en Open Door",
+      "album": "Piedra Libre",
+      "year": 2001,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        1004,
+        1006
+      ]
+    },
+    {
+      "title": "Regresando",
+      "album": "Piedra libre",
+      "year": 2001,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        1031,
+        1033
+      ]
+    },
+    {
+      "title": "Camino al sepulcro",
+      "album": "Un paso más en la batalla",
+      "year": 1984,
+      "band": "V8",
+      "credit_para_range": [
+        1043,
+        1045
+      ]
+    },
+    {
+      "title": "Ideando la fuga",
+      "album": "Un paso más en la batalla",
+      "year": 1984,
+      "band": "V8",
+      "credit_para_range": [
+        1058,
+        1060
+      ]
+    },
+    {
+      "title": "Tu eres su seguridad",
+      "album": "Hermética",
+      "year": 1989,
+      "band": "Hermética",
+      "credit_para_range": [
+        1090,
+        1092
+      ]
+    },
+    {
+      "title": "Se vos",
+      "album": "Almafuerte",
+      "year": 1998,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        1107,
+        1109
+      ]
+    },
+    {
+      "title": "Antes que los Viejos Reyes",
+      "album": "El fin de los inicuos",
+      "year": 1986,
+      "band": "V8",
+      "credit_para_range": [
+        1121,
+        1123
+      ]
+    },
+    {
+      "title": "Ayer deseo, hoy realidad",
+      "album": "Víctimas del vaciamiento",
+      "year": 1994,
+      "band": "Hermética",
+      "credit_para_range": [
+        1139,
+        1141
+      ]
+    },
+    {
+      "title": "Debes saberlo",
+      "album": "Toro y Pampa",
+      "year": 2006,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        1151,
+        1153
+      ]
+    },
+    {
+      "title": "Hoy es",
+      "album": "A fondo blanco",
+      "year": 1999,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        1165,
+        1167
+      ]
+    },
+    {
+      "title": "Todo es en vano si no hay amor",
+      "album": "Ultimando",
+      "year": 2003,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        1193,
+        1195
+      ]
+    },
+    {
+      "title": "Orgullo argentino",
+      "album": "Piedra libre",
+      "year": 2001,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        1215,
+        1217
+      ]
+    },
+    {
+      "title": "Patria al hombro",
+      "album": "Ultimando",
+      "year": 2003,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        1242,
+        1244
+      ]
+    },
+    {
+      "title": "Por ser yo",
+      "album": "Piedra libre",
+      "year": 2001,
+      "band": "Almafuerte",
+      "credit_para_range": [
+        1422,
+        1424
+      ]
+    }
+  ],
+  "chapters_detected": [
+    {
+      "para": 56,
+      "heading": "La Estética"
+    },
+    {
+      "para": 69,
+      "heading": "La Ética"
+    },
+    {
+      "para": 89,
+      "heading": "La Síntesis"
+    },
+    {
+      "para": 211,
+      "heading": "Enajenación"
+    },
+    {
+      "para": 212,
+      "heading": "Individualismo"
+    },
+    {
+      "para": 401,
+      "heading": "Represión"
+    },
+    {
+      "para": 530,
+      "heading": "Domesticación"
+    },
+    {
+      "para": 531,
+      "heading": "“Están adorando un santo de madera”"
+    },
+    {
+      "para": 727,
+      "heading": "Destrucción del entramado social"
+    },
+    {
+      "para": 728,
+      "heading": "“El Vaciamiento”"
+    },
+    {
+      "para": 918,
+      "heading": "Los Nadies"
+    },
+    {
+      "para": 919,
+      "heading": "“Sin poder esquivar el dolor ajeno”"
+    },
+    {
+      "para": 1035,
+      "heading": "Desarrollo de la subjetividad"
+    },
+    {
+      "para": 1036,
+      "heading": "La libertad individual"
+    },
+    {
+      "para": 1124,
+      "heading": "La libertad de todos"
+    },
+    {
+      "para": 1125,
+      "heading": "“Lo soñamos ayer"
+    },
+    {
+      "para": 1126,
+      "heading": "Y lo cumplimos hoy”"
+    }
+  ]
+}

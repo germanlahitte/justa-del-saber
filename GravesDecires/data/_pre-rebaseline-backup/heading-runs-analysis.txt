@@ -1,0 +1,29 @@
+run 0..2 uniform_formatting=True: Graves decires | de | aguda intuición
+run 56..56 uniform_formatting=True: La Estética
+run 69..69 uniform_formatting=True: La Ética
+run 89..89 uniform_formatting=True: La Síntesis
+run 182..184 uniform_formatting=False: “Mis años | y la madrugada, | anudan sueños por cumplir”
+    para 182: jc=left sz=68 color=1c4587 bold=True text='“Mis años '
+    para 183: jc=left sz=68 color=1c4587 bold=True text='y la madrugada,'
+    para 184: jc=left sz=None color=1c4587 bold=True text='anudan sueños por cumplir”'
+run 211..212 uniform_formatting=False: Enajenación | Individualismo
+    para 211: jc=left sz=48 color=None bold=True text='Enajenación '
+    para 212: jc=right sz=22 color=None bold=False text='Individualismo'
+run 409..409 uniform_formatting=True: Represión
+run 546..547 uniform_formatting=False: Domesticación | “Están adorando un santo de madera”
+    para 546: jc=left sz=None color=None bold=True text='Domesticación'
+    para 547: jc=left sz=None color=1c4587 bold=True text='“Están adorando un santo de madera”'
+run 743..744 uniform_formatting=False: Destrucción del entramado social | “El Vaciamiento”
+    para 743: jc=left sz=None color=None bold=True text='Destrucción del entramado social'
+    para 744: jc=left sz=None color=1c4587 bold=False text='“El Vaciamiento”'
+run 934..935 uniform_formatting=False: Los Nadies | “Sin poder esquivar el dolor ajeno”
+    para 934: jc=left sz=40 color=None bold=True text='Los Nadies'
+    para 935: jc=left sz=None color=1c4587 bold=True text='“Sin poder esquivar el dolor ajeno”'
+run 1036..1037 uniform_formatting=False: Desarrollo de la subjetividad | La libertad individual
+    para 1036: jc=left sz=None color=None bold=True text='Desarrollo de la subjetividad'
+    para 1037: jc=left sz=32 color=None bold=True text='La libertad individual'
+run 1125..1127 uniform_formatting=False: La libertad de todos | “Lo soñamos ayer | Y lo cumplimos hoy”
+    para 1125: jc=left sz=None color=None bold=True text='La libertad de todos'
+    para 1126: jc=left sz=None color=1c4587 bold=True text='“Lo soñamos ayer'
+    para 1127: jc=left sz=None color=None bold=False text='Y lo cumplimos hoy”'
+run 1429..1434 uniform_formatting=True: “Si me ves volver, | no me atiendas | ni me abras la puerta. | Loco, solitario | y enredado, | no soy yo”

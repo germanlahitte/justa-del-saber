@@ -1,0 +1,9 @@
+{
+  "concept_count": 32,
+  "reading_count": 33,
+  "invalid_concept_ids": [],
+  "invalid_reading_connections": [],
+  "unresolved_labels_in_template": {},
+  "unused_concepts_after_migration": [],
+  "status": "PASSED"
+}

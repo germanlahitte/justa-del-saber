@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/*
+  VISUAL HYPOTHESIS — NOT APPROVED, PROTOTYPE ONLY.
+
+  Per the user's Stage 3 approval: typography, exact hues (oxide red,
+  amber), and photocopy texture are explicitly NOT approved yet. What
+  follows is ONE concrete hypothesis (call it "Hypothesis A") built only
+  so the prototype can be evaluated as a real, readable interface instead
+  of an unstyled skeleton. Every token below is intentionally isolated
+  here so it can be swapped or replaced wholesale after review without
+  touching component markup.
+
+  Direction being tested (approved as *territory*, not as final choices):
+  editorial / archive / memory / materiality / Argentine underground scene
+  / sobriety / contemporary. Explicitly avoided: SaaS gradients, dashboard
+  shadows, cyberpunk neon, metal-merch clichés (flames, skulls, leather).
+*/
+@theme {
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Paper / ink: deliberately not pure white / pure black (archive, not
+     screen-native). */
+  --color-paper: #f2ede2;
+  --color-paper-dim: #e8e0d0;
+  --color-ink: #221f1a;
+  --color-ink-soft: #4a453c;
+  --color-ink-faint: #797263;
+  --color-rule: #d8cfba;
+
+  /* Single functional accent — hypothesis A: muted oxide red. Used ONLY
+     for the traceability trigger and active map state, never decoration. */
+  --color-accent: #9a4a2c;
+  --color-accent-soft: #c98a68;
+  --color-accent-bg: #f4e3d8;
+}
+
+html {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-serif);
+}
+
+::selection {
+  background-color: var(--color-accent-bg);
+  color: var(--color-ink);
+}
+
+/* Reading measure for verbatim BOOK text: kept out of Tailwind's max-w-*
+   scale on purpose — 65ch is the one number this prototype treats as a
+   near-final typographic decision, independent of the still-open palette
+   question. */
+.prose-book {
+  max-width: 65ch;
+}

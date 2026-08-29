@@ -1,0 +1,150 @@
+OLD unit_count: 47, NEW unit_count: 47
+units missing in NEW: []
+units added in NEW: []
+
+--- unit 3 CHANGED ---
+  range: [53, 180] -> [53, 179]
+  headings: ['La Estética', 'La Ética'] -> ['La Estética', 'La Ética', 'La Síntesis']
+
+--- unit 4 CHANGED ---
+  range: [181, 185] -> [180, 184]
+
+--- unit 5 CHANGED ---
+  range: [186, 211] -> [185, 210]
+
+--- unit 6 CHANGED ---
+  range: [212, 277] -> [211, 276]
+
+--- unit 7 CHANGED ---
+  range: [278, 323] -> [277, 322]
+
+--- unit 8 CHANGED ---
+  range: [324, 331] -> [323, 330]
+
+--- unit 9 CHANGED ---
+  range: [332, 341] -> [331, 340]
+
+--- unit 10 CHANGED ---
+  range: [342, 365] -> [341, 364]
+
+--- unit 11 CHANGED ---
+  range: [366, 409] -> [365, 408]
+
+--- unit 12 CHANGED ---
+  range: [410, 445] -> [409, 444]
+
+--- unit 13 CHANGED ---
+  range: [446, 473] -> [445, 472]
+
+--- unit 14 CHANGED ---
+  range: [474, 491] -> [473, 490]
+
+--- unit 15 CHANGED ---
+  range: [492, 546] -> [491, 545]
+
+--- unit 16 CHANGED ---
+  range: [547, 573] -> [546, 572]
+
+--- unit 17 CHANGED ---
+  range: [574, 628] -> [573, 627]
+
+--- unit 18 CHANGED ---
+  range: [629, 652] -> [628, 651]
+
+--- unit 19 CHANGED ---
+  range: [653, 668] -> [652, 667]
+
+--- unit 20 CHANGED ---
+  range: [669, 732] -> [668, 731]
+
+--- unit 21 CHANGED ---
+  range: [733, 743] -> [732, 742]
+
+--- unit 22 CHANGED ---
+  range: [744, 819] -> [743, 818]
+
+--- unit 23 CHANGED ---
+  range: [820, 829] -> [819, 828]
+
+--- unit 24 CHANGED ---
+  range: [830, 860] -> [829, 859]
+
+--- unit 25 CHANGED ---
+  range: [861, 876] -> [860, 875]
+
+--- unit 26 CHANGED ---
+  range: [877, 889] -> [876, 888]
+
+--- unit 27 CHANGED ---
+  range: [890, 908] -> [889, 907]
+
+--- unit 28 CHANGED ---
+  range: [909, 934] -> [908, 933]
+
+--- unit 29 CHANGED ---
+  range: [935, 947] -> [934, 946]
+
+--- unit 30 CHANGED ---
+  range: [948, 954] -> [947, 953]
+
+--- unit 31 CHANGED ---
+  range: [955, 978] -> [954, 977]
+
+--- unit 32 CHANGED ---
+  range: [979, 987] -> [978, 986]
+
+--- unit 33 CHANGED ---
+  range: [988, 1011] -> [987, 1010]
+
+--- unit 34 CHANGED ---
+  range: [1012, 1036] -> [1011, 1035]
+
+--- unit 35 CHANGED ---
+  range: [1037, 1050] -> [1036, 1049]
+
+--- unit 36 CHANGED ---
+  range: [1051, 1065] -> [1050, 1064]
+
+--- unit 37 CHANGED ---
+  range: [1066, 1094] -> [1065, 1093]
+
+--- unit 38 CHANGED ---
+  range: [1095, 1111] -> [1094, 1110]
+
+--- unit 39 CHANGED ---
+  range: [1112, 1133] -> [1111, 1132]
+  text differs (old 138 words, new 138 words)
+  headings: ['“Lo soñamos ayer', 'Y lo cumplimos hoy”', 'La libertad de todos'] -> ['La libertad de todos', '“Lo soñamos ayer', 'Y lo cumplimos hoy”']
+
+--- unit 40 CHANGED ---
+  range: [1134, 1155] -> [1133, 1154]
+
+--- unit 41 CHANGED ---
+  range: [1156, 1171] -> [1155, 1170]
+
+--- unit 42 CHANGED ---
+  range: [1172, 1197] -> [1171, 1196]
+
+--- unit 43 CHANGED ---
+  range: [1198, 1222] -> [1197, 1221]
+
+--- unit 44 CHANGED ---
+  range: [1223, 1247] -> [1222, 1246]
+
+--- unit 45 CHANGED ---
+  range: [1248, 1338] -> [1247, 1337]
+
+--- unit 46 CHANGED ---
+  range: [1339, 1395] -> [1338, 1394]
+
+--- unit 47 CHANGED ---
+  range: [1396, 1450] -> [1395, 1449]
+
+
+SUMMARY:
+  identical units: 2
+  units with paragraph_range diff: 45
+  units with text diff: 1
+  units with headings diff: 2
+  units with song_credits diff: 0
+  units with asset-identity diff: 0

@@ -1,0 +1,263 @@
+[
+  {
+    "index": 0,
+    "style": "Title",
+    "text": "Graves decires ",
+    "jc": "both",
+    "sz": "120",
+    "color": "1c4587",
+    "bold": true
+  },
+  {
+    "index": 1,
+    "style": "Title",
+    "text": "de",
+    "jc": "both",
+    "sz": "120",
+    "color": "1c4587",
+    "bold": true
+  },
+  {
+    "index": 2,
+    "style": "Title",
+    "text": "aguda intuición",
+    "jc": "both",
+    "sz": "120",
+    "color": "1c4587",
+    "bold": true
+  },
+  {
+    "index": 56,
+    "style": "Heading2",
+    "text": "La Estética",
+    "jc": "left",
+    "sz": "40",
+    "color": "1c4587",
+    "bold": true
+  },
+  {
+    "index": 69,
+    "style": "Heading2",
+    "text": "La Ética",
+    "jc": "left",
+    "sz": "40",
+    "color": "1c4587",
+    "bold": true
+  },
+  {
+    "index": 89,
+    "style": "Heading2",
+    "text": "La Síntesis",
+    "jc": "left",
+    "sz": null,
+    "color": null,
+    "bold": false
+  },
+  {
+    "index": 182,
+    "style": "Heading1",
+    "text": "“Mis años ",
+    "jc": "left",
+    "sz": "68",
+    "color": "1c4587",
+    "bold": true
+  },
+  {
+    "index": 183,
+    "style": "Heading1",
+    "text": "y la madrugada,",
+    "jc": "left",
+    "sz": "68",
+    "color": "1c4587",
+    "bold": true
+  },
+  {
+    "index": 184,
+    "style": "Heading1",
+    "text": "anudan sueños por cumplir”",
+    "jc": "left",
+    "sz": null,
+    "color": "1c4587",
+    "bold": true
+  },
+  {
+    "index": 211,
+    "style": "Heading2",
+    "text": "Enajenación ",
+    "jc": "left",
+    "sz": "48",
+    "color": null,
+    "bold": true
+  },
+  {
+    "index": 212,
+    "style": "Heading2",
+    "text": "Individualismo",
+    "jc": "right",
+    "sz": "22",
+    "color": null,
+    "bold": false
+  },
+  {
+    "index": 409,
+    "style": "Heading2",
+    "text": "Represión",
+    "jc": "left",
+    "sz": "22",
+    "color": null,
+    "bold": true
+  },
+  {
+    "index": 546,
+    "style": "Heading2",
+    "text": "Domesticación",
+    "jc": "left",
+    "sz": null,
+    "color": null,
+    "bold": true
+  },
+  {
+    "index": 547,
+    "style": "Heading2",
+    "text": "“Están adorando un santo de madera”",
+    "jc": "left",
+    "sz": null,
+    "color": "1c4587",
+    "bold": true
+  },
+  {
+    "index": 743,
+    "style": "Heading2",
+    "text": "Destrucción del entramado social",
+    "jc": "left",
+    "sz": null,
+    "color": null,
+    "bold": true
+  },
+  {
+    "index": 744,
+    "style": "Heading2",
+    "text": "“El Vaciamiento”",
+    "jc": "left",
+    "sz": null,
+    "color": "1c4587",
+    "bold": false
+  },
+  {
+    "index": 934,
+    "style": "Heading2",
+    "text": "Los Nadies",
+    "jc": "left",
+    "sz": "40",
+    "color": null,
+    "bold": true
+  },
+  {
+    "index": 935,
+    "style": "Heading2",
+    "text": "“Sin poder esquivar el dolor ajeno”",
+    "jc": "left",
+    "sz": null,
+    "color": "1c4587",
+    "bold": true
+  },
+  {
+    "index": 1036,
+    "style": "Heading2",
+    "text": "Desarrollo de la subjetividad",
+    "jc": "left",
+    "sz": null,
+    "color": null,
+    "bold": true
+  },
+  {
+    "index": 1037,
+    "style": "Heading2",
+    "text": "La libertad individual",
+    "jc": "left",
+    "sz": "32",
+    "color": null,
+    "bold": true
+  },
+  {
+    "index": 1125,
+    "style": "Heading2",
+    "text": "La libertad de todos",
+    "jc": "left",
+    "sz": null,
+    "color": null,
+    "bold": true
+  },
+  {
+    "index": 1126,
+    "style": "Heading2",
+    "text": "“Lo soñamos ayer",
+    "jc": "left",
+    "sz": null,
+    "color": "1c4587",
+    "bold": true
+  },
+  {
+    "index": 1127,
+    "style": "Heading2",
+    "text": "Y lo cumplimos hoy”",
+    "jc": "left",
+    "sz": null,
+    "color": null,
+    "bold": false
+  },
+  {
+    "index": 1429,
+    "style": "Title",
+    "text": "“Si me ves volver,",
+    "jc": "left",
+    "sz": "60",
+    "color": "1c4587",
+    "bold": true
+  },
+  {
+    "index": 1430,
+    "style": "Title",
+    "text": "no me atiendas ",
+    "jc": "left",
+    "sz": "60",
+    "color": "1c4587",
+    "bold": true
+  },
+  {
+    "index": 1431,
+    "style": "Title",
+    "text": "ni me abras la puerta.",
+    "jc": "left",
+    "sz": "60",
+    "color": "1c4587",
+    "bold": true
+  },
+  {
+    "index": 1432,
+    "style": "Title",
+    "text": "Loco, solitario ",
+    "jc": "left",
+    "sz": "60",
+    "color": "1c4587",
+    "bold": true
+  },
+  {
+    "index": 1433,
+    "style": "Title",
+    "text": "y enredado,",
+    "jc": "left",
+    "sz": "60",
+    "color": "1c4587",
+    "bold": true
+  },
+  {
+    "index": 1434,
+    "style": "Title",
+    "text": "no soy yo”",
+    "jc": "left",
+    "sz": "60",
+    "color": "1c4587",
+    "bold": true
+  }
+]

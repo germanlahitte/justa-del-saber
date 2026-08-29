@@ -1,0 +1,79 @@
+p01 | imgs:0 | chars:   38 | Graves / decires / de / aguda / intuición
+p02 | imgs:0 | chars:    0 | 
+p03 | imgs:0 | chars:  719 | A  Joni, que puso Almafuerte en mi walkman / A Sandra y a Daniel, que nos dejaron subir el volumen / A Fede que siempre insistió con Hermética / A Noley que me obligó a escucharlo. / A Zulma o a Mónica, que nos propuso e
+p04 | imgs:0 | chars: 1350 | Esto lo hago porque soy uno de los tantos conmovidos por la / poesía de Ricardo Iorio (1962-2023) y porque lo que elige / decir lo entiendo trascendental a su tiempo y a su figura. / Quisiera que sea conocido y recordado
+p05 | imgs:0 | chars:  836 | Solemos decir que algo o alguien tiene sus bemoles para / señalar puntos débiles o incongruencias, estableciendo un / paralelismo un tanto vacuo con el semitono previo a la nota / que podría ser la síntesis de nuestro ob
+p06 | imgs:1 | chars:  552 | "Loco, V8 ponganlé. / Como el motor" / La Estética / “Basta ya de signos de la paz​ / Basta de cargar con el morral​ / Si estás cansado de llorar​
+p07 | imgs:1 | chars:  725 | La Ética / "Reflejar el presente inmediato para que un chico de 17 años / que encuentre un cassette de Hermética, hurgando entre las / cosas de su padre, advierta cómo vivía éste cuando tenía su / edad. / La intención es
+p08 | imgs:0 | chars:  937 | La Síntesis / “Fue, sin un porqué, mi gran sueño amasijado / Mucho lo lloré, por inesperado / Si existe un motivo, a mí no me lo comunicaron / Los que ayer conmigo compartieron tanto / Premeditaron apartarme y, al saberl
+p09 | imgs:2 | chars:    1 | 9
+p10 | imgs:0 | chars:   61 | “Mis años / y la madrugada, / anudan sueños por / cumplir” / 10
+p11 | imgs:1 | chars:  771 | Para que la semilla de la consciencia llegue a vos / Dando vuelta la tierra, en los surcos de la vida, estoy / Maquinaria compleja / La cabeza tractoreando. / Las inclemencias del tiempo estoy aguantando / La sequía de h
+p12 | imgs:1 | chars:   90 | Enajenación / Individualismo / 12
+p13 | imgs:2 | chars:  441 | “La muerte es ocultar la verdad / El vacío es dejarse mentir / Olvídalo y volverá por más” / Olvídalo y volverá por más / Víctimas del Vaciamiento - 1994 / Hermética
+p14 | imgs:0 | chars:  690 | Desnudar el sinrazón / Que modeló nuestras vidas / Parece ser causa perdida / Nadie apuesta a detener / El motor que contamina / El aire que a diario respiras
+p15 | imgs:1 | chars:  349 | Derrame de combustible, exterminio forestal / El motor contaminante no se detendrá / Para ser, hay otro día en el planeta inferior / Como cualquier día / Como todo día / Con o sin mi reflexión
+p16 | imgs:1 | chars:  553 | En todos los sitios, de cualquier ciudad​ / se encuentran los cerdos babeando maldad.​ / Son quienes controlan nuestra identidad​ / y lucran cuidando que no pienses de más. / Si es amplio tu tiempo para la reflexión,​ / 
+p17 | imgs:1 | chars:  659 | En grises calles infectadas de tensión,​ / sucias paredes, dejan ver la desunión. / Todo está prohibido, salvo ser uno más​ / de los que olvidan y piden seguridad. / Suicidando mis horas estoy,​ / mientras insanos sigan 
+p18 | imgs:1 | chars:  678 | Por nacer en este suelo, hice un pacto, yo con Dios. / O tal vez fue con el diablo, no lo sé / Sólo recuerdo el mandato decidor de no callar lo que / tanto se calló / Parece no importarle a quien parece no sentir / Tal v
+p19 | imgs:1 | chars:    2 | 19
+p20 | imgs:0 | chars: 1253 | Y sí. Viva. / Si es la excusa más popular para gritar a los cuatro vientos / cuando me encuentro incapacitado de explicar lo que no / entiendo. / Cuando me ponen delante la evidencia de que hago / exactamente lo que ayer
+p21 | imgs:0 | chars: 1454 | Las decisiones, los dirigentes y las leyes son democráticos / cuando benefician a muchos más de los que perjudican, / siempre dentro de un marco de derechos que ninguna / mayoría puede quitar. Y ése es el verdadero imper
+p22 | imgs:0 | chars: 1537 | Transitamos un mundo en el que las decisiones tienen un / espíritu exactamente opuesto. Los beneficiados no sólo se / pueden contar: pueden ser señalados con nombres, apellidos / y alcurnia. Mientras que los perjudicados
+p23 | imgs:0 | chars:  403 | derechos universales en privilegios materiales. Que nadie / pueda acumular tanta fuerza que su libertad dependa de la / impotencia de los demás. / Nadie puede ni debe ser el dueño del mundo. Nadie necesita / serlo cuando
+p24 | imgs:1 | chars:  216 | Represión / “Libertad y sus vestigios / Más vale ponerse a salvo / Muchos calzan gorro frigio / Solamente por ser calvos” / Memoria de siglos
+p25 | imgs:1 | chars:    2 | 25
+p26 | imgs:1 | chars:  845 | De la noche del viernes al domingo por la tarde. / Fui enjaulado cual misto. / Sometido al amance por legales de oficio. / Que mi aspecto al parecer, les resultó jodido. / Por metalero y pesado / Amansadora guacha de ave
+p27 | imgs:0 | chars:  863 | Por quererte ver, lucero del alba.​ / Tropecé y caí, al regresar de andar en nada.​ / Pasa el siglo veinte y la ciudad Central me amarra​ / con su mano de cemento etéreo, al vicio de madrugada. / Alcé mis ojos al cielo, 
+p28 | imgs:1 | chars:  506 | De los llanos apartados del gran amontonamiento​ / Donde dejaba este canto en solitario al cielo abierto. / Mi despertar fue tan triste como mi suerte de mala.​ / Lucero que verte quise pero no pude ver nada. / Nada más 
+p29 | imgs:1 | chars:  741 | Uno más, entre tantos soy / que olvidar no quiere / los delirios del defacto / Me ha dictado la razón / cantar en repudio / al genocidio ejecutado
+p30 | imgs:1 | chars:  635 | Una extremista obsesión martilla mi conciencia. / Mostrándome que el tiempo no dura más que la eternidad. / Escribo en canción, mi visión de un mañana bajo tierra. / Donde poder vivir libres del control satelital. / Quie
+p31 | imgs:1 | chars:  310 | Domesticación / “Están adorando un santo de madera” / “Y vos y yo consumidores de basura / acrecentamos el poder de esta gente / que nos impone las reglas de este juego / y rien al vernos caer en su trampa demente”
+p32 | imgs:1 | chars:    2 | 32
+p33 | imgs:0 | chars:  643 | Sin ser Testigo de Jehová, / Dios en mi voz se manifiesta. / No soy evangelista, adventista ni mormón. / Tampoco cura santurrón. / No soy doctorado en la ley. / No soy ladrón, soplón, ni yuta.
+p34 | imgs:1 | chars:  353 | Hijos nacidos de quien ayer cantó. / Son el remake del escapismo. / Si hoy no tenés para pagar un abogado. / Quedás tras las rejas de un penitencial. / Y andá a cantarle a Gardel. / Ya lárguenme, déjenme ser humano.
+p35 | imgs:1 | chars:  559 | “Falsa fe, falso perdón de los pecados. / Dioses que fueron vendidos y comprados / Por cretinos que olvidaron que el infierno es hoy. / Por la TV, varones putos y egoístas / Muestran que fue mintiendo amor como sonrisas.
+p36 | imgs:1 | chars:  731 | Madre Tierra, Padre Sol.​ / Ni Demonio, ni Señor.​ / Pareciera más coherente​ / adorarlos nuevamente. / Que el engaño santurrón de los muertos vivos.​ / Que este rumbo destructivo o el miedo al castigo.
+p37 | imgs:1 | chars:  626 | Yo tengo amigos en el más allá, esperándome / Desencarnados espíritus graves, mentores de mi expresión / Amigos míos que se fueron ya / Y otros que vivo, no los recuerdo / Son los que intuyo y visten mi cantar con pasión
+p38 | imgs:1 | chars:    2 | 38
+p39 | imgs:1 | chars:  281 | Destrucción del entramado social / “El Vaciamiento” / “Si estás pensando sólo en vos, / Jamás lo entenderás.” / El fin de los inicuos / El fin de los inicuos - 1986
+p40 | imgs:2 | chars:    2 | 40
+p41 | imgs:0 | chars:  814 | En las mugrientas esquinas de Liniers pierdo los días porque / no me toca escapar​ / El gran apego a lo ilusorio se refleja en la vidrieras de un / trucho centro comercial / La idolatría populosa se dibuja en largas fila
+p42 | imgs:1 | chars:  524 | En la esquina, un policía está peleando con su hembra porque / ella nunca le fue fiel​ / Bajo el paso de las vías, los mendigos se revuelcan.​ / Muy pocos los quieren mirar / Y la imberbe horda humana que desciende de lo
+p43 | imgs:1 | chars:  878 | De Pacheco a La Paternal / De Dock Sud a 3 de Febrero / Mil amigos, con el corazón, esperan esta canción / Para atravesar el trago amargo de este mal momento / Mientras el mundo, / Policía y ladrón
+p44 | imgs:1 | chars:  780 | Como estaba ahí Dios, estuve yo también​ / Ante el desfile de las inclemencias, contemplando tanta / miseria / y yo pensé pa´mis adentros: “Puta que tiene paciencia” / ¿Cómo tener tanto poder y permitir que esto pueda su
+p45 | imgs:1 | chars:  519 | Planetaria depredación, respaldada en las armas.​ / Dando pasos al abismo, vas restando esperanzas / Es de muchos no querer ver, o no darte importancia​ / A tu marcha de exterminio, que diariamente avanza. / ​ / Mientras
+p46 | imgs:1 | chars:    2 | 46
+p47 | imgs:0 | chars: 1202 | Los políticos son los representantes del pueblo. Nunca lo / entendí hasta que terminé convencido de que es una gran / verdad. / Cuando veo la falta de organización, cuando noto la cantidad / de falencias en cada barrio y
+p48 | imgs:0 | chars: 1304 | Es necesario retomar la senda de la comunidad. Individuos / unidos en pos de un objetivo común, acaso pequeño o de / corto alcance. Cualquier grupo que introduzca mejoras en su / comunidad engrandece a la nación, propone
+p49 | imgs:0 | chars: 1303 | organización. Ante la negación constante de lo público como / posibilidad y la falta de participación, crecemos idiotas. / Carecemos de educación en el dominio de lo público, de / anclaje y de un horizonte ideológico des
+p50 | imgs:0 | chars: 1023 | el tablero. No son dirigentes: son choferes que sacan patente / para manejar lo que hay, tal como está. / Y con esto no digo que son todos iguales. Digo que son / exactamente proporcionales a los votantes: representantes
+p51 | imgs:0 | chars:    2 | 51
+p52 | imgs:1 | chars:  458 | Los Nadies / “Sin poder esquivar el dolor ajeno” / Si me estás buscando me encontrarás​ / por el camino que a Luján sigue la procesión,​ / un hogar llamado Jesús de Nazaret​ / calle de tierra, cruzando el paso a nivel Pa
+p53 | imgs:1 | chars:  543 | Olvidar​ / Yo sé bien que no podés​ / Como la sociedad olvida​ / que fuiste obligado a marchar en su defensa. / Recordando el mal momento.​ / Atrincherado en tu habitación.​
+p54 | imgs:1 | chars:  692 | En la fila tempranera de hospital, / el pueblo soporta la espera buscando sanar. / El desgano evidente del profesional, / motiva el trato prepotente del auxiliar. / Medicina, tu verdad déjame ver. / Toda joven que asista
+p55 | imgs:0 | chars:  961 | Sirva otra vuelta, pulpero.​ / Que no soy chancho.​ / Soy bicho que no tiene rancho.​ / Que anda arrastrando penas y alegrías.​ / Y en eso de la repartida, las malas van ganando. / Sirva otra vuelta, pulpero, a ver.​
+p56 | imgs:1 | chars:  259 | Que lo que uno tiene, tiene que ganarlo.​ / Por eso es que, con once familias,​ / le hemos ganado, una vez, al Estado.​ / Eso sí que es triste.​ / Pal que no tiene rancho.​ / Ni donde caerse muerto.​
+p57 | imgs:1 | chars:  308 | Tengo un amigo!! / Sí / Sí / Amanecer en Open Door. / Legal crucifixión del ser. / Sin tener familiares que vengan a reclamarme.
+p58 | imgs:1 | chars:  679 | Regresando, donde duermen mis huesos. / El sol, con su cachetada, sacude mi plexo. / Obligándome a reflexionar en que nadie me espera, / Y en qué corta es la vida de muchachos calaveras. / Largas son las horas, cuando ma
+p59 | imgs:1 | chars:  295 | Desarrollo de la subjetividad / La libertad individual / “Encuentra ya el camino a seguir. / Los rostros del mal están cuidando que no te apartes de sus filas / Estúpidos son sus argumentos, para que tu ofrendes la vida.
+p60 | imgs:1 | chars:  910 | Hoy desperté, a un nuevo día de esta cruenta realidad​ / que nos imponen, ante su gozo, fuerzas siniestras del mal. / Masturbando mi mente con lo inmoral.​ / Quitándome el tiempo a pensar / en expulsar de mi mente, su se
+p61 | imgs:1 | chars:  857 | Ajeno al tiempo se que quisieras seguir / Pero mil voces te ahogan para que formes la cola del seguro / porvenir. / Por eso te vi escapando en las horas sin sol / De las miradas oscuras que aprobaron las torturas del fug
+p62 | imgs:1 | chars:  421 | Vamos, che / ¿por qué dejar que tus sueños se desperdicien? / Si no sos vos, será muy triste / ¿Por qué falsear? si ser uno es ganar / ¿Por qué engañarse y mentirse? / Yo sé, dirás: "muy duro es aguantar"
+p63 | imgs:1 | chars:  728 | Seres dañados sujetos al mal​ / Mutilaron a quien quiso amar, cambiar, renovar / o tan solo reír / Con falsas historias, quisieron callar las almas / que en la inmensidad del mar​ / ahogaron el grito que desvaneció su vi
+p64 | imgs:1 | chars:   71 | “Lo soñamos ayer / Y lo cumplimos hoy” / La libertad de todos / 64
+p65 | imgs:2 | chars:  523 | "Salir de gira, para llevarte en vivo el concierto, exalta mi vida / Cumple con lo que fue mi deseo / Cuando ya lejos de la ciudad central, / los horizontes me ven rutas saldar / Para llegar / y mostrar que soy quien qui
+p66 | imgs:1 | chars:  526 | Hoy... Hoy es / Yo convidándote a mi fiesta estoy / Metal pesado, argento, de vientos fueguinos. / Sé que los vecinos se quejarán, / no te cortés si la patrulla está en la puerta / Si no hay ortiva, todo va a estar bien​
+p67 | imgs:1 | chars:  673 | “Desde el maestro, a su alumnado / Desde los padres, hasta sus hijos / Desde el predicador, hasta sus fieles / Desde el curador, hasta el paciente / Y todo lo que humanamente pueda ser / Incorregibles nubes de hampa
+p68 | imgs:1 | chars:  600 | Orgullo argentino quiero expresar / Con este recite que supe heredar / Por ser quien no olvida y no ha de olvidar / Patria, bandera y sentir nacional. / No te enganchés con la ficción / Arma que esgrime el mentidor
+p69 | imgs:1 | chars:  833 | Se va la vida y el tiempo a perder / Es una espina que intento quitarme / Y así mi herida cerrada tal vez / Me dé la dicha de mil libertades / Desde temprano se puso a ladrar mi perro interno que morder / no sabe
+p70 | imgs:0 | chars: 1251 | Las redes sociales son estructuras de manipulación. Su uso / como consumidor es potencialmente peligroso. Someterse / cotidianamente a su distracción condiciona nuestra atención / y acostumbra al cerebro a una recompensa
+p71 | imgs:0 | chars: 1164 | aprender. / Consume / energía, / no / es / necesariamente
+p72 | imgs:0 | chars: 1100 | La / felicidad / se / encuentra, en parte, al saldar esas / incongruencias. Es la tranquilidad de saber que nuestra / manera de pensar acompaña nuestra manera de sentir y que
+p73 | imgs:0 | chars:  960 | maquinaria pesada del subdesarrollo emocional que nos / quiere consumidores y pacientes. Y ser paciente de esta / realidad es una sociopatía. / Puede ser de manera inconsciente, pero no reparar en las / fallas del orden 
+p74 | imgs:0 | chars:  911 | Existe la mentira: el fruto de esconder mezquindades detrás / de argumentos nobles. / Existen los ingenuos. / Existen los desatendidos. Esquivos de la empatía. / Existen los que no saben qué hacer y eligen la evasión. / 
+p75 | imgs:0 | chars:  462 | hasta en las soluciones que propongo. Pero tengo un principio / noble y tengo muchas razones para creer que lo que digo está / amparado por ese principio, para confiar en algunos y para / dudar de un montón. / Decir lo q
+p76 | imgs:1 | chars:    2 | 76
+p77 | imgs:1 | chars:  760 | De tanto esquivar soledad / Ya no hay nada que me espante / Todo lo que tuve una vez / Hoy, es ayer / Hoy, es distante / De nada vale recordar lo que fuera algún día
+p78 | imgs:1 | chars:  113 | “Si me ves volver, / no me atiendas / ni me abras la / puerta. / Loco, solitario / y enredado,
+p79 | imgs:0 | chars: 1348 | “Ricardo y la libertad” fue el borrador en el que comencé a / compilar letras que me gustaban y en el que plasmé en papel / algunas reflexiones y pensamientos. / No todo es tan lineal ni responde a un principio de causal

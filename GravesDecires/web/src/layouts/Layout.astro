@@ -1,0 +1,25 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Graves decires de aguda intuición' } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title} · Graves decires</title>
+  </head>
+  <body class="bg-paper text-ink min-h-screen font-serif antialiased">
+    <div class="pointer-events-none fixed inset-x-0 top-0 z-40 h-1 bg-gradient-to-r from-transparent via-[var(--color-accent-soft)] to-transparent opacity-40">
+    </div>
+    <slot />
+  </body>
+</html>

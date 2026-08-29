@@ -1,0 +1,31 @@
+{
+  "_meta": {
+    "source": "EDITORIAL",
+    "purpose": "Créditos de canción provistos por el editor para fragmentos del libro que no imprimen crédito visible junto al texto. Nunca modifica BOOK: solo referencia bookUnitId / docxParagraphRange / pdfPage ya existentes en data/book-model.json.",
+    "generated_by": "manual editorial input, stage 1.5",
+    "rule": "confidence: \"printed\" se reserva para créditos que están efectivamente impresos junto al fragmento (ya capturados en book-model.json). confidence: \"editorial\" es siempre una asociación provista posteriormente y debe consultarse junto con esta capa, nunca inferida."
+  },
+  "song_credits": [
+    {
+      "id": "songcredit-editorial-01",
+      "decision_id": "DEC-12",
+      "source": "EDITORIAL",
+      "confidence": "editorial",
+      "fragment_ref": {
+        "book_unit_id": "unit-3",
+        "docx_paragraph_range": [90, 110],
+        "pdf_page": 8,
+        "excerpt_verbatim": "\u201cFue, sin un porqu\u00e9, mi gran sue\u00f1o amasijado\u2026 Canto mi raz\u00f3n para que quien quiera, guarde\u2026\u201d",
+        "heading_context": "La S\u00edntesis"
+      },
+      "song_ref": {
+        "id": "song-el-amasijo-de-un-gran-sueno",
+        "title": "El amasijo de un gran sue\u00f1o",
+        "band": "Almafuerte",
+        "album": "Mundo Guanaco",
+        "year": 1995
+      },
+      "note": "El libro no imprime cr\u00e9dito visible junto a este fragmento (unidad 'La S\u00edntesis', p.8). Asociaci\u00f3n provista por el editor. No se agrega ning\u00fan cr\u00e9dito visible al libro ni se modifica el fragmento: esta asociaci\u00f3n vive exclusivamente en la capa EDITORIAL y se combina en tiempo de build."
+    }
+  ]
+}

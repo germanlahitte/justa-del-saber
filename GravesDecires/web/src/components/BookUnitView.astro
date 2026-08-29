@@ -1,0 +1,78 @@
+---
+// BookUnitView — renders ONE BookUnit verbatim, with its real assets and
+// song credits. This is the surface where "MODO LEER" must hold: the
+// interpretive layer (Readings) is passed in only as a lightweight summary
+// already resolved by the page, and it is never rendered inline — it is
+// handed to the ReadingDrawer island, which keeps it closed by default.
+import type { CollectionEntry } from 'astro:content';
+import AssetImage from './AssetImage.astro';
+import SourceTag from './SourceTag.astro';
+import ReadingDrawer, { type ReadingSummary } from './react/ReadingDrawer';
+
+interface Props {
+  unit: CollectionEntry<'bookUnits'>;
+  assets: CollectionEntry<'assets'>[];
+  assetContextById: Map<string, CollectionEntry<'editorialAssetContext'>>;
+  readingSummaries: ReadingSummary[];
+}
+
+const { unit, assets, assetContextById, readingSummaries } = Astro.props;
+const { data } = unit;
+
+const paragraphs = data.text_verbatim.split(/\n{1,}/).filter((p) => p.trim());
+---
+
+<article class="mx-auto max-w-3xl px-6 py-14 sm:px-10">
+  <nav class="mb-8 flex items-center justify-between gap-4">
+    <a href="/libro" class="font-mono text-xs uppercase tracking-wide text-ink-faint hover:text-ink">
+      ← Índice del libro
+    </a>
+    <span class="flex items-center gap-2 font-mono text-xs text-ink-faint">
+      <SourceTag source="BOOK" />
+      unidad {data.unit} de 47
+    </span>
+  </nav>
+
+  {data.headings.length > 0 && (
+    <header class="mb-8">
+      {data.headings.map((h) => (
+        <h1 class="text-2xl font-normal text-ink">{h}</h1>
+      ))}
+    </header>
+  )}
+
+  {data.song_credits.length > 0 && (
+    <div class="mb-8 flex flex-wrap gap-3 font-mono text-xs text-ink-faint">
+      {data.song_credits.map((s) => (
+        <span class="rounded-sm border border-rule px-2 py-1">
+          {s.song_title} — {s.band}, <em class="not-italic">{s.album}</em> ({s.year})
+        </span>
+      ))}
+    </div>
+  )}
+
+  <div class="prose-book space-y-4 text-lg leading-relaxed whitespace-pre-line text-ink">
+    {paragraphs.map((p) => (
+      <p>{p}</p>
+    ))}
+  </div>
+
+  {assets.length > 0 && (
+    <div class="mt-10 flex flex-wrap gap-6 border-t border-rule pt-8">
+      {assets.map((asset) => (
+        <AssetImage
+          asset={asset}
+          editorialNote={assetContextById.get(asset.id)?.data.editorial_description}
+        />
+      ))}
+    </div>
+  )}
+
+  <div class="mt-10 border-t border-rule pt-6">
+    <ReadingDrawer
+      client:load
+      readings={readingSummaries}
+      currentUnit={data.unit}
+    />
+  </div>
+</article>

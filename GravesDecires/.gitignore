@@ -1,0 +1,17 @@
+# Build / generated (per-package ignores exist too)
+web/dist/
+web/.astro/
+web/node_modules/
+
+# Local scratch / process artifacts
+tmp2
+tmp_out.txt
+
+# Agent/harness process state (not project source)
+.atl/
+.codegraph/
+
+# Editor / OS noise
+.DS_Store
+.idea/
+.vscode/

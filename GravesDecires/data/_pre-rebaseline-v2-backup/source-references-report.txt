@@ -1,0 +1,7 @@
+Total QR assets: 43
+Resolved SourceReferences: 43 / 43
+By type: {'song': 42, 'press-conference': 1}
+Unresolved: 0
+
+Songs with a credit but NO QR found: 1
+  - Memoria de siglos (Hermética)
