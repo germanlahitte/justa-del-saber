@@ -30,10 +30,16 @@ const isQr = asset.data.type === 'qr';
     />
   </div>
   <figcaption class="flex flex-col gap-1 font-mono text-[11px] text-ink-faint">
-    <span class="flex items-center gap-2">
-      <SourceTag source="ASSET" />
-      p.{asset.data.pdf_page}
-    </span>
+    {/* The ASSET p.N badge is technical metadata (source file + book page) with no
+        value for the web reader, so it is shown ONLY for QRs — where the p.N helps
+        locate the original page — and never on editorial photos (the user wants
+        photos to render with just the photo). Editorial notes and QR links remain. */}
+    {isQr && (
+      <span class="flex items-center gap-2">
+        <SourceTag source="ASSET" />
+        p.{asset.data.pdf_page}
+      </span>
+    )}
     {isQr && asset.data.qr_value && (
       <a
         href={asset.data.qr_value}
