@@ -2,7 +2,7 @@
 
 **Fecha:** 2026-08-27
 **Origen:** detectado durante la re-baseline editorial
-(`docs/web/BOOK-REBASELINE-v0.1.md`), pero **no introducido por ella** — se
+(`docs/web/provenance/BOOK-REBASELINE-v0.1.md`), pero **no introducido por ella** — se
 verificó explícitamente que ambos hallazgos ya existían idénticos en el
 `book-model.json` previo a la re-baseline.
 **Estado:** documentado, **no corregido en esta iteración**. `READINGS`,
@@ -39,7 +39,7 @@ texto verbatim de la unidad que dicen anclar.
 
 **Verificación de que no es una regresión:** se comparó explícitamente
 contra el `book-model.json` respaldado antes de la re-baseline
-(`data/_pre-rebaseline-backup/book-model.json`) y **los mismos 24 casos,
+(`data/backups/_pre-rebaseline-backup/book-model.json`) y **los mismos 24 casos,
 exactamente idénticos, ya existían ahí**. Es un comportamiento heredado del
 pipeline original de vinculación READINGS v0.2→v0.3
 (`tools/resolve_readings_book_links.py` / `tools/normalize_readings_concepts.py`),
@@ -60,11 +60,11 @@ silenciosamente.
 ## Lista completa para referencia futura
 
 Ambas listas quedan preservadas en:
-- `data/_pre-rebaseline-backup/book-model-diff-report.txt` (unidades con
+- `data/backups/_pre-rebaseline-backup/book-model-diff-report.txt` (unidades con
   `docx_paragraph_range` desplazado)
 - Recomputable en cualquier momento ejecutando el diagnóstico usado durante
-  la re-baseline (ver `docs/web/BOOK-REBASELINE-v0.1.md` §6 para el método
-  exacto de verificación).
+   la re-baseline (ver `docs/web/provenance/BOOK-REBASELINE-v0.1.md` §6 para el método
+   exacto de verificación).
 
 ---
 

@@ -69,7 +69,7 @@ Because the repo has a single initial commit (everything untracked), there is no
 
 So the failure sequence: sources correct + first build fine → data regenerated at 10:00 drops the two required fields → build from the NEW data fails → user sees the regression (stale preview / failed sync).
 
-`data/_pre-repair-v3/assets-manifest.json` and `data/_pre-rebaseline-v3-backup/assets-manifest.json` both carry `association_status`+`association_method` on all assets (unchanged across both backups). Current (regenerated) file had none.
+`data/backups/_pre-repair-v3/assets-manifest.json` and `data/backups/_pre-rebaseline-v3-backup/assets-manifest.json` both carry `association_status`+`association_method` on all assets (unchanged across both backups). Current (regenerated) file had none.
 
 ## E. Root cause of each of the 3 regressions
 

@@ -2,7 +2,7 @@
 
 **Status:** REPAIRED — approved plan applied, 4 gates pass
 **Date:** 2026-08-28
-**Depends on:** [REBASELINE-V3-ASSET-AUDIT-v0.1.md](./REBASELINE-V3-ASSET-AUDIT-v0.1.md) (the frozen diagnosis this repair resolves)
+**Depends on:** [REBASELINE-V3-ASSET-AUDIT-v0.1.md](./history/REBASELINE-V3-ASSET-AUDIT-v0.1.md) (the frozen diagnosis this repair resolves)
 **Scope:** Apply the user-approved §10 repair of the V3 re-baseline: make asset **identity and placement SHA-first** (immune to Word's media renumbering/extension-swap), regenerate the derived pipeline, and add a permanent regression gate. **No DOCX/PDF was modified. No frontend file was touched.**
 
 ---
@@ -107,7 +107,7 @@ Per-asset V2 → derived → manifest → expected was printed during the run; a
 
 Two independent oracles:
 
-- **CONTENT oracle (47):** compare each current `source-references.json` entry (keyed by `qr_asset_id`) against the **editorially-validated baseline** (`data/_pre-rebaseline-v3-backup/source-references.json`).
+- **CONTENT oracle (47):** compare each current `source-references.json` entry (keyed by `qr_asset_id`) against the **editorially-validated baseline** (`data/backups/_pre-rebaseline-v3-backup/source-references.json`).
 - **PLACEMENT oracle:** verify every reference's `pdf_page` is the V2-correct page (same, or +1 for pages ≥ 63) and consistent with the QR's owning unit.
 
 Result:
@@ -133,7 +133,7 @@ Added **`tools/verify_rebaseline_assets.py`** — `python tools/verify_rebaselin
 
 - **G1 IDENTITY** (permanent, no baseline): 55 assets, unique SHA, each `extracted_file` hashes to its `sha256`, QR assets carry a `qr_value`.
 - **G2 PLACEMENT** (permanent, no baseline): manifest `pdf_page` must equal the **SHA-resolved perceptual page** — perpetually derivable from curated `image-match.json` + `extraction-log.json`.
-- **G3 CONTENT** (vs validated baseline, best-effort): source-references content-identical to `data/_pre-rebaseline-v3-backup/source-references.json`.
+- **G3 CONTENT** (vs validated baseline, best-effort): source-references content-identical to `data/backups/_pre-rebaseline-v3-backup/source-references.json`.
 
 The gate is deliberately **Word renumbering-tolerant**: it never keys on `imageN.ext`. If a future re-baseline renames all 55 files or swaps extensions but the content is unchanged, G1/G2 still pass (that is the *supported* case). It fails loudly on **actual** drift (a sha that no longer matches its file, or a pdf_page that disagrees with the perceptual match).
 

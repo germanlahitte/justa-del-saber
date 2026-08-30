@@ -41,22 +41,22 @@ PAGE_MODEL = r'data\page-model.json'
 ASSETS_MANIFEST = r'data\assets-manifest.json'
 ASSET_CONTEXT = r'data\editorial\asset-context.json'
 SONG_CREDITS = r'data\editorial\song-credits.json'
-HASH_DIFF = r'data\_pre-rebaseline-v2-backup\asset-hash-diff.json'
+HASH_DIFF = r'data\backups\_pre-rebaseline-v2-backup\asset-hash-diff.json'
 # Last validated baseline. Source-references is a DERIVED artifact; when Word
 # re-saves the DOCX it renumbers embedded media and can silently break the
 # BOOK unit->asset association used to resolve a QR. The song identities are
 # content-stable, so we fall back to the previous editorially-validated
 # baseline ONLY if the song it names still exists as a printed credit in the
 # CURRENT book-model. Deterministic; never guesses a new song.
-PREV_SOURCE_REFS = r'data\_pre-rebaseline-v3-backup\source-references.json'
+PREV_SOURCE_REFS = r'data\backups\_pre-rebaseline-v3-backup\source-references.json'
 OUT = r'data\source-references.json'
-REPORT = r'data\_pre-rebaseline-v2-backup\source-references-report.txt'
+REPORT = r'data\backups\_pre-rebaseline-v2-backup\source-references-report.txt'
 
 
 def build_asset_id_remap():
     """old_asset_id (as referenced by pre-rebaseline EDITORIAL files) ->
     current_asset_id (same content, current identity), via SHA-256."""
-    old_manifest = json.load(open(r'data\_pre-rebaseline-backup\assets-manifest.json', encoding='utf-8'))
+    old_manifest = json.load(open(r'data\backups\_pre-rebaseline-backup\assets-manifest.json', encoding='utf-8'))
     new_manifest = json.load(open(ASSETS_MANIFEST, encoding='utf-8'))
     new_by_sha = {a['sha256']: a['id'] for a in new_manifest['assets']}
     old_by_id = {a['id']: a for a in old_manifest['assets']}

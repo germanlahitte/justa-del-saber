@@ -46,7 +46,7 @@ def load_new_paragraphs():
 
 
 def main():
-    old_model = json.load(open(r'data\_pre-rebaseline-backup\book-model.json', encoding='utf-8'))
+    old_model = json.load(open(r'data\backups\_pre-rebaseline-backup\book-model.json', encoding='utf-8'))
     new_paras = load_new_paragraphs()
 
     print(f'NEW docx paragraph count: {len(new_paras)}')

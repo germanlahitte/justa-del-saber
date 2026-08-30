@@ -75,19 +75,18 @@ Dependency trace from a grep of `tools/*.py` (392 match sites) plus `web/src` (s
 - `build_model.py` reads `data/asset-classification.json`, `data/image-match.json`, `data/extraction-log.json`; writes `data/assets-manifest.json`, `data/book-model-index.json`.
 - `build_book_model.py` reads `data/assets-manifest.json`; writes `data/book-model.json`.
 - `build_page_model.py` reads `data/book-model.json`, `data/assets-manifest.json`, PDF; writes `data/page-model.json`.
-- `build_source_references.py` reads book/page/manifest + `_pre-rebaseline-v2-backup/asset-hash-diff.json`, `_pre-rebaseline-v3-backup/source-references.json`, `_pre-rebaseline-backup/assets-manifest.json`; writes `data/source-references.json` + `_pre-rebaseline-v2-backup/source-references-report.txt`.
-- `re_resolve_readings_after_rebaseline(_v3).py` read `--old-book` from `_pre-rebaseline-v2-backup/book-model.json` / `_pre-rebaseline-v3-backup/book-model.json`; rewrite `content/readings/readings-v0.3.json`.
-- `check_editorial_coverage_after_rebaseline.py` reads `_pre-rebaseline-v2-backup/asset-hash-diff.json`.
-- `check_editorial_layer_impact.py` reads `_pre-rebaseline-backup/assets-manifest.json`; writes `_pre-rebaseline-v2-backup/editorial-impact-report.json`.
-- `diff_assets_by_hash.py` reads/writes `_pre-rebaseline-v2-backup/*` (dead path `extraction-log-OLD.json` noted, harmless).
-- `diff_book_model.py` reads `_pre-rebaseline-v2-backup/book-model.json` + `asset-hash-diff.json`.
-- `diff_docx_versions.py` reads `_pre-rebaseline-backup/book-model.json`.
-- `verify_editorial_layer.py` reads `_pre-rebaseline-backup/assets-manifest.json`.
+- `build_source_references.py` reads book/page/manifest + `data/backups/_pre-rebaseline-v2-backup/asset-hash-diff.json`, `data/backups/_pre-rebaseline-v3-backup/source-references.json`, `data/backups/_pre-rebaseline-backup/assets-manifest.json`; writes `data/source-references.json` + `data/backups/_pre-rebaseline-v2-backup/source-references-report.txt`.
+- `re_resolve_readings_after_rebaseline(_v3).py` read `--old-book` from `data/backups/_pre-rebaseline-v2-backup/book-model.json` / `data/backups/_pre-rebaseline-v3-backup/book-model.json`; rewrite `content/readings/readings-v0.3.json`.
+- `check_editorial_coverage_after_rebaseline.py` reads `data/backups/_pre-rebaseline-v2-backup/asset-hash-diff.json`.
+- `check_editorial_layer_impact.py` reads `data/backups/_pre-rebaseline-backup/assets-manifest.json`; writes `data/backups/_pre-rebaseline-v2-backup/editorial-impact-report.json`.
+- `diff_assets_by_hash.py` reads/writes `data/backups/_pre-rebaseline-v2-backup/*` (dead path `extraction-log-OLD.json` noted, harmless).
+- `diff_book_model.py` reads `data/backups/_pre-rebaseline-v2-backup/book-model.json` + `asset-hash-diff.json`.
+- `diff_docx_versions.py` reads `data/backups/_pre-rebaseline-backup/book-model.json`.
+- `verify_editorial_layer.py` reads `data/backups/_pre-rebaseline-backup/assets-manifest.json`.
 - `consolidate_readings_v03.py` / `normalize_readings_concepts.py` / `resolve_readings_book_links.py` cite root `content/readings/*` paths in documented usage.
 
-**KEY**: `_pre-rebaseline-backup/`, `_pre-rebaseline-v2-backup/`, `_pre-rebaseline-v3-backup/` are **hard-coded**
-in 8 tools (≈17 reference sites) as the "OLD" side of version diffs. Moving them **breaks tooling** unless
-those tool paths are updated too. This is a dependency you asked to have reported before any move (it is now, see §K).
+**KEY**: `data/backups/_pre-rebaseline-backup/`, `data/backups/_pre-rebaseline-v2-backup/`, `data/backups/_pre-rebaseline-v3-backup/` are **hard-coded**
+in 8 tools (≈17 reference sites) as the "OLD" side of version diffs; they now live under `data/backups/`.
 
 ---
 
@@ -500,7 +499,10 @@ data/
   backups/
     _pre-heading-fix-backup/    (NUEVO home)
     _pre-repair-v3/             (NUEVO home)
-  /* CANONICAL + ACTIVE-DERIVED + _pre-rebaseline-* quedan en data/ (Phase 2) */
+    _pre-rebaseline-backup/     (movido en Fase 2)
+    _pre-rebaseline-v2-backup/  (movido en Fase 2)
+    _pre-rebaseline-v3-backup/  (movido en Fase 2)
+  /* CANONICAL + ACTIVE-DERIVED quedan en data/ (stable paths) */
 content/
   readings/
     readings-v0.3.json + 3 docs activos
@@ -562,4 +564,89 @@ sirva de snapshot de estado. Contenido propuesto:
 
 ---
 
-*End of Phase 1 execution result. Next phase (Fase 2) awaits user review.*
+*End of Phase 1 execution result.*
+
+---
+
+# PHASE 2 — EXECUTION RESULT
+
+**Fecha:** 2026-08-30
+**Objetivo:** refactorización exclusiva de paths — mover los 3 backups `_pre-rebaseline-*`
+de `data/` a `data/backups/` y actualizar todas las referencias. **Sin** cambio de lógica,
+re-generación de datos, re-baseline, ni modificación de datos canónicos.
+
+## 1. Movimientos realizados (`git mv`)
+
+| Origen | Destino |
+| --- | --- |
+| `data/_pre-rebaseline-backup/` | `data/backups/_pre-rebaseline-backup/` |
+| `data/_pre-rebaseline-v2-backup/` | `data/backups/_pre-rebaseline-v2-backup/` |
+| `data/_pre-rebaseline-v3-backup/` | `data/backups/_pre-rebaseline-v3-backup/` |
+
+Los tres directorios existen bajo `data/backups/`; `data/` queda solo con
+`backups/`, `baselines/`, `editorial/`, `history/`. Sin copias originales en `data/`.
+
+## 2. Referencias actualizadas por archivo
+
+### tools (ejecutables — paths r/w hard-coded)
+- `tools/build_source_references.py` — 4 refs: `HASH_DIFF`, `PREV_SOURCE_REFS`, `REPORT`, y el `open()` de `assets-manifest.json` del backup → `data\backups\...`.
+- `tools/check_editorial_coverage_after_rebaseline.py` — 1 ref (`asset-hash-diff.json`) → `data\backups\...`.
+- `tools/check_editorial_layer_impact.py` — 2 refs (`OLD_MANIFEST`, write `editorial-impact-report.json`) → `data\backups\...`.
+- `tools/diff_assets_by_hash.py` — 3 refs (`OLD_LOG`, `OUT`, `open` de manifest) → `data\backups\...`.
+- `tools/diff_book_model.py` — 3 refs (`OLD`, `RENAME_DIFF`, `OUT`) → `data\backups\...`.
+- `tools/diff_docx_versions.py` — 1 ref (`open` de `book-model.json` old) → `data\backups\...`.
+- `tools/verify_editorial_layer.py` — 1 ref (`open` de `assets-manifest.json` old) → `data\backups\...`.
+- `tools/re_resolve_readings_after_rebaseline.py` — 1 ref (`--old-book data/.../v2-backup/book-model.json`, docstring Usage) → `data/backups/...`.
+- `tools/re_resolve_readings_after_rebaseline_v3.py` — 1 ref (`--old-book data/.../v3-backup/book-model.json`, docstring Usage) → `data/backups/...`.
+- `tools/verify_rebaseline_assets.py` — 2 refs (docstring + comment, `_pre-rebaseline-v3-backup snapshot` como provenance de G3) → `data/backups/...`.
+
+### documentación activa (ubicación actual)
+- `docs/README.md` — eliminada la nota "los `_pre-rebaseline-*` quedan en `data/`";
+  lista de snapshots actualizada con los 3 movidos.
+- `docs/web/REBASELINE-V3-ASSET-REPAIR-v0.1.md` — 2 refs (G3 CONTENT oracle + G3 baseline) → `data/backups/...`.
+- `docs/web/REBASELINE-V3-RENDER-REGRESSION-v0.1.md` — 1 ref (`assets-manifest.json` del v3-backup) → `data/backups/...`.
+- `docs/web/TECH-DEBT-READINGS-EVIDENCE-v0.1.md` — 2 refs (`book-model.json` y `book-model-diff-report.txt`) → `data/backups/...`.
+- `docs/web/PAGE-REVIEW-IMPLEMENTATION-v0.1.md` — 1 ref (histórico `source-references.json` del v3-backup) → `data/backups/...`.
+- `docs/REPOSITORY-CLEANUP-PLAN-v0.1.md` — bloque de análisis de tools (§C) y árbol final actualizados a `data/backups/...`; añadida esta sección.
+
+### referencias históricas deliberadamente NO modificadas
+- `docs/web/provenance/REBASELINE-V3-v0.1.md` — describe dónde estaba el backup validado
+  **durante la operación V3** (relato histórico, no ejecutable ni de ubicación actual).
+- `docs/web/provenance/BOOK-REBASELINE-v0.1.md` — "`data/_pre-rebaseline-backup/` para
+  trazabilidad histórica" (descripción del momento).
+- `docs/web/history/REBASELINE-V2-v0.1.md` — versión superada; ruta describe ubicación en su momento.
+- `docs/DOCUMENTATION-AUDIT-v0.1.md` — registro del estado al final de la Fase 1.5
+  ("FASE 2: NO ejecutada") — histórico fiel de ese entregable.
+
+## 3. Búsqueda global post-move
+
+- **0 referencias ejecutables stale** a `data/_pre-rebaseline-*` (sin `backups/`) en `tools/`.
+- Los 3 directorios existen bajo `data/backups/`.
+- No quedan copias originales en `data/` (raíz de `data/` sin `_pre-rebaseline-*`).
+
+## 4. Checks
+
+| Check | Result |
+| --- | --- |
+| `git diff --stat` | solo paths/documentos; sin diff de contenido de datos |
+| `python tools/verify_rebaseline_assets.py` | **ALL GATES PASS** (G1 · G2 · G3) |
+| `npx astro check` (en `web/`) | **0 errors / 0 warnings** |
+| `npx astro build` (en `web/`) | **Complete** |
+| Datos CANONICAL (13 rutas) | **sin cambios** |
+| `_pre-rebaseline-*` destino | 3 dirs en `data/backups/` |
+
+## 5. Confirmaciones
+
+- **Datos canónicos intactos:** `data/book-model.json`, `data/page-model.json`,
+  `data/assets-manifest.json`, `data/source-references.json`, `data/editorial/*`,
+  `content/concepts/concepts-v0.3.json`, `content/readings/readings-v0.3.json`,
+  `content/maps/master-map-v0.2.json`,
+  `data/baselines/source-references-approved-v1.json` — sin cambios.
+- **Tools:** lógica sin tocar; solo rutas. **web/src/**: sin cambios.
+- **git status final:** movimientos `R` de los 3 dirs + ediciones de rutas (tools y docs).
+
+## 6. Nota
+
+No se realizó ninguna otra limpieza. Queda a la espera de revisión del usuario.
+
+*End of Phase 2 execution result.*

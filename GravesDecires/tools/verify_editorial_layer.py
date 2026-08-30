@@ -63,7 +63,7 @@ print('\n=== Remaining technical NEEDS-REVIEW/UNKNOWN in assets-manifest.json ==
 # asset_id values were written against the pre-rebaseline manifest and are
 # renumbered by Word on every re-save, so a raw string match would report
 # false positives. DEC-13+ entries already use asset_sha256 directly.
-old_manifest = json.load(open(r'data\_pre-rebaseline-backup\assets-manifest.json', encoding='utf-8'))
+old_manifest = json.load(open(r'data\backups\_pre-rebaseline-backup\assets-manifest.json', encoding='utf-8'))
 current_by_sha = {a['sha256']: a['id'] for a in manifest['assets']}
 resolved_asset_ids = set()
 for ac in asset_context['asset_context']:

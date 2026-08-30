@@ -25,8 +25,8 @@ Gates:
                   editorial baseline (data/baselines/source-references-approved-v1.json),
                   keyed by qr_asset_id. Best-effort: if the baseline is missing
                   it is reported, not failed.
-                  NOTE: G3 was re-baselined from the historical
-                  _pre-rebaseline-v3-backup snapshot to source-references-approved-v1
+                   NOTE: G3 was re-baselined from the historical
+                   data/backups/_pre-rebaseline-v3-backup snapshot to source-references-approved-v1
                   after two INTENTIONAL editorial edits per decisions 6 & 16
                   (asset-image34 'Si me ves volver' on p79, asset-image35
                   'Conferencia de Prensa' on p7). Those were deliberate content
@@ -50,7 +50,7 @@ IMAGE_MATCH = os.path.join(ROOT, 'data', 'image-match.json')
 EXTRACTION = os.path.join(ROOT, 'data', 'extraction-log.json')
 SOURCE_REFS = os.path.join(ROOT, 'data', 'source-references.json')
 # Approved editorial baseline for G3 CONTENT. Re-baselined from the historical
-# _pre-rebaseline-v3-backup snapshot after two INTENTIONAL editorial edits
+# data/backups/_pre-rebaseline-v3-backup snapshot after two INTENTIONAL editorial edits
 # (decisions 6 & 16: asset-image34 'Si me ves volver' on p79, asset-image35
 # 'Conferencia de Prensa' on p7). The historical backup remains untouched as
 # traceability; this snapshot records the currently approved editorial state.

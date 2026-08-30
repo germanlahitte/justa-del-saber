@@ -6,7 +6,7 @@ wrong)."""
 import json
 
 m = json.load(open(r'data\assets-manifest.json', encoding='utf-8'))
-diff = json.load(open(r'data\_pre-rebaseline-v2-backup\asset-hash-diff.json', encoding='utf-8'))
+diff = json.load(open(r'data\backups\_pre-rebaseline-v2-backup\asset-hash-diff.json', encoding='utf-8'))
 remap = {r['old_id']: r['new_file'].rsplit('.', 1)[0].replace('image', 'asset-image')
          for r in diff['renamed']}
 for u in diff['unchanged']:

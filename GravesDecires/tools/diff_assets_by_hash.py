@@ -16,9 +16,9 @@ import hashlib
 import json
 import os
 
-OLD_LOG = r'data\_pre-rebaseline-v2-backup\extraction-log-OLD.json'
+OLD_LOG = r'data\backups\_pre-rebaseline-v2-backup\extraction-log-OLD.json'
 NEW_MEDIA_DIR = r'assets\docx-media'
-OUT = r'data\_pre-rebaseline-v2-backup\asset-hash-diff.json'
+OUT = r'data\backups\_pre-rebaseline-v2-backup\asset-hash-diff.json'
 
 
 def main():
@@ -26,7 +26,7 @@ def main():
     # copy it (see session note); recompute old hashes from the OLD
     # assets-manifest.json backup instead, which still has each asset's
     # original sha256 recorded independently of the extraction-log file.
-    old_manifest = json.load(open(r'data\_pre-rebaseline-v2-backup\assets-manifest.json', encoding='utf-8'))
+    old_manifest = json.load(open(r'data\backups\_pre-rebaseline-v2-backup\assets-manifest.json', encoding='utf-8'))
     old_by_hash = {a['sha256']: a for a in old_manifest['assets']}
 
     new_by_hash = {}

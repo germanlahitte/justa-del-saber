@@ -58,10 +58,7 @@ Web book project for *Graves decires de aguda intuición* de Ricardo Iorio.
 - **Proceso** — `data/history/process/` (ETAPA-1 / ETAPA-1.5), `data/history/repairs/` (evidencia de reparaciones).
 
 ## 8. Backups
-- `data/backups/` — snapshots previos a mutaciones (`_pre-heading-fix-backup`, `_pre-repair-v3`).
-  > Nota: los snapshots `_pre-rebaseline-{backup,v2,v3}` quedan por ahora en `data/`
-  > porque 8 herramientas los referencia como lado "OLD" de diffs; su reubicación a
-  > `data/backups/` es la **Fase 2** (requiere actualizar rutas en las herramientas).
+- `data/backups/` — snapshots previos a mutaciones (`_pre-heading-fix-backup`, `_pre-repair-v3`, `_pre-rebaseline-backup`, `_pre-rebaseline-v2-backup`, `_pre-rebaseline-v3-backup`).
 - `data/baselines/source-references-approved-v1.json` — baseline aprobado (G3), **no mover**.
 
 ---

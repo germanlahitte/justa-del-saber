@@ -1,6 +1,6 @@
 # PAGE-REVIEW — Implementación editorial v0.1
 
-> Implementación de las 22 decisiones de `PAGE-REVIEW-v0.1.md` sobre la **baseline V3 validada** del libro.
+> Implementación de las 22 decisiones de `docs/web/history/PAGE-REVIEW-v0.1.md` sobre la **baseline V3 validada** del libro.
 > **Esta fase NO regenera el pipeline**: no se ejecutó ningún build de modelo, extracción de assets ni re-baseline.
 > Todo el contenido BOOK permanece **verbatim**; solo se añade una capa editorial `EDITORIAL` por encima.
 
@@ -184,7 +184,7 @@ actualizado con un **histórico** de pre-rebaseline, por lo que tras los dos cam
 - Se creó el snapshot explícito del estado aprobado: `data/baselines/source-references-approved-v1.json`
   (byte-idéntico al `source-references.json` actual, 43 referencias, con los cambios p7/p79).
 - G3 **ahora compara contra ese baseline aprobado**, no contra el backup histórico.
-- El histórico `data/_pre-rebaseline-v3-backup/source-references.json` **se preserva intacto** como
+- El histórico `data/backups/_pre-rebaseline-v3-backup/source-references.json` **se preserva intacto** como
   trazabilidad (verificado: conserva "Por ser yo" y la descripción completa de 1993).
 
 > Resultado: **G1 PASS · G2 PASS · G3 PASS · build PASS**, con validación del estado final aprobado.

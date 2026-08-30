@@ -23,7 +23,7 @@ one regenerated unit FAILS loudly and writes no output.
 Usage:
   python tools/re_resolve_readings_after_rebaseline_v3.py \
     --readings content/readings/readings-v0.3.json \
-    --old-book data/_pre-rebaseline-v3-backup/book-model.json \
+    --old-book data/backups/_pre-rebaseline-v3-backup/book-model.json \
     --new-book data/book-model.json \
     --new-page-model data/page-model.json \
     --out content/readings/readings-v0.3.json \

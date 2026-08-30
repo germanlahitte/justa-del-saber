@@ -16,7 +16,7 @@ assets-manifest.json. Read-only; writes no files.
 """
 import json
 
-OLD_MANIFEST = r'data\_pre-rebaseline-backup\assets-manifest.json'
+OLD_MANIFEST = r'data\backups\_pre-rebaseline-backup\assets-manifest.json'
 NEW_MANIFEST = r'data\assets-manifest.json'
 ASSET_CONTEXT = r'data\editorial\asset-context.json'
 SONG_CREDITS = r'data\editorial\song-credits.json'
@@ -70,7 +70,7 @@ def main():
     for b in broken:
         print(f'  {b}')
 
-    with open(r'data\_pre-rebaseline-v2-backup\editorial-impact-report.json', 'w', encoding='utf-8') as f:
+    with open(r'data\backups\_pre-rebaseline-v2-backup\editorial-impact-report.json', 'w', encoding='utf-8') as f:
         json.dump({'broken_count': len(broken), 'broken': broken}, f, ensure_ascii=False, indent=2)
 
 

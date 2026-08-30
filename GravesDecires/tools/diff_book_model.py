@@ -13,10 +13,10 @@ Read-only. Writes a JSON + human report; does not touch any canonical file.
 """
 import json
 
-OLD = r'data\_pre-rebaseline-v2-backup\book-model.json'
+OLD = r'data\backups\_pre-rebaseline-v2-backup\book-model.json'
 NEW = r'data\book-model.json'
-RENAME_DIFF = r'data\_pre-rebaseline-v2-backup\asset-hash-diff.json'
-OUT = r'data\_pre-rebaseline-v2-backup\book-model-diff-report.txt'
+RENAME_DIFF = r'data\backups\_pre-rebaseline-v2-backup\asset-hash-diff.json'
+OUT = r'data\backups\_pre-rebaseline-v2-backup\book-model-diff-report.txt'
 
 
 def main():
