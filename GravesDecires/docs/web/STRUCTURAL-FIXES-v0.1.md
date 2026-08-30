@@ -222,7 +222,7 @@ astro build   → 158 páginas generadas, sin errores
 
 ## Entregable
 
-`docs/web/PAGE-REVIEW-v0.1.md` — 79 secciones (una por página física), con
+`docs/web/history/PAGE-REVIEW-v0.1.md` — 79 secciones (una por página física), con
 metadata factual precompletada (heading/sección + fuente BOOK/EDITORIAL,
 layout, SourceReferences presentes) y campo de observaciones vacío para tu
 revisión manual. Ninguna crítica estética fue generada.
@@ -230,4 +230,4 @@ revisión manual. Ninguna crítica estética fue generada.
 ---
 
 **No se avanzó con dirección visual general.** Quedo a la espera de tu
-revisión de `PAGE-REVIEW-v0.1.md`.
+revisión de `docs/web/history/PAGE-REVIEW-v0.1.md`.

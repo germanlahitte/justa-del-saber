@@ -12,7 +12,7 @@ derivado y de solo lectura: `data/page-model.json`.
 
 > **Nota de vigencia (2026-08-27, misma jornada):** el DOCX/PDF fue
 > corregido por el autor después de este documento (re-baseline completa en
-> `docs/web/BOOK-REBASELINE-v0.1.md`), y luego se generalizó el modelo de
+> `docs/web/provenance/BOOK-REBASELINE-v0.1.md`), y luego se generalizó el modelo de
 > QR de "canción" a **SourceReference** tipado (§ Adenda v0.2 de ese mismo
 > documento). El modelo de página (§1-§8 de este documento) sigue vigente
 > sin cambios; lo que cambió es la fuente de datos que alimenta al pie de

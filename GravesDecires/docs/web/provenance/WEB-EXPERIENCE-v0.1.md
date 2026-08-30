@@ -34,7 +34,7 @@ Todo lo demás en `content/**/history/`, `content/**/.old/`,
 `docs/audits/`, `docs/migrations/` es **trazabilidad histórica**: documenta
 cómo se llegó a v0.3/v0.2, pero no debe alimentar la web. Lo confirmé
 leyendo los propios README de cada carpeta (`content/readings/README.md`,
-`README-READINGS-v0.3.md`, `README-MASTER MAP-v0.2.md`), que declaran
+`docs/web/history/README-READINGS-v0.3.md`, `docs/web/history/README-MASTER-MAP-v0.2.md`), que declaran
 explícitamente cuál es el artefacto de consumo y cuáles son intermedios.
 
 No encontré ningún `content/essays/*` todavía (carpeta vacía) ni ningún
@@ -55,11 +55,11 @@ escritura) que las capas efectivamente resuelven entre sí:
 - **READINGS → CONCEPTS**: 133 referencias `concept_ids[]`, todas contra
   IDs existentes en `concepts-v0.3.json` (0 inválidas, según
   `CONCEPT-NORMALIZATION-REPORT-v0.3.md` y
-  `docs/audits/NORMALIZATION-VERIFICATION-v0.3.json`, ambos `PASSED`).
+  `docs/web/provenance/NORMALIZATION-VERIFICATION-v0.3.json`, ambos `PASSED`).
 - **READINGS → READINGS**: 109 `connections[]` entre IDs `reading-*`, 0
   inválidas.
 - **MASTER MAP → CONCEPTS**: los 9 arcos referencian `concept_ids[]`
-  existentes; 0 huérfanos (`MASTER-MAP-v0.2-REPORT.md`, `PASSED`).
+  existentes; 0 huérfanos (`docs/web/provenance/MASTER-MAP-v0.2-REPORT.md`, `PASSED`).
 - **MASTER MAP → READINGS**: los 9 arcos referencian `reading_ids[]`
   existentes; 0 huérfanos.
 - **MASTER MAP → BOOK**: no referencia BOOK directamente — por diseño

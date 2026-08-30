@@ -1,5 +1,9 @@
 # READINGS v0.3 — consolidación
 
+> **Archivado (HISTORICAL).** Receta del proceso de consolidación v0.3, que ya
+> se ejecutó. El reporte que generaba (`READINGS-v0.3-REPORT.md`) quedó
+> archivado en `docs/web/provenance/READINGS-v0.3-REPORT.md`.
+
 Esta etapa toma el archivo que ya validaste localmente:
 
 `content/readings/readings-v0.2-linked.normalized.json`

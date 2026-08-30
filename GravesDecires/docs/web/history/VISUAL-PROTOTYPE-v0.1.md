@@ -56,7 +56,7 @@ prototipo no sería navegable de verdad): `/libro` (índice/TOC),
 - **Concept detail**: `concept-integridad`, elegido porque el dato real
   confirmó la conectividad que pedías evaluar — 9 Readings lo usan, que
   alcanzan 12 unidades distintas del libro (verificado antes de construir
-  nada, ver `docs/web/WEB-EXPERIENCE-v0.1.md` §A.2 y el chequeo puntual que
+  nada, ver `docs/web/provenance/WEB-EXPERIENCE-v0.1.md` §A.2 y el chequeo puntual que
   hice sobre `readings-v0.3.json` antes de elegir el candidato).
 
 Cero lorem ipsum, cero Readings/Concepts/fragmentos inventados, cero
