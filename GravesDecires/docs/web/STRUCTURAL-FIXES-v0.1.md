@@ -6,7 +6,7 @@ revisión estética página por página. No se avanzó con dirección visual
 general. `CONCEPTS`, `READINGS`, `MASTER MAP` no se modificaron.
 
 Todos los artefactos previos a estas correcciones quedaron respaldados en
-`data/_pre-heading-fix-backup/`.
+`data/backups/_pre-heading-fix-backup/`.
 
 ---
 

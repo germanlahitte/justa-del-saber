@@ -83,13 +83,13 @@ All three are the SAME single root cause: **assets-manifest missing two schema-r
 
 ## F. Exact files to modify (minimal set)
 
-1. `data/assets-manifest.json` — **restore `association_status` + `association_method`** on all 55 assets (done, from `data/_pre-repair-v3/assets-manifest.json` matched by `sha256`).
+1. `data/assets-manifest.json` — **restore `association_status` + `association_method`** on all 55 assets (done, from `data/backups/_pre-repair-v3/assets-manifest.json` matched by `sha256`).
 
 No frontend code, no schema change, no other data file changed. No re-run of the maintenance pipeline.
 
 ## G. Minimal repair plan (applied)
 
-1. Safety-copied the broken manifest → `data/assets-manifest.json.rendermissing-backup`.
+1. Safety-copied the broken manifest → `data/history/repairs/assets-manifest.json.rendermissing-backup`.
 2. Backfilled `association_status` + `association_method` for all 55 assets, keyed by `sha256`, from the validated pre-repair backup. (Values are unchanged extraction metadata — not identity — so copying them is safe and requires no editorial reinterpretation.)
 3. Rebuilt `npx astro build` → **158 pages, Complete**, no schema error.
 4. Static verification: 0 photos missing, 0 footers missing, credit body suppression confirmed.
